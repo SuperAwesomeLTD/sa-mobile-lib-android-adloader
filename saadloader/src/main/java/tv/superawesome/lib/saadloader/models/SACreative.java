@@ -31,6 +31,7 @@ public class SACreative implements Parcelable, JSONSerializable {
     public int cpm;
     public String format;
     public String impressionUrl;
+    public String customPayload;
     public String clickUrl;
     public boolean live;
     public boolean approved;
@@ -58,6 +59,7 @@ public class SACreative implements Parcelable, JSONSerializable {
         cpm = in.readInt();
         format = in.readString();
         impressionUrl = in.readString();
+        customPayload = in.readString();
         clickUrl = in.readString();
         live = in.readByte() != 0;
         approved = in.readByte() != 0;
@@ -93,6 +95,7 @@ public class SACreative implements Parcelable, JSONSerializable {
         dest.writeInt(cpm);
         dest.writeString(format);
         dest.writeString(impressionUrl);
+        dest.writeString(customPayload);
         dest.writeString(clickUrl);
         dest.writeByte((byte) (approved ? 1 : 0));
         dest.writeByte((byte) (live ? 1: 0));
@@ -124,6 +127,9 @@ public class SACreative implements Parcelable, JSONSerializable {
         }
         if (!json.isNull("click_url")){
             clickUrl = json.optString("click_url");
+        }
+        if (!json.isNull("customPayload")) {
+            customPayload = json.optString("customPayload");
         }
         if (!json.isNull("approved")){
             approved = json.optBoolean("approved");
@@ -195,6 +201,11 @@ public class SACreative implements Parcelable, JSONSerializable {
         }
         try {
             json.put("impression_url", impressionUrl);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            json.put("customPayload", customPayload);
         } catch (JSONException e) {
             e.printStackTrace();
         }
