@@ -45,6 +45,7 @@ public class SADetails implements Parcelable, JSONSerializable{
     public String zipFile;
     public String url;
     public String placementFormat;
+    public String cdnUrl;
     public SAData data;
 
     /**
@@ -71,6 +72,7 @@ public class SADetails implements Parcelable, JSONSerializable{
         zipFile = in.readString();
         url = in.readString();
         placementFormat = in.readString();
+        cdnUrl = in.readString();
         value = in.readInt();
         data = in.readParcelable(SAData.class.getClassLoader());
     }
@@ -106,6 +108,7 @@ public class SADetails implements Parcelable, JSONSerializable{
         dest.writeString(zipFile);
         dest.writeString(url);
         dest.writeString(placementFormat);
+        dest.writeString(cdnUrl);
         dest.writeInt(value);
         dest.writeParcelable(data, flags);
     }
@@ -150,6 +153,9 @@ public class SADetails implements Parcelable, JSONSerializable{
         }
         if (!json.isNull("placement_format")){
             placementFormat = json.optString("placement_format");
+        }
+        if (!json.isNull("cdnUrl")) {
+            cdnUrl = json.optString("cdnUrl");
         }
         if (!json.isNull("data")){
             JSONObject obj = json.optJSONObject("data");
@@ -226,6 +232,11 @@ public class SADetails implements Parcelable, JSONSerializable{
         }
         try {
             json.put("placement_format", placementFormat);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            json.put("cdnUrl", cdnUrl);
         } catch (JSONException e) {
             e.printStackTrace();
         }

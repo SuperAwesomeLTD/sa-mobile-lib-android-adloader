@@ -149,6 +149,24 @@ public class SAParser {
 
             ad.creative.parentalGateClickUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgDict2);
 
+            // cdn url
+            switch (ad.creative.creativeFormat) {
+                case tag:
+                case invalid: { break; }
+                case image: {
+                    ad.creative.details.cdnUrl = SAUtils.findBaseURLFromResourceURL(ad.creative.details.image);
+                    break;
+                }
+                case video: {
+                    ad.creative.details.cdnUrl = SAUtils.findBaseURLFromResourceURL(ad.creative.details.video);
+                    break;
+                }
+                case rich: {
+                    ad.creative.details.cdnUrl = SAUtils.findBaseURLFromResourceURL(ad.creative.details.url);
+                    break;
+                }
+            }
+
             /** do a validity check */
             if (!isAdDataValid(ad)) {
                 return null;
