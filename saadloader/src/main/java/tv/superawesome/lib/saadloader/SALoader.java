@@ -81,9 +81,12 @@ public class SALoader {
                     return;
                 }
 
+                Log.d("SuperAwesome-string", data.toString());
+
                 JSONObject dataJson = null;
                 try {
                     dataJson = new JSONObject(data.toString());
+                    Log.d("SuperAwesome-data", dataJson.toString());
                     final SAAd ad = SAParser.parseDictionaryIntoAd(dataJson, placementId);
 
                     if (ad != null) {

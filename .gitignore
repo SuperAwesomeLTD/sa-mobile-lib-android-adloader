@@ -3,3 +3,6 @@ app/*
 wrapper/*
 .gradle/*
 local.properties
+java_pid*
+saadloader/java_pid*
+app/java_pid*
