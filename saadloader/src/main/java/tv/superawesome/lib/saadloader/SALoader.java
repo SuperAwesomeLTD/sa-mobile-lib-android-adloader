@@ -19,11 +19,11 @@ import org.json.JSONObject;
 import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
-import tv.superawesome.lib.savastparser.models.SAVASTAd;
+import tv.superawesome.lib.samodelspace.SAVASTAd;
 import tv.superawesome.lib.sautils.*;
-import tv.superawesome.lib.saadloader.models.SAAd;
-import tv.superawesome.lib.saadloader.models.SACreativeFormat;
-import tv.superawesome.lib.saadloader.models.SAData;
+import tv.superawesome.lib.samodelspace.SAAd;
+import tv.superawesome.lib.samodelspace.SACreativeFormat;
+import tv.superawesome.lib.samodelspace.SAData;
 
 /**
  * This class gathers all the other parts of the "data" package and unifies the whole loading

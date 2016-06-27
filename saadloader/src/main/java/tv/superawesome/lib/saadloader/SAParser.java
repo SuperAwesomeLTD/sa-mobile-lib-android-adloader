@@ -13,8 +13,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import tv.superawesome.lib.sautils.*;
-import tv.superawesome.lib.saadloader.models.SAAd;
-import tv.superawesome.lib.saadloader.models.SACreativeFormat;
+import tv.superawesome.lib.samodelspace.SAAd;
+import tv.superawesome.lib.samodelspace.SACreativeFormat;
 
 /**
  * This is a class of static functions that make it easy to parse Ad responses from the

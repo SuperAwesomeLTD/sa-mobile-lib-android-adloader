@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 
 import tv.superawesome.lib.sautils.SAUtils;
-import tv.superawesome.lib.saadloader.models.SAAd;
+import tv.superawesome.lib.samodelspace.SAAd;
 
 /**
  * Created by gabriel.coman on 10/12/15.

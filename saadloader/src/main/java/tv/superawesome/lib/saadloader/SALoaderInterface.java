@@ -1,6 +1,6 @@
 package tv.superawesome.lib.saadloader;
 
-import tv.superawesome.lib.saadloader.models.SAAd;
+import tv.superawesome.lib.samodelspace.SAAd;
 
 /**
  * Loader interface
