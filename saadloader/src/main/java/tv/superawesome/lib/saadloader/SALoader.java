@@ -42,8 +42,12 @@ public class SALoader {
         final String endpoint = SALoaderSession.getInstance().getBaseUrl() + "/ad/" + placementId;
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
+        String packageName = "unknown";
         Context c = SAApplication.getSAApplicationContext();
-        if (c != null) type = SAUtils.getNetworkConnectivity(c);
+        if (c != null) {
+            type = SAUtils.getNetworkConnectivity(c);
+            packageName = c.getPackageName();
+        }
 
         JSONObject queryJson = new JSONObject();
         try {
@@ -62,7 +66,7 @@ public class SALoader {
             e.printStackTrace();
         }
         try {
-            queryJson.put("bundle", SAApplication.getSAApplicationContext().getPackageName());
+            queryJson.put("bundle", packageName);
         } catch (JSONException e) {
             e.printStackTrace();
         }
