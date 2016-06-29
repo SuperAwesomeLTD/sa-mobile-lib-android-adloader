@@ -11,6 +11,7 @@ package tv.superawesome.lib.saadloader;
  * Imports needed for this implementation
  */
 
+import android.content.Context;
 import android.util.Log;
 
 import org.json.JSONException;
@@ -39,6 +40,11 @@ public class SALoader {
     public void loadAd(final int placementId, final SALoaderInterface listener){
 
         final String endpoint = SALoaderSession.getInstance().getBaseUrl() + "/ad/" + placementId;
+
+        SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
+        Context c = SAApplication.getSAApplicationContext();
+        if (c != null) type = SAUtils.getNetworkConnectivity(c);
+
         JSONObject queryJson = new JSONObject();
         try {
             queryJson.put("test", SALoaderSession.getInstance().getTest());
@@ -65,9 +71,13 @@ public class SALoader {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         try {
              queryJson.put("dauid", SALoaderSession.getInstance().getDauId());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        try {
+            queryJson.put("ct", type.ordinal());
         } catch (JSONException e) {
             e.printStackTrace();
         }

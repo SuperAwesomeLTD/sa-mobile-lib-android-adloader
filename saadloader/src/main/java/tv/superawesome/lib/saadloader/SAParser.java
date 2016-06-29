@@ -7,10 +7,13 @@
  */
 package tv.superawesome.lib.saadloader;
 
+import android.content.Context;
 import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ConcurrentModificationException;
 
 import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
@@ -79,6 +82,10 @@ public class SAParser {
             return null;
         }
 
+        SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
+        Context c = SAApplication.getSAApplicationContext();
+        if (c != null) ct = SAUtils.getNetworkConnectivity(c);
+
         /** surround with a try catch block */
         try {
             SAAd ad = new SAAd(dict);
@@ -99,6 +106,7 @@ public class SAParser {
                 trackingDict.put("creative", ad.creative.id);
                 trackingDict.put("sdkVersion", SALoaderSession.getInstance().getVersion());
                 trackingDict.put("rnd", SAUtils.getCacheBuster());
+                trackingDict.put("ct", ct.ordinal());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -121,6 +129,7 @@ public class SAParser {
             try {
                 impressionDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
                 impressionDict2.put("rnd", SAUtils.getCacheBuster());
+                impressionDict2.put("ct", ct.ordinal());
                 impressionDict2.put("data", SAUtils.encodeDictAsJsonDict(impressionDict1));
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -142,6 +151,7 @@ public class SAParser {
             try {
                 pgDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
                 pgDict2.put("rnd", SAUtils.getCacheBuster());
+                pgDict2.put("ct", ct.ordinal());
                 pgDict2.put("data", SAUtils.encodeDictAsJsonDict(pgDict1));
             } catch (JSONException e){
                 e.printStackTrace();
