@@ -25,6 +25,7 @@ import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
 import tv.superawesome.lib.samodelspace.SAData;
+import tv.superawesome.lib.sanetwork.request.*;
 
 /**
  * This class gathers all the other parts of the "data" package and unifies the whole loading
@@ -49,53 +50,35 @@ public class SALoader {
             packageName = c.getPackageName();
         }
 
-        JSONObject queryJson = new JSONObject();
+        JSONObject query = new JSONObject();
         try {
-            queryJson.put("test", SALoaderSession.getInstance().getTest());
+            query.put("test", SALoaderSession.getInstance().getTest());
+            query.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+            query.put("rnd", SAUtils.getCacheBuster());
+            query.put("bundle", packageName);
+            query.put("name", SAUtils.getAppLabel());
+            query.put("dauid", SALoaderSession.getInstance().getDauId());
+            query.put("ct", type.ordinal());
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        JSONObject header = new JSONObject();
         try {
-            queryJson.put("sdkVersion", SALoaderSession.getInstance().getVersion());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-            queryJson.put("rnd", SAUtils.getCacheBuster());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-            queryJson.put("bundle", packageName);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-            queryJson.put("name", SAUtils.getAppLabel());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-             queryJson.put("dauid", SALoaderSession.getInstance().getDauId());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
-            queryJson.put("ct", type.ordinal());
+            header.put("Content-Type", "application/json");
+            header.put("User-Agent", SAUtils.getUserAgent());
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
         SANetwork network = new SANetwork();
-        network.asyncGet(endpoint, queryJson, new SANetworkInterface() {
+        network.sendGET(c, endpoint, query, header, new SANetworkInterface() {
             @Override
-            public void success(final Object data) {
+            public void success(int status, String data) {
                 if (data == null) {
                     failAd(listener, placementId);
                     return;
                 }
-
-                Log.d("SuperAwesome-string", data.toString());
 
                 JSONObject dataJson = null;
                 try {
@@ -134,15 +117,13 @@ public class SALoader {
                                 break;
                             }
                         }
-                    }
-                    else {
+                    } else {
                         failAd(listener, placementId);
                     }
                 } catch (JSONException e) {
                     failAd(listener, placementId);
                 }
             }
-
             @Override
             public void failure() {
                 failAd(listener, placementId);
