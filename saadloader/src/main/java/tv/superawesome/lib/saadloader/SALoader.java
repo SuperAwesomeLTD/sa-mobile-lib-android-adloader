@@ -17,6 +17,8 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
@@ -59,6 +61,7 @@ public class SALoader {
             query.put("name", SAUtils.getAppLabel());
             query.put("dauid", SALoaderSession.getInstance().getDauId());
             query.put("ct", type.ordinal());
+            query.put("lang", Locale.getDefault().toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
