@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.Locale;
 
+import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
@@ -42,7 +43,7 @@ public class SALoader {
      */
     public void loadAd(final int placementId, final SALoaderInterface listener){
 
-        final String endpoint = SALoaderSession.getInstance().getBaseUrl() + "/ad/" + placementId;
+        final String endpoint = SASession.getInstance().getBaseUrl() + "/ad/" + placementId;
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
         String packageName = "unknown";
@@ -54,12 +55,12 @@ public class SALoader {
 
         JSONObject query = new JSONObject();
         try {
-            query.put("test", SALoaderSession.getInstance().getTest());
-            query.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+            query.put("test", SASession.getInstance().isTestEnabled());
+            query.put("sdkVersion", SASession.getInstance().getVersion());
             query.put("rnd", SAUtils.getCacheBuster());
             query.put("bundle", packageName);
             query.put("name", SAUtils.getAppLabel());
-            query.put("dauid", SALoaderSession.getInstance().getDauId());
+            query.put("dauid", SASession.getInstance().getDauId());
             query.put("ct", type.ordinal());
             query.put("lang", Locale.getDefault().toString());
         } catch (JSONException e) {

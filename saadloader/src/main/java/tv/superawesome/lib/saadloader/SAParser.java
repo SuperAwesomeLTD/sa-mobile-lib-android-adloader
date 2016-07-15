@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import java.util.ConcurrentModificationException;
 
+import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
@@ -104,14 +105,14 @@ public class SAParser {
                 trackingDict.put("placement", ad.placementId);
                 trackingDict.put("line_item", ad.lineItemId);
                 trackingDict.put("creative", ad.creative.id);
-                trackingDict.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                trackingDict.put("sdkVersion", SASession.getInstance().getVersion());
                 trackingDict.put("rnd", SAUtils.getCacheBuster());
                 trackingDict.put("ct", ct.ordinal());
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-            ad.creative.trackingUrl = SALoaderSession.getInstance().getBaseUrl() +
+            ad.creative.trackingUrl = SASession.getInstance().getBaseUrl() +
                     (ad.creative.creativeFormat == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                     SAUtils.formGetQueryFromDict(trackingDict);
 
@@ -127,7 +128,7 @@ public class SAParser {
             }
             JSONObject impressionDict2 = new JSONObject();
             try {
-                impressionDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                impressionDict2.put("sdkVersion", SASession.getInstance().getVersion());
                 impressionDict2.put("rnd", SAUtils.getCacheBuster());
                 impressionDict2.put("ct", ct.ordinal());
                 impressionDict2.put("data", SAUtils.encodeDictAsJsonDict(impressionDict1));
@@ -135,7 +136,7 @@ public class SAParser {
                 e.printStackTrace();
             }
 
-            ad.creative.viewableImpressionUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(impressionDict2);
+            ad.creative.viewableImpressionUrl = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(impressionDict2);
 
             /** create the parental gate URLs */
             JSONObject pgcloseDict1 = new JSONObject();
@@ -149,14 +150,14 @@ public class SAParser {
             }
             JSONObject pgcloseDict2 = new JSONObject();
             try {
-                pgcloseDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                pgcloseDict2.put("sdkVersion", SASession.getInstance().getVersion());
                 pgcloseDict2.put("rnd", SAUtils.getCacheBuster());
                 pgcloseDict2.put("ct", ct.ordinal());
                 pgcloseDict2.put("data", SAUtils.encodeDictAsJsonDict(pgcloseDict1));
             } catch (JSONException e){
                 e.printStackTrace();
             }
-            ad.creative.parentalGateCloseUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgcloseDict2);
+            ad.creative.parentalGateCloseUrl = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgcloseDict2);
 
             JSONObject pgopenDict1 = new JSONObject();
             try {
@@ -169,14 +170,14 @@ public class SAParser {
             }
             JSONObject pgopenDict2 = new JSONObject();
             try {
-                pgopenDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                pgopenDict2.put("sdkVersion", SASession.getInstance().getVersion());
                 pgopenDict2.put("rnd", SAUtils.getCacheBuster());
                 pgopenDict2.put("ct", ct.ordinal());
                 pgopenDict2.put("data", SAUtils.encodeDictAsJsonDict(pgopenDict1));
             } catch (JSONException e){
                 e.printStackTrace();
             }
-            ad.creative.parentalGateOpenUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgopenDict2);
+            ad.creative.parentalGateOpenUrl = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgopenDict2);
 
             JSONObject pgfailDict1 = new JSONObject();
             try {
@@ -189,14 +190,14 @@ public class SAParser {
             }
             JSONObject pgfailDict2 = new JSONObject();
             try {
-                pgfailDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                pgfailDict2.put("sdkVersion", SASession.getInstance().getVersion());
                 pgfailDict2.put("rnd", SAUtils.getCacheBuster());
                 pgfailDict2.put("ct", ct.ordinal());
                 pgfailDict2.put("data", SAUtils.encodeDictAsJsonDict(pgfailDict1));
             } catch (JSONException e){
                 e.printStackTrace();
             }
-            ad.creative.parentalGateFailUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgfailDict2);
+            ad.creative.parentalGateFailUrl = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgfailDict2);
 
             JSONObject pgsuccessDict1 = new JSONObject();
             try {
@@ -209,14 +210,14 @@ public class SAParser {
             }
             JSONObject pgsuccessDict2 = new JSONObject();
             try {
-                pgsuccessDict2.put("sdkVersion", SALoaderSession.getInstance().getVersion());
+                pgsuccessDict2.put("sdkVersion", SASession.getInstance().getVersion());
                 pgsuccessDict2.put("rnd", SAUtils.getCacheBuster());
                 pgsuccessDict2.put("ct", ct.ordinal());
                 pgsuccessDict2.put("data", SAUtils.encodeDictAsJsonDict(pgsuccessDict1));
             } catch (JSONException e){
                 e.printStackTrace();
             }
-            ad.creative.parentalGateSuccessUrl = SALoaderSession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgsuccessDict2);
+            ad.creative.parentalGateSuccessUrl = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgsuccessDict2);
 
             // cdn url
             switch (ad.creative.creativeFormat) {
