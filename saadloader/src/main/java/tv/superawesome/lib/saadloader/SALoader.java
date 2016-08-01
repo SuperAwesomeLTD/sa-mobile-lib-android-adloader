@@ -52,6 +52,7 @@ public class SALoader {
         if (c != null) {
             type = SAUtils.getNetworkConnectivity(c);
             packageName = c.getPackageName();
+
         }
 
         JSONObject query = SAJsonParser.newObject(new Object[]{
@@ -67,7 +68,7 @@ public class SALoader {
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", SAUtils.getUserAgent()
+                "User-Agent", System.getProperty("http.agent") // SAUtils.getUserAgent()
         });
 
         SANetwork network = new SANetwork();
