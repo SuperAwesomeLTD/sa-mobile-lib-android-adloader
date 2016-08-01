@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import java.util.ConcurrentModificationException;
 
+import tv.superawesome.lib.samodelspace.SACampaignType;
 import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
@@ -48,6 +49,10 @@ public class SAParser {
             else if (ad.creative.format.equals("video")) ad.creative.creativeFormat = SACreativeFormat.video;
             else if (ad.creative.format.contains("rich_media")) ad.creative.creativeFormat = SACreativeFormat.rich;
             else if (ad.creative.format.contains("tag")) ad.creative.creativeFormat = SACreativeFormat.tag;
+
+            /** cpm vs cpi */
+            ad.saCampaignType = SACampaignType.CPM;
+            if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
 
             /** create the tracking URL */
             JSONObject trackingDict = new JSONObject();
