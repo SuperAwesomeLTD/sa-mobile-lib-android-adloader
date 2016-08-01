@@ -27,61 +27,11 @@ import tv.superawesome.lib.samodelspace.SACreativeFormat;
 public class SAParser {
 
     /**
-     * This function tests wherer an Ad is valid; It does so by looking at some crucial ad
-     * data that has to be there, as well as data that has to exist depending on the actual type
-     * of the ad
-     * @param ad - the ad that you want to test
-     * @return - true or false, depending on the success of the tests
-     */
-    public static boolean isAdDataValid(SAAd ad) {
-
-        if (ad == null) return false;
-        if (ad.creative == null)  return false;
-        if (ad.creative.creativeFormat == SACreativeFormat.invalid) return false;
-        if (ad.creative.details == null) return false;
-
-        switch (ad.creative.creativeFormat) {
-            case image:{ if (ad.creative.details.image == null) return false; break; }
-            case video:{ if (ad.creative.details.vast == null)  return false; break; }
-            case rich:{ if (ad.creative.details.url == null)  return false; break; }
-            case tag:{ if (ad.creative.details.tag == null)  return false; break; }
-            default:{ break; }
-        }
-
-        return true;
-    }
-
-    /**
-     * This function performs the Basic integrity check on a piece of data loaded from the
-     * internet
-     * @param dict
-     */
-    private static boolean performIntegrityCheck(JSONObject dict){
-        if (!SAUtils.isJSONEmpty(dict)){
-            JSONObject creative = dict.optJSONObject("creative");
-            if (!SAUtils.isJSONEmpty(creative)){
-                JSONObject details = creative.optJSONObject("details");
-                if (!SAUtils.isJSONEmpty(details)){
-                    return true;
-                }
-                return false;
-            }
-            return false;
-        }
-        return false;
-    }
-
-    /**
      * Parses a dictionary received from the server into a valid Ad object
      * @param dict - the dictionary to parse
      * @param placementId = the placement id - just used because it's not returned by the ad server
      */
     public static SAAd parseDictionaryIntoAd(JSONObject dict, int placementId) {
-        /** perform integrity check */
-        if (!SAParser.performIntegrityCheck(dict)){
-            Log.d("SuperAwesome", "Did not pass integrity check");
-            return null;
-        }
 
         SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
         Context c = SAApplication.getSAApplicationContext();
@@ -238,7 +188,7 @@ public class SAParser {
             }
 
             /** do a validity check */
-            if (!isAdDataValid(ad)) {
+            if (!ad.isValid()) {
                 return null;
             }
 

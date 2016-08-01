@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.util.Locale;
 
+import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
@@ -53,27 +54,21 @@ public class SALoader {
             packageName = c.getPackageName();
         }
 
-        JSONObject query = new JSONObject();
-        try {
-            query.put("test", SASession.getInstance().isTestEnabled());
-            query.put("sdkVersion", SASession.getInstance().getVersion());
-            query.put("rnd", SAUtils.getCacheBuster());
-            query.put("bundle", packageName);
-            query.put("name", SAUtils.getAppLabel());
-            query.put("dauid", SASession.getInstance().getDauId());
-            query.put("ct", type.ordinal());
-            query.put("lang", Locale.getDefault().toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        JSONObject query = SAJsonParser.newObject(new Object[]{
+                "test", SASession.getInstance().isTestEnabled(),
+                "sdkVersion", SASession.getInstance().getVersion(),
+                "rnd", SAUtils.getCacheBuster(),
+                "bundle", packageName,
+                "name", SAUtils.getAppLabel(),
+                "dauid", SASession.getInstance().getDauId(),
+                "ct", type.ordinal(),
+                "lang", Locale.getDefault().toString()
+        });
 
-        JSONObject header = new JSONObject();
-        try {
-            header.put("Content-Type", "application/json");
-            header.put("User-Agent", SAUtils.getUserAgent());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        JSONObject header = SAJsonParser.newObject(new Object[]{
+                "Content-Type", "application/json",
+                "User-Agent", SAUtils.getUserAgent()
+        });
 
         SANetwork network = new SANetwork();
         network.sendGET(c, endpoint, query, header, new SANetworkInterface() {
@@ -86,11 +81,13 @@ public class SALoader {
 
                 JSONObject dataJson = null;
                 try {
-                    dataJson = new JSONObject(data.toString());
-                    Log.d("SuperAwesome-data", dataJson.toString());
+                    dataJson = new JSONObject(data);
+
                     final SAAd ad = SAParser.parseDictionaryIntoAd(dataJson, placementId);
 
                     if (ad != null) {
+
+                        Log.d("SuperAwesome", "Ad data is: " + ad.isValid() + " | " + data);
 
                         ad.creative.details.data = new SAData();
                         SACreativeFormat type = ad.creative.creativeFormat;
@@ -121,10 +118,9 @@ public class SALoader {
                                 break;
                             }
                         }
-                    } else {
-                        failAd(listener, placementId);
-                    }
+                    } else throw new JSONException("");
                 } catch (JSONException e) {
+                    Log.d("SuperAwesome", "Ad data is: false | " + data);
                     failAd(listener, placementId);
                 }
             }
