@@ -74,60 +74,52 @@ public class SALoader {
         SANetwork network = new SANetwork();
         network.sendGET(c, endpoint, query, header, new SANetworkInterface() {
             @Override
-            public void success(int status, String data) {
-                if (data == null) {
+            public void response(int status, String data, boolean success) {
+                if (!success || data == null) {
                     failAd(listener, placementId);
                     return;
                 }
 
-                JSONObject dataJson = null;
-                try {
-                    dataJson = new JSONObject(data);
+                // get data
+                JSONObject dataJson = SAJsonParser.newObject(data);
+                final SAAd ad = SAParser.parseDictionaryIntoAd(dataJson, placementId);
 
-                    final SAAd ad = SAParser.parseDictionaryIntoAd(dataJson, placementId);
+                if (ad != null) {
 
-                    if (ad != null) {
+                    Log.d("SuperAwesome", "Ad data is: " + ad.isValid() + " | " + data);
 
-                        Log.d("SuperAwesome", "Ad data is: " + ad.isValid() + " | " + data);
+                    ad.creative.details.data = new SAData();
+                    SACreativeFormat type = ad.creative.creativeFormat;
 
-                        ad.creative.details.data = new SAData();
-                        SACreativeFormat type = ad.creative.creativeFormat;
-
-                        switch (type) {
-                            case invalid:
-                            case image:
-                            case rich:
-                            case tag: {
-                                ad.creative.details.data.adHtml = SAHTMLParser.formatCreativeDataIntoAdHTML(ad);
-                                didLoadAd(listener, ad);
-                                break;
-                            }
-                            case video: {
-                                SAVASTParser parser = new SAVASTParser();
-
-                                parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
-                                    @Override
-                                    public void didParseVAST(SAVASTAd vastAd) {
-                                        if (vastAd != null) {
-                                            ad.creative.details.data.vastAd = vastAd;
-                                            didLoadAd(listener, ad);
-                                        } else {
-                                            failAd(listener, ad.placementId);
-                                        }
-                                    }
-                                });
-                                break;
-                            }
+                    switch (type) {
+                        case invalid:
+                        case image:
+                        case rich:
+                        case tag: {
+                            ad.creative.details.data.adHtml = SAHTMLParser.formatCreativeDataIntoAdHTML(ad);
+                            didLoadAd(listener, ad);
+                            break;
                         }
-                    } else throw new JSONException("");
-                } catch (JSONException e) {
-                    Log.d("SuperAwesome", "Ad data is: false | " + data);
+                        case video: {
+                            SAVASTParser parser = new SAVASTParser();
+
+                            parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
+                                @Override
+                                public void didParseVAST(SAVASTAd vastAd) {
+                                    if (vastAd != null) {
+                                        ad.creative.details.data.vastAd = vastAd;
+                                        didLoadAd(listener, ad);
+                                    } else {
+                                        failAd(listener, ad.placementId);
+                                    }
+                                }
+                            });
+                            break;
+                        }
+                    }
+                } else {
                     failAd(listener, placementId);
                 }
-            }
-            @Override
-            public void failure() {
-                failAd(listener, placementId);
             }
         });
     }
