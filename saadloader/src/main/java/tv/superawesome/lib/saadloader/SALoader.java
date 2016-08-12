@@ -63,12 +63,13 @@ public class SALoader {
                 "name", SAUtils.getAppLabel(),
                 "dauid", SASession.getInstance().getDauId(),
                 "ct", type.ordinal(),
-                "lang", Locale.getDefault().toString()
+                "lang", Locale.getDefault().toString(),
+                "device", SAUtils.getSystemSize() == SAUtils.SASystemSize.mobile ? "mobile" : "tablet"
         });
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", System.getProperty("http.agent") // SAUtils.getUserAgent()
+                "User-Agent", SAUtils.getUserAgent()
         });
 
         SANetwork network = new SANetwork();
