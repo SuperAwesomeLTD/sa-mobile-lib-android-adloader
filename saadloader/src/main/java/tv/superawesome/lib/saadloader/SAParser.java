@@ -53,8 +53,8 @@ public class SAParser {
             else if (ad.creative.format.contains("tag")) ad.creative.creativeFormat = SACreativeFormat.tag;
 
             /** cpm vs cpi */
-//            ad.saCampaignType = SACampaignType.CPM;
-//            if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
+            ad.saCampaignType = SACampaignType.CPM;
+            if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
 
             JSONObject trackingDict = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
