@@ -36,15 +36,16 @@ public class SALoader {
     /**
      * the function that actually loads the Ad
      * @param placementId - the placement ID a user might want to preload an Ad for
+     * @param session - the current session that helps w/ formatting URLs
      * @param listener - a reference to the listener
      */
-    public void loadAd(final int placementId, final SALoaderInterface listener){
+    public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
 
-        // create a local listener to avoid the "chain of listenerrrrs"
+        // create a local listener to avoid the "chain of listeners"
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAAd ad) {} };
 
         // form the endpoint
-        final String endpoint = SASession.getInstance().getBaseUrl() + "/ad/" + placementId;
+        final String endpoint = session.getBaseUrl() + "/ad/" + placementId;
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
         String packageName = "unknown";
@@ -55,12 +56,12 @@ public class SALoader {
         }
 
         JSONObject query = SAJsonParser.newObject(new Object[]{
-                "test", SASession.getInstance().isTestEnabled(),
-                "sdkVersion", SASession.getInstance().getVersion(),
+                "test", session.isTestEnabled(),
+                "sdkVersion", session.getVersion(),
                 "rnd", SAUtils.getCacheBuster(),
                 "bundle", packageName,
                 "name", SAUtils.getAppLabel(),
-                "dauid", SASession.getInstance().getDauId(),
+                "dauid", session.getDauId(),
                 "ct", type.ordinal(),
                 "lang", Locale.getDefault().toString(),
                 "device", SAUtils.getSystemSize() == SAUtils.SASystemSize.mobile ? "mobile" : "tablet"
@@ -80,7 +81,7 @@ public class SALoader {
                 } else {
                     // get data
                     JSONObject dataJson = SAJsonParser.newObject(data);
-                    final SAAd ad = SAParser.parseInitialAdDataFromNetwork(dataJson, placementId);
+                    final SAAd ad = SAParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
 
                     if (ad != null) {
 

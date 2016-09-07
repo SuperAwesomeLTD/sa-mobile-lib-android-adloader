@@ -32,9 +32,10 @@ public class SAParser {
     /**
      * Parses a dictionary received from the server into a valid Ad object
      * @param dict - the dictionary to parse
+     * @param session - the session object that helps w/ formatting URLs
      * @param placementId = the placement id - just used because it's not returned by the ad server
      */
-    public static SAAd parseInitialAdDataFromNetwork(JSONObject dict, int placementId) {
+    public static SAAd parseInitialAdDataFromNetwork(JSONObject dict, SASession session, int placementId) {
 
         SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
         Context c = SAApplication.getSAApplicationContext();
@@ -60,14 +61,14 @@ public class SAParser {
                     "placement", ad.placementId,
                     "line_item", ad.lineItemId,
                     "creative", ad.creative.id,
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal()
             });
 
             SATracking trackingEvt = new SATracking();
             trackingEvt.event = "sa_tracking";
-            trackingEvt.URL = SASession.getInstance().getBaseUrl() +
+            trackingEvt.URL = session.getBaseUrl() +
                     (ad.creative.creativeFormat == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                     SAUtils.formGetQueryFromDict(trackingDict);
 
@@ -86,7 +87,7 @@ public class SAParser {
             });
 
             JSONObject impressionDict2 = SAJsonParser.newObject(new Object[]{
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal(),
                     "data", SAUtils.encodeDictAsJsonDict(impressionDict1)
@@ -94,7 +95,7 @@ public class SAParser {
 
             SATracking viewableImpression = new SATracking();
             viewableImpression.event = "viewable_impr";
-            viewableImpression.URL = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(impressionDict2);
+            viewableImpression.URL = session.getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(impressionDict2);
 
 
             /** create the parental gate URLs */
@@ -106,7 +107,7 @@ public class SAParser {
             });
 
             JSONObject pgcloseDict2 = SAJsonParser.newObject(new Object[]{
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal(),
                     "data", SAUtils.encodeDictAsJsonDict(pgcloseDict1)
@@ -114,7 +115,7 @@ public class SAParser {
 
             SATracking parentalGateClose = new SATracking();
             parentalGateClose.event = "pg_close";
-            parentalGateClose.URL = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgcloseDict2);
+            parentalGateClose.URL = session.getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgcloseDict2);
 
 
             JSONObject pgopenDict1 = SAJsonParser.newObject(new Object[]{
@@ -125,7 +126,7 @@ public class SAParser {
             });
 
             JSONObject pgopenDict2 = SAJsonParser.newObject(new Object[]{
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal(),
                     "data", SAUtils.encodeDictAsJsonDict(pgopenDict1)
@@ -133,7 +134,7 @@ public class SAParser {
 
             SATracking parentalGateOpen = new SATracking();
             parentalGateOpen.event = "pg_open";
-            parentalGateOpen.URL = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgopenDict2);
+            parentalGateOpen.URL = session.getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgopenDict2);
 
 
             JSONObject pgfailDict1 = SAJsonParser.newObject(new Object[]{
@@ -144,7 +145,7 @@ public class SAParser {
             });
 
             JSONObject pgfailDict2 = SAJsonParser.newObject(new Object[]{
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal(),
                     "data", SAUtils.encodeDictAsJsonDict(pgfailDict1)
@@ -152,7 +153,7 @@ public class SAParser {
 
             SATracking parentalGateFail = new SATracking();
             parentalGateFail.event = "pg_fail";
-            parentalGateFail.URL = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgfailDict2);
+            parentalGateFail.URL = session.getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgfailDict2);
 
 
             JSONObject pgsuccessDict1 = SAJsonParser.newObject(new Object[] {
@@ -163,7 +164,7 @@ public class SAParser {
             });
 
             JSONObject pgsuccessDict2 = SAJsonParser.newObject(new Object[] {
-                    "sdkVersion", SASession.getInstance().getVersion(),
+                    "sdkVersion", session.getVersion(),
                     "rnd", SAUtils.getCacheBuster(),
                     "ct", ct.ordinal(),
                     "data", SAUtils.encodeDictAsJsonDict(pgsuccessDict1)
@@ -171,7 +172,7 @@ public class SAParser {
 
             SATracking parentalGateSuccess = new SATracking();
             parentalGateSuccess.event = "pg_success";
-            parentalGateSuccess.URL = SASession.getInstance().getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgsuccessDict2);
+            parentalGateSuccess.URL = session.getBaseUrl() + "/event?" + SAUtils.formGetQueryFromDict(pgsuccessDict2);
 
             ad.creative.events.add(trackingEvt);
             ad.creative.events.add(viewableImpression);
