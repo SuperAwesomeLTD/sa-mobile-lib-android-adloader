@@ -199,7 +199,10 @@ public class SAVASTParser {
         SAXMLParser.searchSiblingsAndChildrenOf(element, "ClickThrough", new SAXMLParser.SAXMLIterator() {
             @Override
             public void foundElement(Element e) {
-                creative.clickUrl = e.getTextContent().replace("&amp;","&").replace("%3A",":").replace("%2F", "/");
+                SATracking tracking = new SATracking();
+                tracking.event = "click_through";
+                tracking.URL = e.getTextContent().replace("&amp;", "&").replace("%3A", ":").replace("%2F", "/");
+                creative.events.add(tracking);
             }
         });
 
