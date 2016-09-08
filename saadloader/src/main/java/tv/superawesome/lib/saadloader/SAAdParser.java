@@ -57,23 +57,6 @@ public class SAAdParser {
             ad.saCampaignType = SACampaignType.CPM;
             if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
 
-            /** form cpi click url */
-            if (ad.saCampaignType == SACampaignType.CPI) {
-
-                JSONObject referrerData = SAJsonParser.newObject(new Object[]{
-                        "utm_source", session.getConfiguration(),
-                        "utm_campaign", ad.campaignId,
-                        "utm_term", ad.lineItemId,
-                        "utm_content", ad.creative.id,
-                        "utm_medium", ad.placementId
-                });
-                String referrerQuery = SAUtils.formGetQueryFromDict(referrerData);
-                referrerQuery = referrerQuery.replace("&", "%26");
-                referrerQuery = referrerQuery.replace("=", "%3D");
-
-                ad.creative.clickUrlCPI = ad.creative.clickUrl + "&referrer=" + referrerQuery;
-            }
-
             JSONObject trackingDict = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
                     "line_item", ad.lineItemId,
