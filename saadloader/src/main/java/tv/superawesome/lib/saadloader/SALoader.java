@@ -81,7 +81,7 @@ public class SALoader {
                 } else {
                     // get data
                     JSONObject dataJson = SAJsonParser.newObject(data);
-                    final SAAd ad = SAParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
+                    final SAAd ad = SAAdParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
 
                     if (ad != null) {
 

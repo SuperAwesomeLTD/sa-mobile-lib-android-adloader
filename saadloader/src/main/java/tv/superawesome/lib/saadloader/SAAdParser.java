@@ -1,5 +1,5 @@
 /**
- * @class: SAParser.java
+ * @class: SAAdParser.java
  * @copyright: (c) 2015 SuperAwesome Ltd. All rights reserved.
  * @author: Gabriel Coman
  * @date: 29/10/2015
@@ -27,7 +27,7 @@ import tv.superawesome.lib.samodelspace.SACreativeFormat;
  * This is a class of static functions that make it easy to parse Ad responses from the
  * server into SuperAwesome SDK models
  */
-public class SAParser {
+public class SAAdParser {
 
     /**
      * Parses a dictionary received from the server into a valid Ad object
@@ -46,7 +46,7 @@ public class SAParser {
             SAAd ad = new SAAd(dict);
             ad.placementId = placementId;
 
-            /** prform the next steps of the parsing */
+            /** perform the next steps of the parsing */
             ad.creative.creativeFormat = SACreativeFormat.invalid;
             if (ad.creative.format.equals("image_with_link")) ad.creative.creativeFormat = SACreativeFormat.image;
             else if (ad.creative.format.equals("video")) ad.creative.creativeFormat = SACreativeFormat.video;
@@ -56,6 +56,23 @@ public class SAParser {
             /** cpm vs cpi */
             ad.saCampaignType = SACampaignType.CPM;
             if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
+
+            /** form cpi click url */
+            if (ad.saCampaignType == SACampaignType.CPI) {
+
+                JSONObject referrerData = SAJsonParser.newObject(new Object[]{
+                        "utm_source", session.getConfiguration(),
+                        "utm_campaign", ad.campaignId,
+                        "utm_term", ad.lineItemId,
+                        "utm_content", ad.creative.id,
+                        "utm_medium", ad.placementId
+                });
+                String referrerQuery = SAUtils.formGetQueryFromDict(referrerData);
+                referrerQuery = referrerQuery.replace("&", "%26");
+                referrerQuery = referrerQuery.replace("=", "%3D");
+
+                ad.creative.clickUrlCPI = ad.creative.clickUrl + "&referrer=" + referrerQuery;
+            }
 
             JSONObject trackingDict = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
@@ -77,7 +94,6 @@ public class SAParser {
                 impr.URL = ad.creative.impressionUrl;
                 impr.event = "impression";
             }
-
 
             JSONObject impressionDict1 = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
