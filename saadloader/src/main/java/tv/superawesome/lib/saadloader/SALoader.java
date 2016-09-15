@@ -56,7 +56,7 @@ public class SALoader {
         }
 
         JSONObject query = SAJsonParser.newObject(new Object[]{
-                "test", session.isTestEnabled(),
+                "test", session.getTestMode(),
                 "sdkVersion", session.getVersion(),
                 "rnd", SAUtils.getCacheBuster(),
                 "bundle", packageName,
