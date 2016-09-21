@@ -8,20 +8,16 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
-import android.util.Log;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ConcurrentModificationException;
-
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
+import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACampaignType;
+import tv.superawesome.lib.samodelspace.SACreativeFormat;
 import tv.superawesome.lib.samodelspace.SATracking;
 import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.*;
-import tv.superawesome.lib.samodelspace.SAAd;
-import tv.superawesome.lib.samodelspace.SACreativeFormat;
+import tv.superawesome.lib.sautils.SAUtils;
 
 /**
  * This is a class of static functions that make it easy to parse Ad responses from the
@@ -29,17 +25,22 @@ import tv.superawesome.lib.samodelspace.SACreativeFormat;
  */
 public class SAAdParser {
 
+    private Context context = null;
+
+    public SAAdParser (Context context) {
+        this.context = context;
+    }
+
     /**
      * Parses a dictionary received from the server into a valid Ad object
      * @param dict - the dictionary to parse
      * @param session - the session object that helps w/ formatting URLs
      * @param placementId = the placement id - just used because it's not returned by the ad server
      */
-    public static SAAd parseInitialAdDataFromNetwork(JSONObject dict, SASession session, int placementId) {
+    public SAAd parseInitialAdDataFromNetwork(JSONObject dict, SASession session, int placementId) {
 
         SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
-        Context c = SAApplication.getSAApplicationContext();
-        if (c != null) ct = SAUtils.getNetworkConnectivity(c);
+        if (context != null) ct = SAUtils.getNetworkConnectivity(context);
 
         /** surround with a try catch block */
         try {

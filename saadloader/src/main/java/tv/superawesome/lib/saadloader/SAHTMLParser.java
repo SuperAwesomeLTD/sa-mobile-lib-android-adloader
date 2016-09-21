@@ -7,17 +7,12 @@
  */
 package tv.superawesome.lib.saadloader;
 
-/**
- * Imports needed for this class
- */
-
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 
+import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SATracking;
 import tv.superawesome.lib.sautils.SAUtils;
-import tv.superawesome.lib.samodelspace.SAAd;
 
 /**
  * Created by gabriel.coman on 10/12/15.

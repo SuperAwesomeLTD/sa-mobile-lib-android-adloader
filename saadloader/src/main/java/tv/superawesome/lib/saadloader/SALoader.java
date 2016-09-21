@@ -1,15 +1,4 @@
-/**
- * @class: SALoader.java
- * @copyright: (c) 2015 SuperAwesome Ltd. All rights reserved.
- * @author: Gabriel Coman
- * @date: 28/09/2015
- *
- */
 package tv.superawesome.lib.saadloader;
-
-/**
- * Imports needed for this implementation
- */
 
 import android.content.Context;
 import android.util.Log;
@@ -19,19 +8,25 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
-import tv.superawesome.lib.samodelspace.SAMedia;
-import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.SAUtils;
-import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
-import tv.superawesome.lib.sanetwork.request.*;
+import tv.superawesome.lib.samodelspace.SAMedia;
+import tv.superawesome.lib.sanetwork.request.SANetwork;
+import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
+import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sautils.SAUtils;
 
 /**
  * This class gathers all the other parts of the "data" package and unifies the whole loading
  * experience for the user
  */
 public class SALoader {
+
+    private Context context = null;
+
+    public SALoader (Context context) {
+        this.context = context;
+    }
 
     /**
      * the function that actually loads the Ad
@@ -49,10 +44,9 @@ public class SALoader {
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
         String packageName = "unknown";
-        Context c = SAApplication.getSAApplicationContext();
-        if (c != null) {
-            type = SAUtils.getNetworkConnectivity(c);
-            packageName = c.getPackageName();
+        if (context != null) {
+            type = SAUtils.getNetworkConnectivity(context);
+            packageName = context.getPackageName();
         }
 
         JSONObject query = SAJsonParser.newObject(new Object[]{
@@ -60,7 +54,7 @@ public class SALoader {
                 "sdkVersion", session.getVersion(),
                 "rnd", SAUtils.getCacheBuster(),
                 "bundle", packageName,
-                "name", SAUtils.getAppLabel(),
+                "name", SAUtils.getAppLabel(context),
                 "dauid", session.getDauId(),
                 "ct", type.ordinal(),
                 "lang", Locale.getDefault().toString(),
@@ -69,11 +63,11 @@ public class SALoader {
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", SAUtils.getUserAgent()
+                "User-Agent", SAUtils.getUserAgent(context)
         });
 
         SANetwork network = new SANetwork();
-        network.sendGET(c, endpoint, query, header, new SANetworkInterface() {
+        network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
             @Override
             public void response(int status, String data, boolean success) {
                 if (!success || data == null) {
@@ -81,7 +75,8 @@ public class SALoader {
                 } else {
                     // get data
                     JSONObject dataJson = SAJsonParser.newObject(data);
-                    final SAAd ad = SAAdParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
+                    SAAdParser adParser = new SAAdParser(context);
+                    final SAAd ad = adParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
 
                     if (ad != null) {
 
@@ -100,7 +95,7 @@ public class SALoader {
                                 break;
                             }
                             case video: {
-                                SAVASTParser parser = new SAVASTParser();
+                                SAVASTParser parser = new SAVASTParser(context);
                                 parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
                                     @Override
                                     public void didParseVAST(SAAd vastAd) {

@@ -1,5 +1,6 @@
 package tv.superawesome.lib.saadloader;
 
+import android.content.Context;
 import android.util.Log;
 
 import org.json.JSONObject;
@@ -24,13 +25,18 @@ import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
-import tv.superawesome.lib.sautils.SAApplication;
 import tv.superawesome.lib.sautils.SAUtils;
 
 /**
  * Created by gabriel.coman on 25/08/16.
  */
 public class SAVASTParser {
+
+    private Context context = null;
+
+    public SAVASTParser (Context context) {
+        this.context = context;
+    }
 
     /**
      * The main parse function of the parser
@@ -43,7 +49,7 @@ public class SAVASTParser {
             @Override
             public void didParseVAST(final SAAd ad) {
                 if (ad.creative.details.media != null) {
-                    SAFileDownloader downloader = new SAFileDownloader(SAApplication.getSAApplicationContext());
+                    SAFileDownloader downloader = new SAFileDownloader(context);
                     downloader.downloadFile(ad.creative.details.media.playableMediaUrl, ad.creative.details.media.playableDiskUrl, new SAFileDownloaderInterface() {
                         @Override
                         public void response(boolean success) {
@@ -68,11 +74,11 @@ public class SAVASTParser {
         /** step 1: get the XML */
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", SAUtils.getUserAgent()
+                "User-Agent", SAUtils.getUserAgent(context)
         });
 
         final SANetwork network = new SANetwork();
-        network.sendGET(SAApplication.getSAApplicationContext(), url, new JSONObject(), header, new SANetworkInterface() {
+        network.sendGET(context, url, new JSONObject(), header, new SANetworkInterface() {
             @Override
             public void response(int status, String VAST, boolean success) {
                 SAAd empty = new SAAd();
