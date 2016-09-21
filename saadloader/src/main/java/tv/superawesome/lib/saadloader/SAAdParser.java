@@ -72,12 +72,6 @@ public class SAAdParser {
                     (ad.creative.creativeFormat == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                     SAUtils.formGetQueryFromDict(trackingDict);
 
-            SATracking impr = new SATracking();
-            if (ad.creative.impressionUrl != null) {
-                impr.URL = ad.creative.impressionUrl;
-                impr.event = "impression";
-            }
-
             JSONObject impressionDict1 = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
                     "line_item", ad.lineItemId,
@@ -179,8 +173,21 @@ public class SAAdParser {
             ad.creative.events.add(parentalGateFail);
             ad.creative.events.add(parentalGateOpen);
             ad.creative.events.add(parentalGateSuccess);
+
+            // add impression
             if (ad.creative.impressionUrl != null) {
+                SATracking impr = new SATracking();
+                impr.URL = ad.creative.impressionUrl;
+                impr.event = "impression";
                 ad.creative.events.add(impr);
+            }
+
+            // add install
+            if (ad.creative.installUrl != null) {
+                SATracking inst = new SATracking();
+                inst.URL = ad.creative.installUrl;
+                inst.event = "install";
+                ad.creative.events.add(inst);
             }
 
             // cdn url
