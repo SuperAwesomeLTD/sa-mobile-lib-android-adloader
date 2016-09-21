@@ -25,36 +25,26 @@ import tv.superawesome.lib.sautils.SAUtils;
  */
 public class SAAdParser {
 
-    private Context context = null;
-
-    public SAAdParser (Context context) {
-        this.context = context;
-    }
-
     /**
      * Parses a dictionary received from the server into a valid Ad object
      * @param dict - the dictionary to parse
-     * @param session - the session object that helps w/ formatting URLs
+     * @param session - the current session
      * @param placementId = the placement id - just used because it's not returned by the ad server
      */
     public SAAd parseInitialAdDataFromNetwork(JSONObject dict, SASession session, int placementId) {
 
-        SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
-        if (context != null) ct = SAUtils.getNetworkConnectivity(context);
-
-        /** surround with a try catch block */
         try {
             SAAd ad = new SAAd(dict);
             ad.placementId = placementId;
 
-            /** perform the next steps of the parsing */
+            // perform the next steps of the parsing
             ad.creative.creativeFormat = SACreativeFormat.invalid;
             if (ad.creative.format.equals("image_with_link")) ad.creative.creativeFormat = SACreativeFormat.image;
             else if (ad.creative.format.equals("video")) ad.creative.creativeFormat = SACreativeFormat.video;
             else if (ad.creative.format.contains("rich_media")) ad.creative.creativeFormat = SACreativeFormat.rich;
             else if (ad.creative.format.contains("tag")) ad.creative.creativeFormat = SACreativeFormat.tag;
 
-            /** cpm vs cpi */
+            // cpm vs cpi/
             ad.saCampaignType = SACampaignType.CPM;
             if (ad.campaignType == 1) ad.saCampaignType = SACampaignType.CPI;
 
@@ -63,8 +53,8 @@ public class SAAdParser {
                     "line_item", ad.lineItemId,
                     "creative", ad.creative.id,
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal()
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType()
             });
 
             SATracking trackingEvt = new SATracking();
@@ -82,8 +72,8 @@ public class SAAdParser {
 
             JSONObject impressionDict2 = SAJsonParser.newObject(new Object[]{
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal(),
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType(),
                     "data", SAUtils.encodeDictAsJsonDict(impressionDict1)
             });
 
@@ -102,8 +92,8 @@ public class SAAdParser {
 
             JSONObject pgcloseDict2 = SAJsonParser.newObject(new Object[]{
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal(),
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType(),
                     "data", SAUtils.encodeDictAsJsonDict(pgcloseDict1)
             });
 
@@ -121,8 +111,8 @@ public class SAAdParser {
 
             JSONObject pgopenDict2 = SAJsonParser.newObject(new Object[]{
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal(),
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType(),
                     "data", SAUtils.encodeDictAsJsonDict(pgopenDict1)
             });
 
@@ -140,8 +130,8 @@ public class SAAdParser {
 
             JSONObject pgfailDict2 = SAJsonParser.newObject(new Object[]{
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal(),
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType(),
                     "data", SAUtils.encodeDictAsJsonDict(pgfailDict1)
             });
 
@@ -159,8 +149,8 @@ public class SAAdParser {
 
             JSONObject pgsuccessDict2 = SAJsonParser.newObject(new Object[] {
                     "sdkVersion", session.getVersion(),
-                    "rnd", SAUtils.getCacheBuster(),
-                    "ct", ct.ordinal(),
+                    "rnd", session.getCachebuster(),
+                    "ct", session.getConnectionType(),
                     "data", SAUtils.encodeDictAsJsonDict(pgsuccessDict1)
             });
 
@@ -209,12 +199,12 @@ public class SAAdParser {
                 }
             }
 
-            /** do a validity check */
+            // do a validity check
             if (!ad.isValid()) {
                 return null;
             }
 
-            /** return proper ad */
+            // return proper ad
             return ad;
         } catch (Exception e){
             return null;

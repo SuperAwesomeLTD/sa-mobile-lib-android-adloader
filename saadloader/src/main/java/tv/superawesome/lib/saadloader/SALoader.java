@@ -1,11 +1,8 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
-import android.util.Log;
 
 import org.json.JSONObject;
-
-import java.util.Locale;
 
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.SAAd;
@@ -14,7 +11,6 @@ import tv.superawesome.lib.samodelspace.SAMedia;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.SAUtils;
 
 /**
  * This class gathers all the other parts of the "data" package and unifies the whole loading
@@ -42,28 +38,21 @@ public class SALoader {
         // form the endpoint
         final String endpoint = session.getBaseUrl() + "/ad/" + placementId;
 
-        SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
-        String packageName = "unknown";
-        if (context != null) {
-            type = SAUtils.getNetworkConnectivity(context);
-            packageName = context.getPackageName();
-        }
-
         JSONObject query = SAJsonParser.newObject(new Object[]{
                 "test", session.getTestMode(),
                 "sdkVersion", session.getVersion(),
-                "rnd", SAUtils.getCacheBuster(),
-                "bundle", packageName,
-                "name", SAUtils.getAppLabel(context),
+                "rnd", session.getCachebuster(),
+                "bundle", session.getPackageName(),
+                "name", session.getAppName(),
                 "dauid", session.getDauId(),
-                "ct", type.ordinal(),
-                "lang", Locale.getDefault().toString(),
-                "device", SAUtils.getSystemSize() == SAUtils.SASystemSize.mobile ? "mobile" : "tablet"
+                "ct", session.getConnectionType(),
+                "lang", session.getLang(),
+                "device", session.getDevice()
         });
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", SAUtils.getUserAgent(context)
+                "User-Agent", session.getUserAgent()
         });
 
         SANetwork network = new SANetwork();
@@ -75,12 +64,10 @@ public class SALoader {
                 } else {
                     // get data
                     JSONObject dataJson = SAJsonParser.newObject(data);
-                    SAAdParser adParser = new SAAdParser(context);
+                    SAAdParser adParser = new SAAdParser();
                     final SAAd ad = adParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
 
                     if (ad != null) {
-
-                        Log.d("SuperAwesome", "Ad data is: " + ad.isValid() + " | " + data);
 
                         SACreativeFormat type = ad.creative.creativeFormat;
 
