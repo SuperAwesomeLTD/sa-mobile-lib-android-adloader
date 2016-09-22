@@ -2,12 +2,15 @@ package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
 import tv.superawesome.lib.samodelspace.SAMedia;
+import tv.superawesome.lib.samodelspace.SAResponse;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
@@ -19,9 +22,15 @@ import tv.superawesome.lib.sasession.SASession;
 public class SALoader {
 
     private Context context = null;
+    private SAAdParser adParser = null;
 
+    /**
+     * Constructor
+     * @param context - current contet
+     */
     public SALoader (Context context) {
         this.context = context;
+        adParser = new SAAdParser();
     }
 
     /**
@@ -33,7 +42,7 @@ public class SALoader {
     public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
 
         // create a local listener to avoid the "chain of listeners"
-        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAAd ad) {} };
+        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
 
         // form the endpoint
         final String endpoint = session.getBaseUrl() + "/ad/" + placementId;
@@ -59,42 +68,119 @@ public class SALoader {
         network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
             @Override
             public void response(int status, String data, boolean success) {
+
+                final SAResponse def = new SAResponse();
+                def.status = status;
+
                 if (!success || data == null) {
-                    localListener.didLoadAd(null);
-                } else {
-                    // get data
-                    JSONObject dataJson = SAJsonParser.newObject(data);
-                    SAAdParser adParser = new SAAdParser();
-                    final SAAd ad = adParser.parseInitialAdDataFromNetwork(dataJson, session, placementId);
+                    localListener.didLoadAd(def);
+                }
+                else {
 
-                    if (ad != null) {
+                    // declare the two possible json outcomes
+                    JSONObject jsonObject = null;
+                    JSONArray jsonArray = null;
 
-                        SACreativeFormat type = ad.creative.creativeFormat;
+                    // try to get json Object
+                    try {
+                        jsonObject = new JSONObject(data);
+                    } catch (JSONException e) {
+                        // do nothing
+                    }
 
-                        switch (type) {
-                            case invalid:
-                            case image:
-                            case rich:
-                            case tag: {
-                                ad.creative.details.media = new SAMedia();
-                                ad.creative.details.media.html = SAHTMLParser.formatCreativeDataIntoAdHTML(ad);
-                                localListener.didLoadAd(ad);
-                                break;
+                    // try to get json Array
+                    try {
+                        jsonArray = new JSONArray(data);
+                    } catch (JSONException e) {
+                        // do nothing
+                    }
+
+                    // Normal Ad case
+                    if (jsonObject != null) {
+
+                        // form the ad response
+                        final SAResponse response = new SAResponse();
+                        response.status = status;
+
+                        // parse the final ad
+                        final SAAd ad = adParser.parseInitialAdDataFromNetwork(jsonObject, session, placementId);
+
+                        if (ad != null) {
+
+                            // add an ad to the response
+                            response.ads.add(ad);
+
+                            // define type
+                            SACreativeFormat type = ad.creative.creativeFormat;
+
+                            switch (type) {
+                                case invalid:
+                                case image:
+                                case rich:
+                                case tag: {
+                                    ad.creative.details.media = new SAMedia();
+                                    ad.creative.details.media.html = SAHTMLParser.formatCreativeDataIntoAdHTML(ad);
+                                    localListener.didLoadAd(response);
+                                    break;
+                                }
+                                case video: {
+                                    SAVASTParser parser = new SAVASTParser(context);
+                                    parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
+                                        @Override
+                                        public void didParseVAST(SAAd vastAd) {
+                                            ad.sumAd(vastAd);
+                                            localListener.didLoadAd(response);
+                                        }
+                                    });
+                                    break;
+                                }
                             }
-                            case video: {
-                                SAVASTParser parser = new SAVASTParser(context);
-                                parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
-                                    @Override
-                                    public void didParseVAST(SAAd vastAd) {
-                                        ad.sumAd(vastAd);
-                                        localListener.didLoadAd(ad);
+                        } else {
+                            localListener.didLoadAd(response);
+                        }
+                    }
+                    // GameWall case
+                    else if (jsonArray != null) {
+
+                        // create response
+                        final SAResponse response = new SAResponse();
+                        response.status = status;
+
+                        // add ads to it
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            try {
+
+                                // parse ad
+                                SAAd ad = adParser.parseInitialAdDataFromNetwork(jsonArray.getJSONObject(i), session, placementId);
+
+                                // if all's OK add to response
+                                if (ad != null) {
+
+                                    SACreativeFormat format = ad.creative.creativeFormat;
+
+                                    // only add image type ads - no rich media or videos in the
+                                    // GameWall for now
+                                    if (format == SACreativeFormat.image) {
+                                        response.ads.add(ad);
                                     }
-                                });
-                                break;
+                                }
+                            } catch (JSONException e) {
+                                // do nothing
                             }
                         }
-                    } else {
-                        localListener.didLoadAd(null);
+
+                        // get all resources for the GameWall
+                        SAGameWallParser gameWallParser = new SAGameWallParser(context);
+                        gameWallParser.getGameWallResources(response.ads, new SAGameWallParserInterface() {
+                            @Override
+                            public void gotAllImages() {
+                                // return response
+                                localListener.didLoadAd(response);
+                            }
+                        });
+                    }
+                    else {
+                        localListener.didLoadAd(def);
                     }
                 }
             }

@@ -50,7 +50,7 @@ public class SAVASTParser {
             public void didParseVAST(final SAAd ad) {
                 if (ad.creative.details.media != null) {
                     SAFileDownloader downloader = new SAFileDownloader(context);
-                    downloader.downloadFile(ad.creative.details.media.playableMediaUrl, ad.creative.details.media.playableDiskUrl, new SAFileDownloaderInterface() {
+                    downloader.downloadFile(ad.creative.details.media.playableMediaUrl, ad.creative.details.media.playableDiskUrl, "mp4", new SAFileDownloaderInterface() {
                         @Override
                         public void response(boolean success) {
                             ad.creative.details.media.isOnDisk = success;
@@ -266,7 +266,7 @@ public class SAVASTParser {
         SAMedia media = new SAMedia();
         media.type = element.getAttribute("type");
         media.playableMediaUrl = element.getTextContent().replace(" ", "");
-        media.playableDiskUrl = SAFileDownloader.getDiskLocation();
+        media.playableDiskUrl = SAFileDownloader.getDiskLocation("mp4");
         return media;
     }
 
