@@ -100,6 +100,7 @@ public class SALoader {
 
                         // form the ad response
                         final SAResponse response = new SAResponse();
+                        response.placementId = placementId;
                         response.status = status;
 
                         // parse the final ad
@@ -112,6 +113,9 @@ public class SALoader {
 
                             // define type
                             SACreativeFormat type = ad.creative.creativeFormat;
+
+                            // update type in response as well
+                            response.format = type;
 
                             switch (type) {
                                 case invalid:
@@ -144,6 +148,8 @@ public class SALoader {
 
                         // create response
                         final SAResponse response = new SAResponse();
+                        response.placementId = placementId;
+                        response.format = SACreativeFormat.gamewall;
                         response.status = status;
 
                         // add ads to it
