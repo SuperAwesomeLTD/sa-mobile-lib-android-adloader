@@ -43,6 +43,7 @@ public class SAAdParser {
             else if (ad.creative.format.equals("video")) ad.creative.creativeFormat = SACreativeFormat.video;
             else if (ad.creative.format.contains("rich_media")) ad.creative.creativeFormat = SACreativeFormat.rich;
             else if (ad.creative.format.contains("tag")) ad.creative.creativeFormat = SACreativeFormat.tag;
+            else if (ad.creative.format.contains("gamewall")) ad.creative.creativeFormat = SACreativeFormat.gamewall;
 
             // cpm vs cpi/
             ad.saCampaignType = SACampaignType.CPM;
@@ -62,6 +63,19 @@ public class SAAdParser {
             trackingEvt.URL = session.getBaseUrl() +
                     (ad.creative.creativeFormat == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                     SAUtils.formGetQueryFromDict(trackingDict);
+
+            JSONObject impressionDict = SAJsonParser.newObject(new Object[] {
+                    "placement", ad.placementId,
+                    "creative", ad.creative.id,
+                    "line_item", ad.lineItemId,
+                    "sdkVersion", session.getVersion(),
+                    "rnd", session.getCachebuster(),
+                    "no_image", true
+            });
+
+            SATracking saImpressionEvt = new SATracking();
+            saImpressionEvt.event = "sa_impression";
+            saImpressionEvt.URL = session.getBaseUrl() + "/impression?" + SAUtils.formGetQueryFromDict(impressionDict);
 
             JSONObject impressionDict1 = SAJsonParser.newObject(new Object[]{
                     "placement", ad.placementId,
@@ -164,6 +178,7 @@ public class SAAdParser {
             ad.creative.events.add(parentalGateFail);
             ad.creative.events.add(parentalGateOpen);
             ad.creative.events.add(parentalGateSuccess);
+            ad.creative.events.add(saImpressionEvt);
 
             // add impression
             if (ad.creative.impressionUrl != null) {
@@ -185,6 +200,7 @@ public class SAAdParser {
             switch (ad.creative.creativeFormat) {
                 case tag:
                 case invalid: { break; }
+                case gamewall:
                 case image: {
                     ad.creative.details.cdnUrl = SAUtils.findBaseURLFromResourceURL(ad.creative.details.image);
                     break;
