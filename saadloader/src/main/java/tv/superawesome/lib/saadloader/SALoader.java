@@ -56,7 +56,8 @@ public class SALoader {
                 "dauid", session.getDauId(),
                 "ct", session.getConnectionType(),
                 "lang", session.getLang(),
-                "device", session.getDevice()
+                "device", session.getDevice(),
+                "preload", true
         });
 
         JSONObject header = SAJsonParser.newObject(new Object[]{

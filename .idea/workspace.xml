@@ -12,7 +12,7 @@
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/saadloader.iml" afterPath="$PROJECT_DIR$/saadloader/saadloader.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAAdParser.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAAdParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -174,10 +174,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="local.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.19280206">
               <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding />
             </state>
@@ -194,10 +194,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saadloader/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78791773">
+            <state vertical-scroll-proportion="0.0">
               <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
               <folding />
             </state>
@@ -208,7 +208,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/superawesome/tv/saadloaderdemo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding>
                 <element signature="e#2414#2682#0" expanded="true" />
                 <element signature="e#2681#2682#0" expanded="true" />
@@ -676,9 +676,9 @@
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.6.7" />
+                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.6.8" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader067Library" />
+                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader068Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare tv.superawesome.lib.sajsonparser:sajsonparser:0.2.1" />
@@ -1325,9 +1325,9 @@
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.6.7" />
+                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.6.8" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader067Library" />
+                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader068Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare tv.superawesome.lib.sajsonparser:sajsonparser:0.2.1" />
@@ -2598,12 +2598,12 @@
         <option value="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.2.1/jars/classes.jar!/tv/superawesome/lib/sanetwork/file/SAFileDownloader.class" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAGameWallParserInterface.java" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
         <option value="$PROJECT_DIR$/saadloader/build.gradle" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAGameWallParser.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAVASTParser.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/superawesome/tv/saadloaderdemo/MainActivity.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAAdParser.java" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
         <option value="$PROJECT_DIR$/local.properties" />
       </list>
     </option>
@@ -2637,9 +2637,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2738,6 +2737,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -3001,7 +3001,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29399142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29399142" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18526466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -3365,14 +3365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAGameWallParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3401,10 +3393,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/superawesome/tv/saadloaderdemo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
             <element signature="e#2414#2682#0" expanded="true" />
             <element signature="e#2681#2682#0" expanded="true" />
@@ -3414,16 +3422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.19280206">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78791773">
-          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
           <folding />
         </state>
       </provider>
