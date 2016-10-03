@@ -32,19 +32,19 @@ public class SAGameWallParser {
                 listener.gotAllImages();
             }
         } else {
-            SAAd ad = ads.get(i);
+            final SAAd ad = ads.get(i);
             ad.creative.details.media.playableMediaUrl = ad.creative.details.image;
 
             // create the image
             String[] names = ad.creative.details.media.playableMediaUrl.split("\\.");
             String ext = "png";
             if (names.length > 0) ext = names[names.length - 1];
-            ad.creative.details.media.playableDiskUrl = "tmpimg_" + (new Random()).nextInt(65548) + "." + ext;
 
-            SAFileDownloader fileDownloader = new SAFileDownloader(c);
-            fileDownloader.downloadFile(ad.creative.details.media.playableMediaUrl, ad.creative.details.media.playableDiskUrl, ext, new SAFileDownloaderInterface() {
+            SAFileDownloader.getInstance().downloadFileFrom(c, ad.creative.details.media.playableMediaUrl, ext, new SAFileDownloaderInterface() {
                 @Override
-                public void response(boolean b) {
+                public void response(boolean success, String diskUrl) {
+                    ad.creative.details.media.isOnDisk = success;
+                    ad.creative.details.media.playableDiskUrl = diskUrl;
                     getImages(c, i+1, max, ads, listener);
                 }
             });

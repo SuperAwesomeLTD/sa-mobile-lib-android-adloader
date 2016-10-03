@@ -69,11 +69,12 @@ public class SALoader {
             @Override
             public void response(int status, String data, boolean success) {
 
-                final SAResponse def = new SAResponse();
-                def.status = status;
+                final SAResponse response = new SAResponse();
+                response.status = status;
+                response.placementId = placementId;
 
                 if (!success || data == null) {
-                    localListener.didLoadAd(def);
+                    localListener.didLoadAd(response);
                 }
                 else {
 
@@ -98,24 +99,17 @@ public class SALoader {
                     // Normal Ad case
                     if (jsonObject != null) {
 
-                        // form the ad response
-                        final SAResponse response = new SAResponse();
-                        response.placementId = placementId;
-                        response.status = status;
-
                         // parse the final ad
                         final SAAd ad = adParser.parseInitialAdDataFromNetwork(jsonObject, session, placementId);
 
                         if (ad != null) {
-
-                            // add an ad to the response
-                            response.ads.add(ad);
 
                             // define type
                             SACreativeFormat type = ad.creative.creativeFormat;
 
                             // update type in response as well
                             response.format = type;
+                            response.ads.add(ad);
 
                             switch (type) {
                                 case invalid:
@@ -146,11 +140,8 @@ public class SALoader {
                     // GameWall case
                     else if (jsonArray != null) {
 
-                        // create response
-                        final SAResponse response = new SAResponse();
-                        response.placementId = placementId;
+                        // assign correct format
                         response.format = SACreativeFormat.gamewall;
-                        response.status = status;
 
                         // add ads to it
                         for (int i = 0; i < jsonArray.length(); i++) {
@@ -186,7 +177,7 @@ public class SALoader {
                         });
                     }
                     else {
-                        localListener.didLoadAd(def);
+                        localListener.didLoadAd(response);
                     }
                 }
             }
