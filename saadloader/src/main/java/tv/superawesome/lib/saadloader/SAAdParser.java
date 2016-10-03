@@ -74,7 +74,7 @@ public class SAAdParser {
             });
 
             SATracking saImpressionEvt = new SATracking();
-            saImpressionEvt.event = "sa_impression";
+            saImpressionEvt.event = "sa_impr";
             saImpressionEvt.URL = session.getBaseUrl() + "/impression?" + SAUtils.formGetQueryFromDict(impressionDict);
 
             JSONObject impressionDict1 = SAJsonParser.newObject(new Object[]{
