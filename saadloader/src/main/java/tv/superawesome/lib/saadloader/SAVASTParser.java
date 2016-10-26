@@ -50,7 +50,7 @@ public class SAVASTParser {
             public void didParseVAST(final SAAd ad) {
                 if (ad.creative.details.media != null) {
 
-                    SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.playableMediaUrl, "mp4", new SAFileDownloaderInterface() {
+                    SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.playableMediaUrl, new SAFileDownloaderInterface() {
                         @Override
                         public void response(boolean success, String diskUrl) {
                             ad.creative.details.media.isOnDisk = success;

@@ -40,7 +40,7 @@ public class SAGameWallParser {
             String ext = "png";
             if (names.length > 0) ext = names[names.length - 1];
 
-            SAFileDownloader.getInstance().downloadFileFrom(c, ad.creative.details.media.playableMediaUrl, ext, new SAFileDownloaderInterface() {
+            SAFileDownloader.getInstance().downloadFileFrom(c, ad.creative.details.media.playableMediaUrl, new SAFileDownloaderInterface() {
                 @Override
                 public void response(boolean success, String diskUrl) {
                     ad.creative.details.media.isOnDisk = success;
