@@ -54,7 +54,7 @@ public class SALoader {
                 "bundle", session.getPackageName(),
                 "name", session.getAppName(),
                 "dauid", session.getDauId(),
-                "ct", session.getConnectionType(),
+                "ct", session.getConnectionType().ordinal(),
                 "lang", session.getLang(),
                 "device", session.getDevice()
                 // "preload", true
@@ -124,7 +124,7 @@ public class SALoader {
                                 }
                                 case video: {
                                     SAVASTParser parser = new SAVASTParser(context);
-                                    parser.parseVASTAds(ad.creative.details.vast, new SAVASTParserInterface() {
+                                    parser.parseVASTAds(ad.creative.details.vast, session, new SAVASTParserInterface() {
                                         @Override
                                         public void didParseVAST(SAAd vastAd) {
                                             ad.sumAd(vastAd);

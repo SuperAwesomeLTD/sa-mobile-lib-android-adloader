@@ -25,6 +25,7 @@ import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
+import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
 
 /**
@@ -33,6 +34,7 @@ import tv.superawesome.lib.sautils.SAUtils;
 public class SAVASTParser {
 
     private Context context = null;
+    private SAUtils.SAConnectionType connectionType = SAUtils.SAConnectionType.unknown;
 
     public SAVASTParser (Context context) {
         this.context = context;
@@ -41,10 +43,15 @@ public class SAVASTParser {
     /**
      * The main parse function of the parser
      * @param url - URL where the VAST resides
+     * @param session - the current session
      * @param listener - a SAVASTParserInterface listener object
      */
-    public void parseVASTAds(final String url, final SAVASTParserInterface listener) {
+    public void parseVASTAds(final String url, final SASession session, final SAVASTParserInterface listener) {
 
+        // get the current connectivity status
+        connectionType = session.getConnectionType();
+
+        // parse the current vast
         this.parseVAST(url, new SAVASTParserInterface() {
             @Override
             public void didParseVAST(final SAAd ad) {
@@ -139,7 +146,7 @@ public class SAVASTParser {
      * @param adElement XML element
      * @return a SAAd object
      */
-    public static SAAd parseAdXML(Element adElement) {
+    private SAAd parseAdXML(Element adElement) {
         final SAAd ad = new SAAd();
 
         ad.error = 0;
@@ -199,7 +206,7 @@ public class SAVASTParser {
      * @param element a XML element
      * @return a valid SACreative model
      */
-    public static SACreative parseCreativeXML (Element element) {
+    private SACreative parseCreativeXML (Element element) {
 
         final SACreative creative = new SACreative();
         creative.events = new ArrayList<>();
@@ -246,15 +253,75 @@ public class SAVASTParser {
 
         creative.details = new SADetails();
 
+        final List<SAMedia> mediaFiles = new ArrayList<>();
+        final SAMedia[] defaultMedia = {null};
+
         SAXMLParser.searchSiblingsAndChildrenOf(element, "MediaFile", new SAXMLParser.SAXMLIterator() {
             @Override
             public void foundElement(Element e) {
                 SAMedia media = parseMediaXML(e);
                 if (media.type.contains("mp4") || media.type.contains(".mp4")) {
-                    creative.details.media = media;
+                    mediaFiles.add(media);
+                    defaultMedia[0] = media;
                 }
             }
         });
+
+        if (mediaFiles.size() >= 1 && defaultMedia[0] != null) {
+            // get the videos at different bit rates
+            List<SAMedia> bitrate360 = new ArrayList<>();
+            for (SAMedia m : mediaFiles) {
+                if (m.bitrate == 360) {
+                    bitrate360.add(m);
+                }
+            }
+            List<SAMedia> bitrate540 = new ArrayList<>();
+            for (SAMedia m : mediaFiles) {
+                if (m.bitrate == 540) {
+                    bitrate540.add(m);
+                }
+            }
+            List<SAMedia> bitrate720 = new ArrayList<>();
+            for (SAMedia m : mediaFiles) {
+                if (m.bitrate == 720) {
+                    bitrate720.add(m);
+                }
+            }
+
+            SAMedia media360 = bitrate360.size() >= 1 ? bitrate360.get(0) : null;
+            SAMedia media540 = bitrate540.size() >= 1 ? bitrate540.get(0) : null;
+            SAMedia media720 = bitrate720.size() >= 1 ? bitrate720.get(0) : null;
+
+            // when connection is:
+            //  1) cellular unknown
+            //  2) 2g
+            // try to get the lowest media possible
+            if (connectionType == SAUtils.SAConnectionType.cellular_unknown ||
+                connectionType == SAUtils.SAConnectionType.cellular_2g) {
+                creative.details.media = media360;
+            }
+            // when connection is:
+            //  1) 3g
+            // try to get the medium media
+            else if (connectionType == SAUtils.SAConnectionType.cellular_3g) {
+                creative.details.media = media540;
+            }
+            // when connection is:
+            //  1) unknown
+            //  2) 4g
+            //  3) wifi
+            //  4) ethernet
+            // try to get the best media available
+            else {
+                creative.details.media = media720;
+            }
+        }
+
+        // if somehow no media was added (because of legacy VAST)
+        // then just add the default media (which should be the 720 one)
+        if (creative.details.media == null) {
+            creative.details.media = defaultMedia[0];
+        }
 
         return creative;
     }
@@ -268,6 +335,14 @@ public class SAVASTParser {
         SAMedia media = new SAMedia();
         media.type = element.getAttribute("type");
         media.playableMediaUrl = element.getTextContent().replace(" ", "");
+        String bitstr = element.getAttribute("bitrate");
+        if (bitstr != null) {
+            try {
+                media.bitrate = Integer.parseInt(bitstr);
+            } catch (NumberFormatException e) {
+                // do nothing
+            }
+        }
         media.playableDiskUrl = null;
         return media;
     }
