@@ -168,8 +168,8 @@ public class SALoader {
                         }
 
                         // get all resources for the GameWall
-                        SAGameWallParser gameWallParser = new SAGameWallParser(context);
-                        gameWallParser.getGameWallResources(response.ads, new SAGameWallParserInterface() {
+                        SAAppWallParser gameWallParser = new SAAppWallParser(context);
+                        gameWallParser.getAppWallResources(response.ads, new SAAppWallParserInterface() {
                             @Override
                             public void gotAllImages() {
                                 // return response
