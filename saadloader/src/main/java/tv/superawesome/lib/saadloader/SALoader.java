@@ -142,7 +142,7 @@ public class SALoader {
                     else if (jsonArray != null) {
 
                         // assign correct format
-                        response.format = SACreativeFormat.gamewall;
+                        response.format = SACreativeFormat.appwall;
 
                         // add ads to it
                         for (int i = 0; i < jsonArray.length(); i++) {
