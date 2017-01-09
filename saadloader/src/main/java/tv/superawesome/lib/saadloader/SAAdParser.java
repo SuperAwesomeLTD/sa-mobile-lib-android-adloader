@@ -39,7 +39,7 @@ public class SAAdParser {
                             "line_item", ad.lineItemId,
                             "creative", ad.creative.id,
                             "sdkVersion", session.getVersion(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType()
                     }));
@@ -53,7 +53,7 @@ public class SAAdParser {
                             "creative", ad.creative.id,
                             "line_item", ad.lineItemId,
                             "sdkVersion", session.getVersion(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "rnd", session.getCachebuster(),
                             "no_image", true
                     }));
@@ -66,13 +66,13 @@ public class SAAdParser {
                             "sdkVersion", session.getVersion(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                            "placement", ad.placementId,
-                            "line_item", ad.lineItemId,
-                            "creative", ad.creative.id,
-                            "type", "viewable_impression"
-                    }))
+                                "placement", ad.placementId,
+                                "line_item", ad.lineItemId,
+                                "creative", ad.creative.id,
+                                "type", "viewable_impression"
+                            }))
                     }));
 
             SATracking parentalGateClose = new SATracking();
@@ -83,13 +83,13 @@ public class SAAdParser {
                             "sdkVersion", session.getVersion(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
-                            "placement", ad.placementId,
-                            "line_item", ad.lineItemId,
-                            "creative", ad.creative.id,
-                            "type", "parentalGateClose"
-                    }))
+                                "placement", ad.placementId,
+                                "line_item", ad.lineItemId,
+                                "creative", ad.creative.id,
+                                "type", "parentalGateClose"
+                            }))
                     }));
 
 
@@ -101,13 +101,13 @@ public class SAAdParser {
                             "sdkVersion", session.getVersion(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                            "placement", ad.placementId,
-                            "line_item", ad.lineItemId,
-                            "creative", ad.creative.id,
-                            "type", "parentalGateOpen"
-                    }))
+                                "placement", ad.placementId,
+                                "line_item", ad.lineItemId,
+                                "creative", ad.creative.id,
+                                "type", "parentalGateOpen"
+                            }))
                     }));
 
             SATracking parentalGateFail = new SATracking();
@@ -118,13 +118,13 @@ public class SAAdParser {
                             "sdkVersion", session.getVersion(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
-                            "placement", ad.placementId,
-                            "line_item", ad.lineItemId,
-                            "creative", ad.creative.id,
-                            "type", "parentalGateFail"
-                    }))
+                                "placement", ad.placementId,
+                                "line_item", ad.lineItemId,
+                                "creative", ad.creative.id,
+                                "type", "parentalGateFail"
+                            }))
                     }));
 
             SATracking parentalGateSuccess = new SATracking();
@@ -135,13 +135,13 @@ public class SAAdParser {
                             "sdkVersion", session.getVersion(),
                             "rnd", session.getCachebuster(),
                             "ct", session.getConnectionType(),
-                            "bundle", session.getPackageName(),
+                            "sourceBundle", session.getPackageName(),
                             "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                            "placement", ad.placementId,
-                            "line_item", ad.lineItemId,
-                            "creative", ad.creative.id,
-                            "type", "parentalGateSuccess"
-                    }))
+                                "placement", ad.placementId,
+                                "line_item", ad.lineItemId,
+                                "creative", ad.creative.id,
+                                "type", "parentalGateSuccess"
+                            }))
                     }));
 
             SATracking externalImpression = new SATracking();
