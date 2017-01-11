@@ -33,10 +33,10 @@ public class SAParser {
      * @param dict - the dictionary to parse
      * @param placementId = the placement id - just used because it's not returned by the ad server
      */
-    public static SAAd parseDictionaryIntoAd(JSONObject dict, int placementId) {
+    public static SAAd parseDictionaryIntoAd(Context c, JSONObject dict, int placementId) {
 
         SAUtils.SAConnectionType ct = SAUtils.SAConnectionType.unknown;
-        Context c = SAApplication.getSAApplicationContext();
+        // Context c = SAApplication.getSAApplicationContext();
         if (c != null) ct = SAUtils.getNetworkConnectivity(c);
 
         /** surround with a try catch block */

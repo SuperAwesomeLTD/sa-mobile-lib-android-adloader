@@ -42,13 +42,13 @@ public class SALoader {
      * @param placementId - the placement ID a user might want to preload an Ad for
      * @param listener - a reference to the listener
      */
-    public void loadAd(final int placementId, final SALoaderInterface listener){
+    public void loadAd(final Context c, final int placementId, final SALoaderInterface listener){
 
         final String endpoint = SASession.getInstance().getBaseUrl() + "/ad/" + placementId;
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
         String packageName = "unknown";
-        Context c = SAApplication.getSAApplicationContext();
+        // Context c = SAApplication.getSAApplicationContext();
         if (c != null) {
             type = SAUtils.getNetworkConnectivity(c);
             packageName = c.getPackageName();
@@ -60,7 +60,7 @@ public class SALoader {
                 "sdkVersion", SASession.getInstance().getVersion(),
                 "rnd", SAUtils.getCacheBuster(),
                 "bundle", packageName,
-                "name", SAUtils.getAppLabel(),
+                "name", SAUtils.getAppLabel(c),
                 "dauid", SASession.getInstance().getDauId(),
                 "ct", type.ordinal(),
                 "lang", Locale.getDefault().toString()
@@ -68,7 +68,7 @@ public class SALoader {
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", System.getProperty("http.agent") // SAUtils.getUserAgent()
+                "User-Agent", SAUtils.getUserAgent(c)
         });
 
         SANetwork network = new SANetwork();
@@ -82,7 +82,7 @@ public class SALoader {
 
                 // get data
                 JSONObject dataJson = SAJsonParser.newObject(data);
-                final SAAd ad = SAParser.parseDictionaryIntoAd(dataJson, placementId);
+                final SAAd ad = SAParser.parseDictionaryIntoAd(c, dataJson, placementId);
 
                 if (ad != null) {
 

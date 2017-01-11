@@ -145,11 +145,11 @@ public class SAHTMLParser {
 
         String tagString = ad.creative.details.tag;
         tagString = tagString.replace("[click]", ad.creative.trackingUrl + "&redir=");
-        try {
+//        try {
             tagString = tagString.replace("[click_enc]", SAUtils.encodeURL(ad.creative.trackingUrl));
-        } catch (URISyntaxException | MalformedURLException e) {
-            e.printStackTrace();
-        }
+//        } catch (URISyntaxException | MalformedURLException e) {
+//            e.printStackTrace();
+//        }
         tagString = tagString.replace("[keywords]", "");
         tagString = tagString.replace("[timestamp]", "");
         tagString = tagString.replace("target=\"_blank\"", "");
