@@ -13,23 +13,24 @@ package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
 import android.util.Log;
+import android.webkit.WebView;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Locale;
 
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
-import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.SAUtils;
-import tv.superawesome.lib.savastparser.SAVASTParser;
-import tv.superawesome.lib.savastparser.SAVASTParserInterface;
-import tv.superawesome.lib.samodelspace.SAVASTAd;
-import tv.superawesome.lib.sautils.*;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
 import tv.superawesome.lib.samodelspace.SAData;
-import tv.superawesome.lib.sanetwork.request.*;
+import tv.superawesome.lib.samodelspace.SAVASTAd;
+import tv.superawesome.lib.sanetwork.request.SANetwork;
+import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
+import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sautils.SAApplication;
+import tv.superawesome.lib.sautils.SAUtils;
+import tv.superawesome.lib.savastparser.SAVASTParser;
+import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
 /**
  * This class gathers all the other parts of the "data" package and unifies the whole loading
@@ -42,17 +43,21 @@ public class SALoader {
      * @param placementId - the placement ID a user might want to preload an Ad for
      * @param listener - a reference to the listener
      */
-    public void loadAd(final Context c, final int placementId, final SALoaderInterface listener){
+    public void loadAd(final int placementId, final SALoaderInterface listener){
 
         final String endpoint = SASession.getInstance().getBaseUrl() + "/ad/" + placementId;
 
         SAUtils.SAConnectionType type = SAUtils.SAConnectionType.unknown;
         String packageName = "unknown";
-        // Context c = SAApplication.getSAApplicationContext();
+        final Context c = SAApplication.getSAApplicationContext();
         if (c != null) {
             type = SAUtils.getNetworkConnectivity(c);
             packageName = c.getPackageName();
+        }
 
+        String ua = System.getProperty("http.agent");
+        if (c != null) {
+            ua = (new WebView(c)).getSettings().getUserAgentString();
         }
 
         JSONObject query = SAJsonParser.newObject(new Object[]{
@@ -60,7 +65,7 @@ public class SALoader {
                 "sdkVersion", SASession.getInstance().getVersion(),
                 "rnd", SAUtils.getCacheBuster(),
                 "bundle", packageName,
-                "name", SAUtils.getAppLabel(c),
+                "name", SAUtils.getAppLabel(),
                 "dauid", SASession.getInstance().getDauId(),
                 "ct", type.ordinal(),
                 "lang", Locale.getDefault().toString()
@@ -68,7 +73,7 @@ public class SALoader {
 
         JSONObject header = SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", SAUtils.getUserAgent(c)
+                "User-Agent", ua
         });
 
         SANetwork network = new SANetwork();
