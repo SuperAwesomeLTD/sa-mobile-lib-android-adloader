@@ -265,6 +265,7 @@ public class SALoader {
                                 // GameWall for now
                                 if (ad.creative.creativeFormat == SACreativeFormat.image) {
                                     response.ads.add(ad);
+                                    ad.creative.creativeFormat = SACreativeFormat.appwall;
                                 }
                             } catch (JSONException e) {
                                 // do nothing
