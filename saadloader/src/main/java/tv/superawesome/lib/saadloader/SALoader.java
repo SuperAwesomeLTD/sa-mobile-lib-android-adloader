@@ -5,7 +5,6 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -152,8 +151,6 @@ public class SALoader {
              */
             @Override
             public void response(int status, String data, boolean success) {
-
-                Log.d("SuperAwesome", "Raw data " + data);
 
                 // create a new object of type SAResponse
                 final SAResponse response = new SAResponse();

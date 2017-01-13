@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/appwallad.json" afterPath="$PROJECT_DIR$/samples/appwallad.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,7 +164,32 @@
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="155" column="48" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="48" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SAProcessEvents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#121#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SALoaderInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
               </folding>
@@ -198,19 +223,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAUtils.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/jars/classes.jar!/tv/superawesome/lib/sautils/SAUtils.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="223" column="35" selection-start-line="223" selection-start-column="35" selection-end-line="223" selection-end-column="42" />
-              <folding>
-                <element signature="e#8100#8101#0" expanded="true" />
-                <element signature="e#8160#8161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SAAdLoader_ProcessHTML_Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -228,7 +240,7 @@
       <file leaf-file-name="SAProcessHTML.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-345">
+            <state relative-caret-position="930">
               <caret line="64" column="44" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="44" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
@@ -247,21 +259,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="local.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/local.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="767" column="106" selection-start-line="767" selection-start-column="106" selection-end-line="767" selection-end-column="106" />
+            <state relative-caret-position="433">
+              <caret line="842" column="118" selection-start-line="842" selection-start-column="118" selection-end-line="842" selection-end-column="118" />
               <folding>
                 <element signature="e#1507#6710#0" expanded="true" />
                 <element signature="e#6709#6710#0" expanded="true" />
@@ -275,21 +287,8 @@
                 <element signature="e#34399#34400#0" expanded="true" />
                 <element signature="e#34484#39988#0" expanded="true" />
                 <element signature="e#39987#39988#0" expanded="true" />
-                <element signature="e#40072#45846#0" expanded="true" />
-                <element signature="e#45845#45846#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SASession.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/jars/classes.jar!/tv/superawesome/lib/sasession/SASession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
-              <folding>
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#4000#4001#0" expanded="true" />
+                <element signature="e#40072#46992#0" expanded="true" />
+                <element signature="e#46991#46992#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2987,9 +2986,9 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
-        <option value="$PROJECT_DIR$/local.properties" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+        <option value="$PROJECT_DIR$/local.properties" />
       </list>
     </option>
   </component>
@@ -3169,7 +3168,7 @@
       <recent name="tv.superawesome.lib.saadloader.postprocessor" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Tests.testAds()">
+  <component name="RunManager" selected="Android Tests.TestSuite">
     <configuration default="false" name="TestSuite" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -3639,8 +3638,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.testAds()" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.testAds()" />
         <item index="2" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]" />
         <item index="3" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [install]" />
         <item index="4" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
@@ -3741,14 +3740,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testAds() - 2017.01.13 at 15h 00m 59s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 01m 40s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 02m 53s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestSuite - 2017.01.13 at 15h 25m 18s.xml">
+      <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="testAds() - 2017.01.13 at 15h 05m 01s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
@@ -3769,6 +3762,12 @@
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="testAds() - 2017.01.13 at 15h 16m 19s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 24m 40s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 25m 10s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
   </component>
@@ -3944,16 +3943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -4034,17 +4023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/jars/classes.jar!/tv/superawesome/lib/sasession/SASession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -4063,16 +4041,6 @@
           <folding>
             <element signature="e#8100#8101#0" expanded="true" />
             <element signature="e#8160#8161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4111,11 +4079,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="433">
+          <caret line="842" column="118" selection-start-line="842" selection-start-column="118" selection-end-line="842" selection-end-column="118" />
+          <folding>
+            <element signature="e#1507#6710#0" expanded="true" />
+            <element signature="e#6709#6710#0" expanded="true" />
+            <element signature="e#6757#12171#0" expanded="true" />
+            <element signature="e#12170#12171#0" expanded="true" />
+            <element signature="e#17958#23298#0" expanded="true" />
+            <element signature="e#23297#23298#0" expanded="true" />
+            <element signature="e#23382#28872#0" expanded="true" />
+            <element signature="e#28871#28872#0" expanded="true" />
+            <element signature="e#28956#34400#0" expanded="true" />
+            <element signature="e#34399#34400#0" expanded="true" />
+            <element signature="e#34484#39988#0" expanded="true" />
+            <element signature="e#39987#39988#0" expanded="true" />
+            <element signature="e#40072#46992#0" expanded="true" />
+            <element signature="e#46991#46992#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4130,33 +4113,49 @@
     <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="155" column="48" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="48" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="767" column="106" selection-start-line="767" selection-start-column="106" selection-end-line="767" selection-end-column="106" />
+        <state relative-caret-position="270">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
           <folding>
-            <element signature="e#1507#6710#0" expanded="true" />
-            <element signature="e#6709#6710#0" expanded="true" />
-            <element signature="e#6757#12171#0" expanded="true" />
-            <element signature="e#12170#12171#0" expanded="true" />
-            <element signature="e#17958#23298#0" expanded="true" />
-            <element signature="e#23297#23298#0" expanded="true" />
-            <element signature="e#23382#28872#0" expanded="true" />
-            <element signature="e#28871#28872#0" expanded="true" />
-            <element signature="e#28956#34400#0" expanded="true" />
-            <element signature="e#34399#34400#0" expanded="true" />
-            <element signature="e#34484#39988#0" expanded="true" />
-            <element signature="e#39987#39988#0" expanded="true" />
-            <element signature="e#40072#45846#0" expanded="true" />
-            <element signature="e#45845#45846#0" expanded="true" />
+            <element signature="e#0#121#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="64" column="44" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
