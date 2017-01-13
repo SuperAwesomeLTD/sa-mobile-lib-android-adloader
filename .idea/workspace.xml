@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/saadloader.iml" afterPath="$PROJECT_DIR$/saadloader/saadloader.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,14 +160,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SAProcessEvents.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+      <file leaf-file-name="SALoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+            <state relative-caret-position="-150">
+              <caret line="107" column="68" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,7 +247,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/local.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -258,16 +257,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="230" column="111" selection-start-line="230" selection-start-column="111" selection-end-line="230" selection-end-column="111" />
+            <state relative-caret-position="352">
+              <caret line="612" column="58" selection-start-line="612" selection-start-column="58" selection-end-line="612" selection-end-column="58" />
               <folding>
-                <element signature="e#1478#6552#0" expanded="true" />
-                <element signature="e#6551#6552#0" expanded="true" />
-                <element signature="e#6599#12023#0" expanded="true" />
-                <element signature="e#12022#12023#0" expanded="true" />
+                <element signature="e#1507#6710#0" expanded="true" />
+                <element signature="e#6709#6710#0" expanded="true" />
+                <element signature="e#6757#12171#0" expanded="true" />
+                <element signature="e#12170#12171#0" expanded="true" />
+                <element signature="e#17958#23298#0" expanded="true" />
+                <element signature="e#23297#23298#0" expanded="true" />
+                <element signature="e#23382#28872#0" expanded="true" />
+                <element signature="e#28871#28872#0" expanded="true" />
+                <element signature="e#28956#34292#0" expanded="true" />
+                <element signature="e#34291#34292#0" expanded="true" />
+                <element signature="e#34376#34649#0" expanded="true" />
+                <element signature="e#34648#34649#0" expanded="true" />
+                <element signature="e#34733#35006#0" expanded="true" />
+                <element signature="e#35005#35006#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2974,13 +2983,13 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/superawesome/tv/saadloaderdemo/MainActivity.java" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
         <option value="$PROJECT_DIR$/local.properties" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
       </list>
     </option>
   </component>
@@ -3160,7 +3169,7 @@
       <recent name="tv.superawesome.lib.saadloader.postprocessor" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]">
+  <component name="RunManager" selected="Android Tests.testAds()">
     <configuration default="false" name="TestSuite" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -3630,10 +3639,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [install]" />
-        <item index="2" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
-        <item index="3" class="java.lang.String" itemvalue="Android Tests.testAds()" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.testAds()" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [install]" />
         <item index="4" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
       </list>
     </recent_temporary>
@@ -3732,34 +3741,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SAAdLoader_Async_Tes___ - 2017.01.13 at 14h 06m 43s.xml">
-      <configuration name="SAAdLoader_Async_Tes..." configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="TestSuite - 2017.01.13 at 14h 13m 42s.xml">
       <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 08m 26s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 10m 11s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 10m 29s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 11m 30s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 12m 18s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 12m 41s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestSuite - 2017.01.13 at 14h 49m 41s.xml">
+      <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="testAds() - 2017.01.13 at 14h 12m 56s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="testAds() - 2017.01.13 at 14h 13m 34s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 52m 15s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 54m 06s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 54m 35s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 56m 17s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 56m 35s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 14h 59m 50s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
   </component>
@@ -3776,7 +3785,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4764268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43548387" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43548387" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3785,7 +3794,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24105866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25250357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25250357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3824,14 +3833,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#121#0" expanded="true" />
-            <element signature="e#2186#2187#0" expanded="true" />
-            <element signature="e#2224#2225#0" expanded="true" />
-            <element signature="e#5185#13557#0" expanded="true" />
-            <element signature="e#8976#10397#0" expanded="true" />
-            <element signature="e#9652#10323#0" expanded="true" />
-            <element signature="e#10322#10323#0" expanded="true" />
-            <element signature="e#10396#10397#0" expanded="true" />
-            <element signature="e#13556#13557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4033,24 +4034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-            <element signature="e#2186#2187#0" expanded="true" />
-            <element signature="e#2224#2225#0" expanded="true" />
-            <element signature="e#5185#13557#0" expanded="true" />
-            <element signature="e#8976#10397#0" expanded="true" />
-            <element signature="e#9652#10323#0" expanded="true" />
-            <element signature="e#10322#10323#0" expanded="true" />
-            <element signature="e#10396#10397#0" expanded="true" />
-            <element signature="e#13556#13557#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -4128,16 +4111,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+    <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="230" column="111" selection-start-line="230" selection-start-column="111" selection-end-line="230" selection-end-column="111" />
-          <folding>
-            <element signature="e#1478#6552#0" expanded="true" />
-            <element signature="e#6551#6552#0" expanded="true" />
-            <element signature="e#6599#12023#0" expanded="true" />
-            <element signature="e#12022#12023#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4149,11 +4127,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="-150">
+          <caret line="107" column="68" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="612" column="58" selection-start-line="612" selection-start-column="58" selection-end-line="612" selection-end-column="58" />
+          <folding>
+            <element signature="e#1507#6710#0" expanded="true" />
+            <element signature="e#6709#6710#0" expanded="true" />
+            <element signature="e#6757#12171#0" expanded="true" />
+            <element signature="e#12170#12171#0" expanded="true" />
+            <element signature="e#17958#23298#0" expanded="true" />
+            <element signature="e#23297#23298#0" expanded="true" />
+            <element signature="e#23382#28872#0" expanded="true" />
+            <element signature="e#28871#28872#0" expanded="true" />
+            <element signature="e#28956#34292#0" expanded="true" />
+            <element signature="e#34291#34292#0" expanded="true" />
+            <element signature="e#34376#34649#0" expanded="true" />
+            <element signature="e#34648#34649#0" expanded="true" />
+            <element signature="e#34733#35006#0" expanded="true" />
+            <element signature="e#35005#35006#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

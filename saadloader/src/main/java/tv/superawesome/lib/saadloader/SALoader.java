@@ -105,22 +105,40 @@ public class SALoader {
     }
 
     /**
-     * Method that actually handles the whole of the ad loading
+     * Shorthand method that only takes a placement Id and a session
      *
      * @param placementId   the AwesomeAds ID to load an ad for
      * @param session       the current session to load the placement Id for
-     * @param listener      placement copy so that the loader can return the response to the
+     * @param listener      listener copy so that the loader can return the response to the
      *                      library user
      */
     public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
-
-        // create a local listener to avoid null pointer exceptions
-        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
 
         // get connection things to AwesomeAds
         String endpoint = getAwesomeAdsEndpoint(session, placementId);
         JSONObject query = getAwesomeAdsQuery(session);
         JSONObject header = getAwesomeAdsHeader(session);
+
+        // call to the load ad method
+        loadAd(endpoint, query, header, placementId, session, listener);
+    }
+
+    /**
+     * Method that actually loads the ad
+     *
+     * @param endpoint      endpoint from where to get an ad resource
+     * @param query         additional query parameters
+     * @param header        request header
+     * @param placementId   placement Id (bc it's not returned by the request)
+     * @param session       current session
+     * @param listener      listener copy so that the loader can return the response to the
+     *                      library user
+     */
+    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SASession session, SALoaderInterface listener) {
+
+        // create a local listener to avoid null pointer exceptions
+        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
+
 
         SANetwork network = new SANetwork();
         network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
@@ -290,5 +308,6 @@ public class SALoader {
                 }
             }
         });
+
     }
 }
