@@ -1,15 +1,22 @@
+/**
+ * @Copyright:   SuperAwesome Trading Limited 2017
+ * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
+ */
 package tv.superawesome.lib.saadloader;
 
 import tv.superawesome.lib.samodelspace.SAResponse;
 
 /**
- * Loader interface
+ * Interface used by the SALoader class to send events back to the library users when an ad
+ * has finally been fully downloaded and processed
  */
 public interface SALoaderInterface {
 
     /**
-     * After SALoader pre-loads an Ad, this is the function that should be called
-     * @param ad - sends back the Ad object that was loaded
+     * Method that needs to be implemented in order for the loader to be able to send back
+     * a callback
+     *
+     * @param response an object of type SAResponse
      */
     void didLoadAd(SAResponse response);
 

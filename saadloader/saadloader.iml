@@ -87,11 +87,12 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.4/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.4.7/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.2.6/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.3/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.8/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.5/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.0/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.6/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
@@ -103,15 +104,15 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/poms" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="sajsonparser-0.2.4" level="project" />
-    <orderEntry type="library" exported="" name="sasession-0.2.3" level="project" />
-    <orderEntry type="library" exported="" name="samodelspace-0.4.7" level="project" />
-    <orderEntry type="library" exported="" name="sanetwork-0.2.6" level="project" />
-    <orderEntry type="library" exported="" name="sautils-0.2.8" level="project" />
+    <orderEntry type="library" exported="" name="samodelspace-0.5.0" level="project" />
+    <orderEntry type="library" exported="" name="savastparser-0.4.6" level="project" />
+    <orderEntry type="library" exported="" name="sajsonparser-0.2.5" level="project" />
+    <orderEntry type="library" exported="" name="sasession-0.2.5" level="project" />
+    <orderEntry type="library" exported="" name="sanetwork-0.3.4" level="project" />
+    <orderEntry type="library" exported="" name="sautils-0.2.9" level="project" />
   </component>
 </module>

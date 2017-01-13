@@ -1,3 +1,7 @@
+/**
+ * @Copyright:   SuperAwesome Trading Limited 2017
+ * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
+ */
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
@@ -6,48 +10,80 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import tv.superawesome.lib.saadloader.postprocessor.SAProcessEvents;
+import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
-import tv.superawesome.lib.samodelspace.SAMedia;
 import tv.superawesome.lib.samodelspace.SAResponse;
+import tv.superawesome.lib.samodelspace.SAVASTAd;
+import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
+import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
+import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloader;
+import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.savastparser.SAVASTParser;
+import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
 /**
- * This class gathers all the other parts of the "data" package and unifies the whole loading
- * experience for the user
+ * This class abstracts away the loading of a SuperAwesome ad server by the server.
+ * It tries to handle two major case
+ *  - when the ad comes alone, in the case of image, rich media, tag, video
+ *  - when the ads come as an array, in the case of app wall
+ *
+ * Additionally it will try to:
+ *  - for image, rich media and tag ads, format the needed HTML to display the ad in a web view
+ *  - for video ads, parse the associated VAST tag and get all the events and media files;
+ *    also it will try to download the media resource on disk
+ *  - for app wall ads, download all the image resources associated with each ad in the wall
  */
 public class SALoader {
 
+    // private context
     private Context context = null;
-    private SAAdParser adParser = null;
 
     /**
-     * Constructor
-     * @param context - current contet
+     * Standard constructor with a context
+     *
+     * @param context copy a reference to the context
      */
     public SALoader (Context context) {
         this.context = context;
-        adParser = new SAAdParser();
     }
 
     /**
-     * the function that actually loads the Ad
-     * @param placementId - the placement ID a user might want to preload an Ad for
-     * @param session - the current session that helps w/ formatting URLs
-     * @param listener - a reference to the listener
+     * Method that creates the standard AwesomeAds session
+     *
+     * @param session       current session
+     * @param placementId   current placement Id
+     * @return              an url of the form https://ads.superawesome.tv/v2/ad/7212
      */
-    public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
+    public String getAwesomeAdsEndpoint (SASession session, int placementId) {
+        return session.getBaseUrl() + "/ad/" + placementId;
+    }
 
-        // create a local listener to avoid the "chain of listeners"
-        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
-
-        // form the endpoint
-        final String endpoint = session.getBaseUrl() + "/ad/" + placementId;
-
-        JSONObject query = SAJsonParser.newObject(new Object[]{
+    /**
+     * Method that creates the additional query paramters that will need to be appended to the
+     * AwesomeAds endpoint
+     *
+     * @param session   current session
+     * @return          a JSONObject containing the necessary query params, such as:
+     *                  - test mode
+     *                  - sdk version
+     *                  - cache buster
+     *                  - bundle & app name
+     *                  - DAU Id for frequency capping
+     *                  - connection type as an integer
+     *                  - current language as "en_US"
+     *                  - type of device as string, "phone" or "tablet"
+     */
+    public JSONObject getAwesomeAdsQuery (SASession session) {
+        return SAJsonParser.newObject(new Object[]{
                 "test", session.getTestMode(),
                 "sdkVersion", session.getVersion(),
                 "rnd", session.getCachebuster(),
@@ -59,24 +95,55 @@ public class SALoader {
                 "device", session.getDevice()
                 // "preload", true
         });
+    }
 
-        JSONObject header = SAJsonParser.newObject(new Object[]{
+    public JSONObject getAwesomeAdsHeader (SASession session) {
+        return SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
                 "User-Agent", session.getUserAgent()
         });
+    }
+
+    /**
+     * Method that actually handles the whole of the ad loading
+     *
+     * @param placementId   the AwesomeAds ID to load an ad for
+     * @param session       the current session to load the placement Id for
+     * @param listener      placement copy so that the loader can return the response to the
+     *                      library user
+     */
+    public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
+
+        // create a local listener to avoid null pointer exceptions
+        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
+
+        // get connection things to AwesomeAds
+        String endpoint = getAwesomeAdsEndpoint(session, placementId);
+        JSONObject query = getAwesomeAdsQuery(session);
+        JSONObject header = getAwesomeAdsHeader(session);
 
         SANetwork network = new SANetwork();
         network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
+            /**
+             * Overridden method of the SANetworkInterface in which I process the ad response
+             *
+             * @param status    status of the SuperAwesome ad request
+             * @param data      payload returned by the ad server
+             * @param success   success status
+             */
             @Override
             public void response(int status, String data, boolean success) {
 
+                // create a new object of type SAResponse
                 final SAResponse response = new SAResponse();
                 response.status = status;
                 response.placementId = placementId;
 
+                // error case, just bail out with a non-null invalid response
                 if (!success || data == null) {
                     localListener.didLoadAd(response);
                 }
+                // good case, continue trying to figure out what kind of ad this is
                 else {
 
                     // declare the two possible json outcomes
@@ -101,44 +168,67 @@ public class SALoader {
                     if (jsonObject != null) {
 
                         // parse the final ad
-                        final SAAd ad = adParser.parseInitialAdDataFromNetwork(jsonObject, session, placementId);
+                        final SAAd ad = new SAAd(jsonObject);
+                        ad.placementId = placementId;
+                        // add events
+                        SAProcessEvents.addAdEvents(ad, session);
 
-                        if (ad != null) {
+                        // update type in response as well
+                        response.format = ad.creative.creativeFormat;
+                        response.ads.add(ad);
 
-                            // define type
-                            SACreativeFormat type = ad.creative.creativeFormat;
-
-                            // update type in response as well
-                            response.format = type;
-                            response.ads.add(ad);
-
-                            switch (type) {
-                                case invalid:
-                                case image:
-                                case rich:
-                                case tag: {
-                                    ad.creative.details.media = new SAMedia();
-                                    ad.creative.details.media.html = SAHTMLParser.formatCreativeDataIntoAdHTML(ad);
-                                    localListener.didLoadAd(response);
-                                    break;
-                                }
-                                case video: {
-                                    SAVASTParser parser = new SAVASTParser(context);
-                                    parser.parseVASTAds(ad.creative.details.vast, session, new SAVASTParserInterface() {
-                                        @Override
-                                        public void didParseVAST(SAAd vastAd) {
-                                            ad.sumAd(vastAd);
-                                            localListener.didLoadAd(response);
-                                        }
-                                    });
-                                    break;
-                                }
+                        switch (ad.creative.creativeFormat) {
+                            // in this case return whatever we have at this moment
+                            case invalid:
+                                localListener.didLoadAd(response);
+                                break;
+                            // in this case process the HTML and return the response
+                            case image:
+                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
+                                localListener.didLoadAd(response);
+                                break;
+                            // in this case process the HTML and return the response
+                            case rich:
+                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
+                                localListener.didLoadAd(response);
+                                break;
+                            // in this case process the HTML and return the response
+                            case tag: {
+                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
+                                localListener.didLoadAd(response);
+                                break;
                             }
-                        } else {
-                            localListener.didLoadAd(response);
+                            // in this case process the VAST response, download the files and return
+                            case video: {
+                                SAVASTParser parser = new SAVASTParser(context);
+                                parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
+                                    @Override
+                                    public void didParseVAST(SAVASTAd savastAd) {
+
+                                        // copy the vast media
+                                        ad.creative.details.media.playableMediaUrl = savastAd.mediaUrl;
+                                        // copy the vast events
+                                        ad.creative.events.addAll(savastAd.vastEvents);
+                                        // download file
+                                        SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.playableMediaUrl, new SAFileDownloaderInterface() {
+                                            @Override
+                                            public void response(boolean success, String playableDiskUrl) {
+
+                                                ad.creative.details.media.playableDiskUrl = playableDiskUrl;
+                                                ad.creative.details.media.isOnDisk = playableDiskUrl != null;
+
+                                                // finally respond with a response
+                                                localListener.didLoadAd(response);
+
+                                            }
+                                        });
+                                    }
+                                });
+                                break;
+                            }
                         }
                     }
-                    // GameWall case
+                    // ÅppWall case
                     else if (jsonArray != null) {
 
                         // assign correct format
@@ -146,37 +236,54 @@ public class SALoader {
 
                         // add ads to it
                         for (int i = 0; i < jsonArray.length(); i++) {
+
                             try {
-
                                 // parse ad
-                                SAAd ad = adParser.parseInitialAdDataFromNetwork(jsonArray.getJSONObject(i), session, placementId);
+                                SAAd ad = new SAAd(jsonArray.getJSONObject(i));
+                                ad.placementId = placementId;
+                                SAProcessEvents.addAdEvents(ad, session);
 
-                                // if all's OK add to response
-                                if (ad != null) {
-
-                                    SACreativeFormat format = ad.creative.creativeFormat;
-
-                                    // only add image type ads - no rich media or videos in the
-                                    // GameWall for now
-                                    if (format == SACreativeFormat.image) {
-                                        response.ads.add(ad);
-                                    }
+                                // only add image type ads - no rich media or videos in the
+                                // GameWall for now
+                                if (ad.creative.creativeFormat == SACreativeFormat.image) {
+                                    response.ads.add(ad);
                                 }
                             } catch (JSONException e) {
                                 // do nothing
                             }
                         }
 
-                        // get all resources for the GameWall
-                        SAAppWallParser gameWallParser = new SAAppWallParser(context);
-                        gameWallParser.getAppWallResources(response.ads, new SAAppWallParserInterface() {
+                        // add all the images that'll need to be downloaded
+                        List<String> filesToDownload = new ArrayList<>();
+                        for (SAAd ad : response.ads) {
+                            filesToDownload.add(ad.creative.details.image);
+                        }
+
+                        // use the file list downloader to download them in the same
+                        // correct order
+                        SAFileListDownloader fileListDownloader = new SAFileListDownloader(context);
+                        fileListDownloader.downloadListOfFiles(filesToDownload, new SAFileListDownloaderInterface() {
                             @Override
-                            public void gotAllImages() {
-                                // return response
+                            public void didGetAllFiles(List<String> list) {
+
+                                for (int i = 0; i < list.size(); i++) {
+                                    try {
+                                        String diskUrl = list.get(i);
+                                        SAAd ad = response.ads.get(i);
+                                        ad.creative.details.media.playableMediaUrl = ad.creative.details.image;
+                                        ad.creative.details.media.isOnDisk = diskUrl != null;
+                                        ad.creative.details.media.playableDiskUrl = diskUrl;
+                                    } catch (Exception e) {
+                                        // do nothing
+                                    }
+                                }
+
+                                // and finally send a response
                                 localListener.didLoadAd(response);
                             }
                         });
                     }
+                    // it's not a normal ad or an app wall, then return
                     else {
                         localListener.didLoadAd(response);
                     }

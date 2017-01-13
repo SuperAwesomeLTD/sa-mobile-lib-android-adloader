@@ -1,24 +1,22 @@
 /**
- * @class: SAHTMLParser.java
- * @copyright: (c) 2015 SuperAwesome Ltd. All rights reserved.
- * @author: Gabriel Coman
- * @date: 10/12/2015
- *
+ * @Copyright:   SuperAwesome Trading Limited 2017
+ * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
  */
-package tv.superawesome.lib.saadloader;
-
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
+package tv.superawesome.lib.saadloader.postprocessor;
 
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SATracking;
 import tv.superawesome.lib.sautils.SAUtils;
 
 /**
- * Created by gabriel.coman on 10/12/15.
+ * Class that formats a specific HTML "website" for each type of ad that needs displaying.
+ *  - For image ads a document with mostly an <img/> tag
+ *  - For rich media ads a document with an <iframe> to load the content in
+ *  - For external tags a div to write the tag in
  */
-public class SAHTMLParser {
+public class SAProcessHTML {
 
+    // the HTML needed for an image ad
     private static final String imageHTML = "" +
             "<!DOCTYPE html><html>" +
             "<head>" +
@@ -35,6 +33,7 @@ public class SAHTMLParser {
             "</body>" +
             "</html>";
 
+    // the HTML needed for a rich media ad
     private static final String richMediaHTML = "" +
             "<!DOCTYPE html><html>" +
             "<head>" +
@@ -51,6 +50,7 @@ public class SAHTMLParser {
             "</body>" +
             "</html>";
 
+    // the HTML needed for a tag ad
     private static final String tagHTML = "" +
             "<!DOCTYPE html><html>" +
             "<head>" +
@@ -68,44 +68,13 @@ public class SAHTMLParser {
             "</html>";
 
     /**
-     * This static function uses ad data to return a formatted HTML string
-     * @param ad - the ad
-     * @return - a HTML string for the Ad to be rendered
+     * Method that loads a special HTML file and parse & format it so that later
+     * on web views will be able to use it to display proper image data
+     *
+     * @param ad    ad data (as an SAAd object)
+     * @return      the formatted HTML string to be used by a WebView
      */
-    public static String formatCreativeDataIntoAdHTML(SAAd ad) {
-        /**
-         * based on the creative format, return the appropriate function
-         * and leave the implementation details to each private function in part
-         */
-        switch (ad.creative.creativeFormat) {
-            case invalid:{
-                return null;
-            }
-            case image:{
-                return SAHTMLParser.formatCreativeIntoImageHTML(ad);
-            }
-            case video:{
-                return null;
-            }
-            case rich:{
-                return SAHTMLParser.formatCreativeIntoRichMediaHTML(ad);
-            }
-            case tag:{
-                return SAHTMLParser.formatCreativeIntoTagHTML(ad);
-            }
-            default:{
-                return null;
-            }
-        }
-    }
-
-    /**
-     * load a special HTML file and parse & format it so that later on webviews will be
-     * able to use it to display proper image data
-     * @param ad - ad data
-     * @return - the formatted HTML string to be used by a WebView
-     */
-    private static String formatCreativeIntoImageHTML(SAAd ad) {
+    public static String formatCreativeIntoImageHTML(SAAd ad) {
         String htmlString = imageHTML;
         String click = ad.creative.clickUrl;
 
@@ -123,12 +92,13 @@ public class SAHTMLParser {
     }
 
     /**
-     * load a special HTML file and parse & format it so that later on webviews will be
-     * able to use it to display proper rich media data
-     * @param ad - ad data
-     * @return - the formatted HTML string to be used by a WebView
+     * Method that loads a special HTML file and parse & format it so that later
+     * on web views will be able to use it to display proper rich media data
+     *
+     * @param ad    ad data (as an SAAd object)
+     * @return      the formatted HTML string to be used by a WebView
      */
-    private static String formatCreativeIntoRichMediaHTML(SAAd ad) {
+    public static String formatCreativeIntoRichMediaHTML(SAAd ad) {
         String htmlString = richMediaHTML;
         String richMediaURL = ad.creative.details.url +
                 "?placement=" + ad.placementId +
@@ -140,12 +110,12 @@ public class SAHTMLParser {
     }
 
     /**
-     * load a special HTML file and parse & format it so that later on webviews will be
-     * able to use it to display proper tag data
-     * @param ad - ad data
-     * @return - the formatted HTML string to be used by a WebView
+     * Method that loads a special HTML file and parse & format it so that later
+     * on web views will be able to use it to display proper tag data
+     * @param ad    ad data (as an SAAd object)
+     * @return      the formatted HTML string to be used by a WebView
      */
-    private  static String formatCreativeIntoTagHTML(SAAd ad) {
+    public static String formatCreativeIntoTagHTML(SAAd ad) {
         String htmlString = tagHTML;
 
         String click = ad.creative.clickUrl;
