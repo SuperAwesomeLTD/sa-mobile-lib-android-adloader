@@ -12,7 +12,7 @@
                 "currency": "GBP"
             },
             "impressionUrl": null,
-            "installUrl": null,
+            "installUrl": "https://ads.superawesome.tv/install_1",
             "clickUrl": "http://superawesome.tv",
             "clickCounterUrl": null,
             "details": {

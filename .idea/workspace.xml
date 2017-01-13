@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/appwallad.json" afterPath="$PROJECT_DIR$/samples/appwallad.json" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,7 +160,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SALoader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SALoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -257,11 +257,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="546" column="82" selection-start-line="546" selection-start-column="82" selection-end-line="546" selection-end-column="82" />
+            <state relative-caret-position="328">
+              <caret line="767" column="106" selection-start-line="767" selection-start-column="106" selection-end-line="767" selection-end-column="106" />
               <folding>
                 <element signature="e#1507#6710#0" expanded="true" />
                 <element signature="e#6709#6710#0" expanded="true" />
@@ -271,12 +271,12 @@
                 <element signature="e#23297#23298#0" expanded="true" />
                 <element signature="e#23382#28872#0" expanded="true" />
                 <element signature="e#28871#28872#0" expanded="true" />
-                <element signature="e#28956#34376#0" expanded="true" />
-                <element signature="e#34375#34376#0" expanded="true" />
-                <element signature="e#34460#34733#0" expanded="true" />
-                <element signature="e#34732#34733#0" expanded="true" />
-                <element signature="e#34817#35090#0" expanded="true" />
-                <element signature="e#35089#35090#0" expanded="true" />
+                <element signature="e#28956#34400#0" expanded="true" />
+                <element signature="e#34399#34400#0" expanded="true" />
+                <element signature="e#34484#39988#0" expanded="true" />
+                <element signature="e#39987#39988#0" expanded="true" />
+                <element signature="e#40072#45846#0" expanded="true" />
+                <element signature="e#45845#45846#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2988,8 +2988,8 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
         <option value="$PROJECT_DIR$/local.properties" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
       </list>
     </option>
   </component>
@@ -3741,27 +3741,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSuite - 2017.01.13 at 14h 49m 41s.xml">
-      <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 52m 15s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 54m 06s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 54m 35s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 56m 17s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 56m 35s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 14h 59m 50s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="testAds() - 2017.01.13 at 15h 00m 59s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
@@ -3771,10 +3750,31 @@
     <history-entry file="testAds() - 2017.01.13 at 15h 02m 53s.xml">
       <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 05m 01s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 05m 29s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 06m 12s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 10m 30s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 10m 46s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 11m 03s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="testAds() - 2017.01.13 at 15h 16m 19s.xml">
+      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3784,7 +3784,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4764268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5471464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43548387" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -4127,10 +4127,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="155" column="48" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="546" column="82" selection-start-line="546" selection-start-column="82" selection-end-line="546" selection-end-column="82" />
+        <state relative-caret-position="328">
+          <caret line="767" column="106" selection-start-line="767" selection-start-column="106" selection-end-line="767" selection-end-column="106" />
           <folding>
             <element signature="e#1507#6710#0" expanded="true" />
             <element signature="e#6709#6710#0" expanded="true" />
@@ -4140,22 +4150,12 @@
             <element signature="e#23297#23298#0" expanded="true" />
             <element signature="e#23382#28872#0" expanded="true" />
             <element signature="e#28871#28872#0" expanded="true" />
-            <element signature="e#28956#34376#0" expanded="true" />
-            <element signature="e#34375#34376#0" expanded="true" />
-            <element signature="e#34460#34733#0" expanded="true" />
-            <element signature="e#34732#34733#0" expanded="true" />
-            <element signature="e#34817#35090#0" expanded="true" />
-            <element signature="e#35089#35090#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="155" column="48" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
+            <element signature="e#28956#34400#0" expanded="true" />
+            <element signature="e#34399#34400#0" expanded="true" />
+            <element signature="e#34484#39988#0" expanded="true" />
+            <element signature="e#39987#39988#0" expanded="true" />
+            <element signature="e#40072#45846#0" expanded="true" />
+            <element signature="e#45845#45846#0" expanded="true" />
           </folding>
         </state>
       </provider>
