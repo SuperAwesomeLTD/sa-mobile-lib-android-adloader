@@ -20,13 +20,13 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/gabriel.coman/Workspa
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [tv.superawesome.lib.saadloader:saadloader:0.8.9] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.9/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:13:5-20:19
+MERGED from [tv.superawesome.lib.saadloader:saadloader:0.9.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.9.0/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:13:5-21:19
 MERGED from [tv.superawesome.lib.sautils:sautils:0.3.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.0/AndroidManifest.xml:13:5-17:19
 MERGED from [tv.superawesome.lib.samodelspace:samodelspace:0.5.3] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.3/AndroidManifest.xml:11:5-15:19
 MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:0.2.5] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.5/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sasession:sasession:0.2.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.6/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.savastparser:savastparser:0.4.9] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.9/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sasession:sasession:0.2.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.7/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.savastparser:savastparser:0.5.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.5.0/AndroidManifest.xml:11:5-15:19
 	android:label
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:8:9-41
 	android:supportsRtl
@@ -63,13 +63,13 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/gabriel.coman/Workspa
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [tv.superawesome.lib.saadloader:saadloader:0.8.9] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.9/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.saadloader:saadloader:0.9.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.9.0/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:7:5-9:41
 MERGED from [tv.superawesome.lib.sautils:sautils:0.3.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [tv.superawesome.lib.samodelspace:samodelspace:0.5.3] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.3/AndroidManifest.xml:7:5-9:41
 MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:0.2.5] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.5/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sasession:sasession:0.2.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.6/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.savastparser:savastparser:0.4.9] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.9/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sasession:sasession:0.2.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.7/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.savastparser:savastparser:0.5.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.5.0/AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -79,15 +79,17 @@ MERGED from [tv.superawesome.lib.savastparser:savastparser:0.4.9] /Users/gabriel
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:11:5-67
+ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:11:22-64
+		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:11:22-64
 service#tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync
-ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:17:9-19:39
+ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:17:9-20:72
 	android:exported
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:19:13-36
+		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:19:13-37
+	android:permission
+		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:20:13-69
 	android:name
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/AndroidManifest.xml:18:13-87
+		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.7/AndroidManifest.xml:18:13-87
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [tv.superawesome.lib.sautils:sautils:0.3.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.0/AndroidManifest.xml:11:5-79
 	android:name

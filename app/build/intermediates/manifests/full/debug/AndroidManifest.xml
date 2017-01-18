@@ -30,7 +30,8 @@
 
         <service
             android:name="tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync"
-            android:exported="true" />
+            android:exported="false"
+            android:permission="tv.superawesome.sdk.SuperAwesomeSDK" />
     </application>
 
 </manifest>
