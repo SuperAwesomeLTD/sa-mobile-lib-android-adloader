@@ -27,6 +27,7 @@ import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
@@ -57,18 +58,23 @@ public class SALoader {
     }
 
     /**
-     * Method that creates the standard AwesomeAds session
+     * Method that creates the standard AwesomeAds base url starting from a session (to know
+     * if it's in STAGING or PRODUCTION mode), and a placement Id
      *
      * @param session       current session
      * @param placementId   current placement Id
      * @return              an url of the form https://ads.superawesome.tv/v2/ad/7212
      */
     public String getAwesomeAdsEndpoint (SASession session, int placementId) {
-        return session.getBaseUrl() + "/ad/" + placementId;
+        if (session != null) {
+            return session.getBaseUrl() + "/ad/" + placementId;
+        } else {
+            return null;
+        }
     }
 
     /**
-     * Method that creates the additional query paramters that will need to be appended to the
+     * Method that creates the additional query parameters that will need to be appended to the
      * AwesomeAds endpoint
      *
      * @param session   current session
@@ -84,23 +90,29 @@ public class SALoader {
      */
     public JSONObject getAwesomeAdsQuery (SASession session) {
         return SAJsonParser.newObject(new Object[]{
-                "test", session.getTestMode(),
-                "sdkVersion", session.getVersion(),
-                "rnd", session.getCachebuster(),
-                "bundle", session.getPackageName(),
-                "name", session.getAppName(),
-                "dauid", session.getDauId(),
-                "ct", session.getConnectionType().ordinal(),
-                "lang", session.getLang(),
-                "device", session.getDevice()
+                "test", session != null && session.getTestMode(),
+                "sdkVersion", session != null ? session.getVersion() : "0.0.0",
+                "rnd", session != null ? session.getCachebuster() : SAUtils.randomNumberBetween(1000000, 1500000),
+                "bundle", session != null ? session.getPackageName() : "unknown",
+                "name", session != null ? session.getAppName() : "unknown",
+                "dauid", session != null ? session.getDauId() : 0,
+                "ct", session != null ? session.getConnectionType().ordinal() : SAUtils.SAConnectionType.unknown.ordinal(),
+                "lang", session != null ? session.getLang() : "unknown",
+                "device", session != null ? session.getDevice() : "phone"
                 // "preload", true
         });
     }
 
+    /**
+     * Method that creates the Awesome Ads specific header needed for network requests
+     *
+     * @param session   current session
+     * @return          a JSONObject with header parameters
+     */
     public JSONObject getAwesomeAdsHeader (SASession session) {
         return SAJsonParser.newObject(new Object[]{
                 "Content-Type", "application/json",
-                "User-Agent", session.getUserAgent()
+                "User-Agent", session != null ? session.getUserAgent() : ""
         });
     }
 
@@ -137,7 +149,7 @@ public class SALoader {
     public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SASession session, SALoaderInterface listener) {
 
         // create a local listener to avoid null pointer exceptions
-        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void didLoadAd(SAResponse response) {} };
+        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
 
 
         SANetwork network = new SANetwork();
@@ -150,7 +162,7 @@ public class SALoader {
              * @param success   success status
              */
             @Override
-            public void response(int status, String data, boolean success) {
+            public void saDidGetResponse(int status, String data, boolean success) {
 
                 // create a new object of type SAResponse
                 final SAResponse response = new SAResponse();
@@ -159,7 +171,7 @@ public class SALoader {
 
                 // error case, just bail out with a non-null invalid response
                 if (!success || data == null) {
-                    localListener.didLoadAd(response);
+                    localListener.saDidLoadAd(response);
                 }
                 // good case, continue trying to figure out what kind of ad this is
                 else {
@@ -192,28 +204,28 @@ public class SALoader {
                         SAProcessEvents.addAdEvents(ad, session);
 
                         // update type in response as well
-                        response.format = ad.creative.creativeFormat;
+                        response.format = ad.creative.format;
                         response.ads.add(ad);
 
-                        switch (ad.creative.creativeFormat) {
+                        switch (ad.creative.format) {
                             // in this case return whatever we have at this moment
                             case invalid:
-                                localListener.didLoadAd(response);
+                                localListener.saDidLoadAd(response);
                                 break;
                             // in this case process the HTML and return the response
                             case image:
                                 ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
-                                localListener.didLoadAd(response);
+                                localListener.saDidLoadAd(response);
                                 break;
                             // in this case process the HTML and return the response
                             case rich:
                                 ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
-                                localListener.didLoadAd(response);
+                                localListener.saDidLoadAd(response);
                                 break;
                             // in this case process the HTML and return the response
                             case tag: {
                                 ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
-                                localListener.didLoadAd(response);
+                                localListener.saDidLoadAd(response);
                                 break;
                             }
                             // in this case process the VAST response, download the files and return
@@ -221,7 +233,7 @@ public class SALoader {
                                 SAVASTParser parser = new SAVASTParser(context);
                                 parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
                                     @Override
-                                    public void didParseVAST(SAVASTAd savastAd) {
+                                    public void saDidParseVAST(SAVASTAd savastAd) {
 
                                         // copy the vast media
                                         ad.creative.details.media.playableMediaUrl = savastAd.mediaUrl;
@@ -230,13 +242,13 @@ public class SALoader {
                                         // download file
                                         SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.playableMediaUrl, new SAFileDownloaderInterface() {
                                             @Override
-                                            public void response(boolean success, String playableDiskUrl) {
+                                            public void saDidDownloadFile(boolean success, String playableDiskUrl) {
 
                                                 ad.creative.details.media.playableDiskUrl = playableDiskUrl;
                                                 ad.creative.details.media.isOnDisk = playableDiskUrl != null;
 
                                                 // finally respond with a response
-                                                localListener.didLoadAd(response);
+                                                localListener.saDidLoadAd(response);
 
                                             }
                                         });
@@ -263,9 +275,9 @@ public class SALoader {
 
                                 // only add image type ads - no rich media or videos in the
                                 // GameWall for now
-                                if (ad.creative.creativeFormat == SACreativeFormat.image) {
+                                if (ad.creative.format == SACreativeFormat.image) {
                                     response.ads.add(ad);
-                                    ad.creative.creativeFormat = SACreativeFormat.appwall;
+                                    ad.creative.format = SACreativeFormat.appwall;
                                 }
                             } catch (JSONException e) {
                                 // do nothing
@@ -283,7 +295,7 @@ public class SALoader {
                         SAFileListDownloader fileListDownloader = new SAFileListDownloader(context);
                         fileListDownloader.downloadListOfFiles(filesToDownload, new SAFileListDownloaderInterface() {
                             @Override
-                            public void didGetAllFiles(List<String> list) {
+                            public void saDidDownloadFilesInList(List<String> list) {
 
                                 for (int i = 0; i < list.size(); i++) {
                                     try {
@@ -298,13 +310,13 @@ public class SALoader {
                                 }
 
                                 // and finally send a response
-                                localListener.didLoadAd(response);
+                                localListener.saDidLoadAd(response);
                             }
                         });
                     }
                     // it's not a normal ad or an app wall, then return
                     else {
-                        localListener.didLoadAd(response);
+                        localListener.saDidLoadAd(response);
                     }
                 }
             }

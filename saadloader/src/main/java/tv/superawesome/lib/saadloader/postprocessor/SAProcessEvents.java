@@ -31,7 +31,7 @@ public class SAProcessEvents {
         SATracking clickEvt = new SATracking();
         clickEvt.event = "sa_tracking";
         clickEvt.URL = session.getBaseUrl() +
-                (ad.creative.creativeFormat == SACreativeFormat.video ? "/video/click/?" : "/click?") +
+                (ad.creative.format == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "placement", ad.placementId,
                         "line_item", ad.lineItemId,
@@ -162,7 +162,6 @@ public class SAProcessEvents {
         externalInstall.URL = ad.creative.installUrl;
 
         // add events to the ads events array
-
         ad.creative.events.add(clickEvt);
         ad.creative.events.add(viewableImpression);
         ad.creative.events.add(parentalGateClose);

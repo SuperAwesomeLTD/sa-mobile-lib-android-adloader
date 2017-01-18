@@ -18,6 +18,6 @@ public interface SALoaderInterface {
      *
      * @param response an object of type SAResponse
      */
-    void didLoadAd(SAResponse response);
+    void saDidLoadAd (SAResponse response);
 
 }

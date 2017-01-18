@@ -12,7 +12,202 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.6/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.6/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.6/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.6/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.7/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.7/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.7/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.7/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.8/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.8/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.8/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.8.8/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.0/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.0/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.0/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.0/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.2/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.2/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.2/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.2/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/aapt/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.4/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/aapt/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.5/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/aapt/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.2.9/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.6/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.6/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.6/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.6/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.7/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.7/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.7/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.7/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.8/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.8/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.8/jars/classes.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.8/res/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.saadloader-saadloader-0.8.8_c5fdb8a9a80f356f9f5143c0d5c3129204bcb441.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.samodelspace-samodelspace-0.5.2_3afeaff2544dce894bec0632ed9c88abb0cec5f8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.sanetwork-sanetwork-0.3.4_b8c0ebf6388ae92788b082e929311a55299ca927.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.sasession-sasession-0.2.5_e0a5a8f56f5926d747f523337b93cff9b48cd1b4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.sautils-sautils-0.2.9_237629ff5f6e231fe3fc3e4cd951d7f562e62620.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.savastparser-savastparser-0.4.8_73d66506d4197a073b68512597b4a89e6f524dd3.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$2$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/SALoaderInterface.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_9cq3rpgg970xlnumae1jcqow2/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/samodelspace_0_5_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/samodelspace_0_5_3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/sanetwork_0_3_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sanetwork_0_3_6.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/sasession_0_2_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sasession_0_2_6.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/sautils_0_2_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sautils_0_3_0.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/savastparser_0_4_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/savastparser_0_4_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/9z+jq_X5RUKeYH_vZy+Bp4fOjfc=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/9z+jq_X5RUKeYH_vZy+Bp4fOjfc=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/zip-cache/Almej0cVuH6030AFRRES3w+wz7s=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/zip-cache/Almej0cVuH6030AFRRES3w+wz7s=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-exposed-instrumentation-api-publish-0.5_c8da9d4684390333214d57ad1658999b1fcbcda0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-exposed-instrumentation-api-publish-0.5_c8da9d4684390333214d57ad1658999b1fcbcda0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-rules-0.5_f2fdcb856daacf65715be3683aa1f39fbd65394d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-rules-0.5_f2fdcb856daacf65715be3683aa1f39fbd65394d.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-runner-0.5_a447398c1cdedddd2657a51a845e2a6b5ae1b2b0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test-runner-0.5_a447398c1cdedddd2657a51a845e2a6b5ae1b2b0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test.espresso-espresso-core-2.2.2_2631281ec4d59bb89fb03381fca3c5e9ac39c1ec.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test.espresso-espresso-core-2.2.2_2631281ec4d59bb89fb03381fca3c5e9ac39c1ec.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test.espresso-espresso-idling-resource-2.2.2_469f504ef1b29cc787c6e6a890fa9084430ceb11.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/com.android.support.test.espresso-espresso-idling-resource-2.2.2_469f504ef1b29cc787c6e6a890fa9084430ceb11.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/debug_66a3c8c96bb24f08aa0fc5a6c9dfb2fbffdeb7a4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/debug_66a3c8c96bb24f08aa0fc5a6c9dfb2fbffdeb7a4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-core-1.3_b5db8d995c46465c2050e6454eab2f69f8b14952.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-core-1.3_b5db8d995c46465c2050e6454eab2f69f8b14952.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-integration-1.3_17db670ddf3de511ca4134419a0a8344e341e1bc.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-integration-1.3_17db670ddf3de511ca4134419a0a8344e341e1bc.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-library-1.3_491208c3222efab33dadfecc192487ec4633b5a1.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-library-1.3_491208c3222efab33dadfecc192487ec4633b5a1.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javawriter-2.1.1_847dbffb2a696b6a294d2a33c52b97f67be4de91.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javawriter-2.1.1_847dbffb2a696b6a294d2a33c52b97f67be4de91.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javax.annotation-api-1.2_e491704b463ccacda1281fd6ed65fe58e5a45db9.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javax.annotation-api-1.2_e491704b463ccacda1281fd6ed65fe58e5a45db9.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javax.inject-1_f88e6c94ea1543ec788ee38c7aaa9eddf0fab669.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/javax.inject-1_f88e6c94ea1543ec788ee38c7aaa9eddf0fab669.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/jsr305-2.0.1_1cb80881cdc005cb60eaa58b196a5ee2efad7cdb.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/jsr305-2.0.1_1cb80881cdc005cb60eaa58b196a5ee2efad7cdb.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/junit-4.12_a806fb83159ec61d6443aa993895a5dee4409b3f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/junit-4.12_a806fb83159ec61d6443aa993895a5dee4409b3f.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_ae4169bae5c92e1e0933b6e61835619e59c1d2c6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_ae4169bae5c92e1e0933b6e61835619e59c1d2c6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_a56058317002f718d417249c0d42cf07591017d4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_a56058317002f718d417249c0d42cf07591017d4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_5e6d3c92e5295a63a40bf5d33f81236f7fcaa6de.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_5e6d3c92e5295a63a40bf5d33f81236f7fcaa6de.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_14abcb5ea1f2dd0181d137cb34928963a3f79c81.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_14abcb5ea1f2dd0181d137cb34928963a3f79c81.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_be727c3e2c3df003b46526dea43b7ba3582ffe18.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_be727c3e2c3df003b46526dea43b7ba3582ffe18.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_632a3d12746c1eb6407d63f611bca40adf211f9a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_632a3d12746c1eb6407d63f611bca40adf211f9a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_26852ab25d0d3cb7e8a1dabdfe2ac2eb8c36a2dc.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_26852ab25d0d3cb7e8a1dabdfe2ac2eb8c36a2dc.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_889f559a57db6d45bf211f7a1e2cb2d5daf37c71.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_889f559a57db6d45bf211f7a1e2cb2d5daf37c71.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_778236fba4e81ebbb69f9bad6f25512af7fc9f29.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_778236fba4e81ebbb69f9bad6f25512af7fc9f29.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.sajsonparser-sajsonparser-0.2.5_b916e4132c875df4b2a5da81e9d003173415efb9.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tv.superawesome.lib.sajsonparser-sajsonparser-0.2.5_b916e4132c875df4b2a5da81e9d003173415efb9.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_16dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_go_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_16dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_clear_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-androidTest.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-androidTest.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/build.gradle" afterPath="$PROJECT_DIR$/saadloader/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/saadloader.iml" afterPath="$PROJECT_DIR$/saadloader/saadloader.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java" afterPath="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -162,24 +357,28 @@
       <file leaf-file-name="SALoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3047">
-              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+            <state relative-caret-position="304">
+              <caret line="114" column="75" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="75" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#6737#15213#0" expanded="true" />
+                <element signature="e#15212#15213#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAProcessEvents.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+      <file leaf-file-name="SASession.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.6/jars/classes.jar!/tv/superawesome/lib/sasession/SASession.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+            <state relative-caret-position="250">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
-                <element signature="e#0#121#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#4270#4271#0" expanded="true" />
+                <element signature="e#4302#4303#0" expanded="true" />
+                <element signature="e#4335#4336#0" expanded="true" />
+                <element signature="e#4369#4370#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,8 +387,8 @@
       <file leaf-file-name="SALoaderInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="300">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
               </folding>
@@ -197,35 +396,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saadloader/build.gradle">
+      <file leaf-file-name="SAAdLoader_ProcessEvents_Tests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
-              <folding>
-                <marker date="1484563319000" expanded="true" signature="2495:2566" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAAdLoader_ProcessHTML_Tests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="131" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAProcessHTML.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
+      <file leaf-file-name="SAAdLoader_Endpoint_Tests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="64" column="44" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="44" />
+            <state relative-caret-position="508">
+              <caret line="306" column="38" selection-start-line="306" selection-start-column="38" selection-end-line="306" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SAProcessEvents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1650">
+              <caret line="164" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
               <folding>
                 <element signature="e#0#121#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -234,8 +432,18 @@
       <file leaf-file-name="TestSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="180">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SAAdLoader_ProcessHTML_Tests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="59" column="427" selection-start-line="52" selection-start-column="8" selection-end-line="59" selection-end-column="427" />
               <folding />
             </state>
           </provider>
@@ -254,18 +462,8 @@
       <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="884" column="49" selection-start-line="884" selection-start-column="49" selection-end-line="884" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAResponse.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/jars/classes.jar!/tv/superawesome/lib/samodelspace/SAResponse.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+            <state relative-caret-position="510">
+              <caret line="814" column="17" selection-start-line="716" selection-start-column="16" selection-end-line="814" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -453,11 +651,6 @@
                 <option name="name" value="generateDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.8" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser048Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugJavaWithJavac" />
               </ExternalTaskPojo>
@@ -561,6 +754,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork036Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="uninstallRelease" />
@@ -631,11 +829,6 @@
                 <option name="name" value="processReleaseManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.2.9" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils029Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:appcompat-v7:23.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportAppcompatV72340Library" />
@@ -694,6 +887,11 @@
                 <option name="name" value="mergeDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.9" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser049Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:animated-vector-drawable:23.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportAnimatedVectorDrawable2340Library" />
@@ -727,6 +925,11 @@
                 <option name="name" value="transformNative_libsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.8.9" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader089Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
@@ -741,11 +944,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeDebugResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.8.8" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader088Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Publishes artifacts to bintray.com." />
@@ -768,6 +966,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.3.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils030Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -827,17 +1030,17 @@
                 <option name="name" value="jarReleaseClasses" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace053Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.5" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession025Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for all variants." />
@@ -997,11 +1200,6 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.4" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork034Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.5" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library" />
@@ -1014,6 +1212,11 @@
                 <option name="description" value="Runs lint on just the fatal issues in the release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession026Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Debug build." />
@@ -1044,11 +1247,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformNative_libsWithSyncJniLibsForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace052Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1199,11 +1397,6 @@
                 <option name="name" value="generateDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.8" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser048Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileDebugJavaWithJavac" />
               </ExternalTaskPojo>
@@ -1294,6 +1487,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork036Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="uninstallRelease" />
@@ -1350,11 +1548,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="processReleaseManifest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.2.9" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils029Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:appcompat-v7:23.4.0" />
@@ -1415,6 +1608,11 @@
                 <option name="name" value="mergeDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.9" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser049Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:animated-vector-drawable:23.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComAndroidSupportAnimatedVectorDrawable2340Library" />
@@ -1448,6 +1646,11 @@
                 <option name="name" value="transformNative_libsWithMergeJniLibsForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.8.9" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader089Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="packageRelease" />
               </ExternalTaskPojo>
@@ -1464,11 +1667,6 @@
                 <option name="name" value="mergeDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.saadloader:saadloader:0.8.8" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSaadloaderSaadloader088Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="preDebugUnitTestBuild" />
               </ExternalTaskPojo>
@@ -1479,6 +1677,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.3.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils030Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1534,17 +1737,17 @@
                 <option name="name" value="jarReleaseClasses" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace053Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.5" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession025Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for all variants." />
@@ -1700,11 +1903,6 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.4" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork034Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.5" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library" />
@@ -1717,6 +1915,11 @@
                 <option name="description" value="Runs lint on just the fatal issues in the release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="lintVitalRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession026Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Debug build." />
@@ -1744,11 +1947,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="preDebugBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace052Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1920,11 +2118,6 @@
                 <option name="name" value="generateDebugResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.8" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
-                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser048Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="compileDebugJavaWithJavac" />
               </ExternalTaskPojo>
@@ -2014,6 +2207,11 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
+                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork036Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
@@ -2075,11 +2273,6 @@
                 <option name="name" value="processReleaseManifest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.2.9" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
-                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils029Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="uninstallDebugAndroidTest" />
@@ -2133,6 +2326,11 @@
                 <option name="name" value="mergeDebugAssets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.savastparser:savastparser:0.4.9" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
+                <option name="name" value="prepareTvSuperawesomeLibSavastparserSavastparser049Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks on currently connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="connectedCheck" />
@@ -2180,6 +2378,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sautils:sautils:0.3.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
+                <option name="name" value="prepareTvSuperawesomeLibSautilsSautils030Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
@@ -2235,17 +2438,17 @@
                 <option name="name" value="compileReleaseJavaWithJavac" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.3" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
+                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace053Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.5" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
-                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession025Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run unit tests for all variants." />
@@ -2372,13 +2575,13 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.sanetwork:sanetwork:0.3.4" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
-                <option name="name" value="prepareTvSuperawesomeLibSanetworkSanetwork034Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare tv.superawesome.lib.sasession:sasession:0.2.6" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
+                <option name="name" value="prepareTvSuperawesomeLibSasessionSasession026Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the signing info for each variant." />
@@ -2405,11 +2608,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
                 <option name="name" value="transformNative_libsWithSyncJniLibsForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare tv.superawesome.lib.samodelspace:samodelspace:0.5.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
-                <option name="name" value="prepareTvSuperawesomeLibSamodelspaceSamodelspace052Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/saadloader" />
@@ -2457,7 +2655,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5936036719000" />
+        <entry key="$PROJECT_DIR$" value="5936210692000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2952,25 +3150,26 @@
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAAdParser.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SAPostProcessor.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAPostProcessor.java" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/superawesome/tv/saadloaderdemo/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
-        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
         <option value="$PROJECT_DIR$/saadloader/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java" />
+        <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java" />
         <option value="$PROJECT_DIR$/local.properties" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
+    <option name="x" value="1440" />
+    <option name="width" value="1600" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -2998,9 +3197,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3107,26 +3325,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sa-mobile-lib-android-adloader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3234,12 +3433,12 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="false" name="SAAdLoader_Async_Tes..." type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="testGetAwesomeAdsE...()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
-      <option name="TESTING_TYPE" value="2" />
+      <option name="TESTING_TYPE" value="3" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="superawesome.tv.saadloaderdemo.SAAdLoader_Async_Tests" />
+      <option name="METHOD_NAME" value="testGetAwesomeAdsEndpoint4" />
+      <option name="CLASS_NAME" value="superawesome.tv.saadloaderdemo.SAAdLoader_Endpoint_Tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
@@ -3278,40 +3477,92 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="false" name="sa-mobile-lib-android-adloader [install]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="install" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+    <configuration default="false" name="testGetAwesomeAdsQ...()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="testGetAwesomeAdsQuery4" />
+      <option name="CLASS_NAME" value="superawesome.tv.saadloaderdemo.SAAdLoader_Endpoint_Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
-    <configuration default="false" name="sa-mobile-lib-android-adloader [bintrayUpload]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bintrayUpload" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+    <configuration default="false" name="testGetAwesomeAdsH...()" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="testGetAwesomeAdsHeader3" />
+      <option name="CLASS_NAME" value="superawesome.tv.saadloaderdemo.SAAdLoader_Endpoint_Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -3609,17 +3860,17 @@
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
       <item index="2" class="java.lang.String" itemvalue="Android Tests.testAds()" />
-      <item index="3" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [install]" />
-      <item index="5" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]" />
+      <item index="3" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsE...()" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsQ...()" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsH...()" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.testAds()" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [bintrayUpload]" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.sa-mobile-lib-android-adloader [install]" />
-        <item index="4" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsH...()" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsQ...()" />
+        <item index="3" class="java.lang.String" itemvalue="Android Tests.testGetAwesomeAdsE...()" />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.testAds()" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -3717,39 +3968,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSuite - 2017.01.13 at 16h 09m 24s.xml">
+    <history-entry file="TestSuite - 2017.01.18 at 11h 01m 09s.xml">
       <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestSuite - 2017.01.16 at 10h 42m 41s.xml">
+    <history-entry file="TestSuite - 2017.01.18 at 11h 44m 52s.xml">
       <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestSuite - 2017.01.16 at 10h 48m 44s.xml">
+    <history-entry file="TestSuite - 2017.01.18 at 15h 40m 52s.xml">
       <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="TestSuite - 2017.01.16 at 10h 49m 01s.xml">
-      <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsE___() - 2017.01.18 at 13h 15m 56s.xml">
+      <configuration name="testGetAwesomeAdsE...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 10m 30s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsE___() - 2017.01.18 at 13h 16m 30s.xml">
+      <configuration name="testGetAwesomeAdsE...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 10m 46s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsE___() - 2017.01.18 at 13h 16m 47s.xml">
+      <configuration name="testGetAwesomeAdsE...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 11m 03s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsE___() - 2017.01.18 at 13h 16m 57s.xml">
+      <configuration name="testGetAwesomeAdsE...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 16m 19s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsH___() - 2017.01.18 at 13h 42m 20s.xml">
+      <configuration name="testGetAwesomeAdsH...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 24m 40s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsQ___() - 2017.01.18 at 13h 34m 07s.xml">
+      <configuration name="testGetAwesomeAdsQ...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds() - 2017.01.13 at 15h 25m 10s.xml">
-      <configuration name="testAds()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="testGetAwesomeAdsQ___() - 2017.01.18 at 13h 36m 47s.xml">
+      <configuration name="testGetAwesomeAdsQ...()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1440" y="0" width="1600" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3761,7 +4012,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32258064" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5471464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43548387" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43548387" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3769,8 +4020,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26824033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2811159" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2406932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25224647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3791,44 +4042,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/org/json/JSONArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/ApplicationTest.java" />
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3946,13 +4164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-23/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -3981,52 +4192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="146" column="5" selection-start-line="135" selection-start-column="4" selection-end-line="146" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.5.1/jars/classes.jar!/tv/superawesome/lib/samodelspace/SAResponse.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -4037,37 +4202,131 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/saadloader/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="88" column="64" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+        <state relative-caret-position="373">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
-            <marker date="1484563319000" expanded="true" signature="2495:2566" ph="{...}" />
+            <marker date="1484737292000" expanded="true" signature="2495:2566" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java">
+    <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/jars/classes.jar!/tv/superawesome/lib/sanetwork/listdownload/SAFileListDownloaderInterface.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="105">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+    <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.4.9/jars/classes.jar!/tv/superawesome/lib/savastparser/SAVASTParserInterface.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="884" column="49" selection-start-line="884" selection-start-column="49" selection-end-line="884" selection-end-column="49" />
+        <state relative-caret-position="105">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.6/jars/classes.jar!/tv/superawesome/lib/sanetwork/file/SAFileDownloaderInterface.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="116" column="7" selection-start-line="111" selection-start-column="4" selection-end-line="116" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/saadloader/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.2.6/jars/classes.jar!/tv/superawesome/lib/sasession/SASession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#4270#4271#0" expanded="true" />
+            <element signature="e#4302#4303#0" expanded="true" />
+            <element signature="e#4335#4336#0" expanded="true" />
+            <element signature="e#4369#4370#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3047">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="304">
+          <caret line="114" column="75" selection-start-line="114" selection-start-column="75" selection-end-line="114" selection-end-column="75" />
           <folding>
             <element signature="e#0#121#0" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#6737#15213#0" expanded="true" />
+            <element signature="e#15212#15213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Endpoint_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="306" column="38" selection-start-line="306" selection-start-column="38" selection-end-line="306" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessHTML_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="59" column="427" selection-start-line="52" selection-start-column="8" selection-end-line="59" selection-end-column="427" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="131" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="164" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="164" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="814" column="17" selection-start-line="716" selection-start-column="16" selection-end-line="814" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/SALoaderInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#121#0" expanded="true" />
           </folding>
         </state>
       </provider>

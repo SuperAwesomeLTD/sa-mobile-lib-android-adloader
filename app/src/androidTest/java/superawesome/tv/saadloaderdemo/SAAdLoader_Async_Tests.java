@@ -49,7 +49,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
         SALoader loader = new SALoader(getContext());
         loader.loadAd(placement1, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -66,15 +66,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = false;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = -1;
                 String expected_creative_click_url = "http://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "image_with_link";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.image;
+                SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 9;
 
@@ -114,14 +112,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -146,7 +142,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(placement2, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 Log.d("SuperAwesome", "Resp " + response.writeToJson().toString());
 
@@ -165,15 +161,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = false;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = -1;
                 String expected_creative_click_url = "http://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "video";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.video;
+                SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 24;
 
@@ -213,14 +207,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -245,7 +237,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(placement3, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -262,15 +254,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = false;
                 boolean expected_ad_show_padlock = false;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 0;
                 String expected_creative_click_url = null;
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = null;
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.invalid;
+                SACreativeFormat expected_creative_format = SACreativeFormat.invalid;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 9;
 
@@ -310,14 +300,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -349,7 +337,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl1, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -366,15 +354,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = true;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 5768;
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "image_with_link";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.image;
+                SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 9;
 
@@ -414,14 +400,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -446,7 +430,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl2, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -463,15 +447,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = true;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 8902;
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = "https://superawesome.tv/v2/ad/ext_impression";
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "rich_media";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.rich;
+                SACreativeFormat expected_creative_format = SACreativeFormat.rich;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 9;
 
@@ -511,14 +493,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -543,7 +523,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl3, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 Log.d("SuperAwesome", "resp" + response.writeToJson().toString());
 
@@ -562,15 +542,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = true;
                 boolean expected_ad_show_padlock = false;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 21029;
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = "https://superawesome.tv/v2/ad/ext_impression";
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "tag";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.tag;
+                SACreativeFormat expected_creative_format = SACreativeFormat.tag;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 9;
 
@@ -610,14 +588,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -642,7 +618,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl4, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -659,15 +635,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = true;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 5770;
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "video";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.video;
+                SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 49;
 
@@ -707,14 +681,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
@@ -740,7 +712,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl5, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 2;
@@ -757,15 +729,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean[] expected_ad_isHouse = {false, false};
                 boolean[] expected_ad_safeAdApproved = {true, true};
                 boolean[] expected_ad_show_padlock = {true, true};
-                int[] expected_ad_campaignType = {1, 1};
-                SACampaignType[] expected_ad_saCampaignType = {SACampaignType.CPI, SACampaignType.CPI};
+                SACampaignType[] expected_ad_campaignType = {SACampaignType.CPI, SACampaignType.CPI};
 
                 int[] expected_creative_id = {5792, 5793};
                 String[] expected_creative_click_url = {"http://superawesome.tv", "http://www.superawesome.tv/en/kws"};
                 String[] expected_creative_impression_url = {null, null};
                 String[] expected_creative_installUrl = {"https://ads.superawesome.tv/install_1", null};
-                String[] expected_creative_format = {"image_with_link", "image_with_link"};
-                SACreativeFormat[] expected_creative_creativeFormat = {SACreativeFormat.appwall, SACreativeFormat.appwall};
+                SACreativeFormat[] expected_creative_format = {SACreativeFormat.appwall, SACreativeFormat.appwall};
                 String[] expected_creative_bundleId = {"tv.superawesome.demoapp", "tv.superawesome.demoapp"};
                 int[] expected_creative_events = {9, 9};
 
@@ -822,14 +792,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                     assertEquals(expected_ad_safeAdApproved[i], ad.safeAdApproved);
                     assertEquals(expected_ad_show_padlock[i], ad.showPadlock);
                     assertEquals(expected_ad_campaignType[i], ad.campaignType);
-                    assertEquals(expected_ad_saCampaignType[i], ad.saCampaignType);
 
                     assertEquals(expected_creative_id[i], ad.creative.id);
                     assertEquals(expected_creative_click_url[i], ad.creative.clickUrl);
                     assertEquals(expected_creative_impression_url[i], ad.creative.impressionUrl);
                     assertEquals(expected_creative_installUrl[i], ad.creative.installUrl);
                     assertEquals(expected_creative_format[i], ad.creative.format);
-                    assertEquals(expected_creative_creativeFormat[i], ad.creative.creativeFormat);
                     assertEquals(expected_creative_bundleId[i], ad.creative.bundleId);
                     assertEquals(expected_creative_events[i], ad.creative.events.size());
 
@@ -855,7 +823,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
 
         loader.loadAd(adurl6, new JSONObject(), new JSONObject(), 100, session, new SALoaderInterface() {
             @Override
-            public void didLoadAd(SAResponse response) {
+            public void saDidLoadAd(SAResponse response) {
 
                 // only test for relevant things
                 int expected_ads = 1;
@@ -872,15 +840,13 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 boolean expected_ad_isHouse = false;
                 boolean expected_ad_safeAdApproved = true;
                 boolean expected_ad_show_padlock = true;
-                int expected_ad_campaignType = 0;
-                SACampaignType expected_ad_saCampaignType = SACampaignType.CPM;
+                SACampaignType expected_ad_campaignType = SACampaignType.CPM;
 
                 int expected_creative_id = 3330;
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
-                String expected_creative_format = "video";
-                SACreativeFormat expected_creative_creativeFormat = SACreativeFormat.video;
+                SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 39;
 
@@ -920,14 +886,12 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_ad_safeAdApproved, ad.safeAdApproved);
                 assertEquals(expected_ad_show_padlock, ad.showPadlock);
                 assertEquals(expected_ad_campaignType, ad.campaignType);
-                assertEquals(expected_ad_saCampaignType, ad.saCampaignType);
 
                 assertEquals(expected_creative_id, ad.creative.id);
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
-                assertEquals(expected_creative_creativeFormat, ad.creative.creativeFormat);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
