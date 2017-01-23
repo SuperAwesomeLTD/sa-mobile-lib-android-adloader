@@ -16,57 +16,6 @@ import tv.superawesome.lib.sautils.SAUtils;
  */
 public class SAProcessHTML {
 
-    // the HTML needed for an image ad
-    private static final String imageHTML = "" +
-            "<!DOCTYPE html><html>" +
-            "<head>" +
-            "<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no\"/>" +
-            "<title>SuperAwesome Image Template</title>" +
-            "<style>" +
-            "html, body { box-sizing: border-box; width: 100%; height: 100%; padding: 0px; margin: 0px; overflow: hidden; }" +
-            "img#sa_image { width: _WIDTH_px; height: _HEIGHT_px; border: 0; -webkit-transform-origin: 0 0; -webkit-transform: scale(_SCALE_); position:absolute; }" +
-            "</style>" +
-            "</head>" +
-            "<body>" +
-            "<a href='hrefURL' target=\"_blank\"><img id='sa_image' src='imageURL'/></a>" +
-            "_MOAT_" +
-            "</body>" +
-            "</html>";
-
-    // the HTML needed for a rich media ad
-    private static final String richMediaHTML = "" +
-            "<!DOCTYPE html><html>" +
-            "<head>" +
-            "<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no\"/>" +
-            "<title>SuperAwesome Rich Media Template</title>" +
-            "<style>" +
-            "html, body { box-sizing: border-box; width: 100%; height: 100%; padding: 0px; margin: 0px; overflow: hidden; }" +
-            "iframe { width: _WIDTH_px; height: _HEIGHT_px; border: 0; -webkit-transform-origin: 0 0; -webkit-transform: scale(_SCALE_); position:absolute; }" +
-            "</style>" +
-            "</head>" +
-            "<body>" +
-            "<iframe src='richMediaURL'></iframe>" +
-            "_MOAT_" +
-            "</body>" +
-            "</html>";
-
-    // the HTML needed for a tag ad
-    private static final String tagHTML = "" +
-            "<!DOCTYPE html><html>" +
-            "<head>" +
-            "<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no\"/>" +
-            "<title>SuperAwesome 3rd Party Tag Template</title>" +
-            "<style>" +
-            "html, body { box-sizing: border-box; width: 100%; height: 100%; padding: 0px; margin: 0px; overflow: hidden; }" +
-            "div#inner { width: _WIDTH_px; height: _HEIGHT_px; border: 0; -webkit-transform-origin: 0 0; -webkit-transform: scale(_SCALE_); position:absolute; }" +
-            "</style>" +
-            "</head>" +
-            "<body>" +
-            "<div id=\"inner\">tagdata</div>" +
-            "_MOAT_" +
-            "</body>" +
-            "</html>";
-
     /**
      * Method that loads a special HTML file and parse & format it so that later
      * on web views will be able to use it to display proper image data
@@ -75,7 +24,7 @@ public class SAProcessHTML {
      * @return      the formatted HTML string to be used by a WebView
      */
     public static String formatCreativeIntoImageHTML(SAAd ad) {
-        String htmlString = imageHTML;
+        String htmlString = "<a href='_HREF_URL_' target='_blank'><img src='_IMAGE_URL_'/></a>_MOAT_";
         String click = ad.creative.clickUrl;
 
         if (click == null) {
@@ -86,8 +35,8 @@ public class SAProcessHTML {
             }
         }
 
-        htmlString = htmlString.replace("hrefURL", click != null ? click : "");
-        htmlString = htmlString.replace("imageURL", ad.creative.details.image);
+        htmlString = htmlString.replace("_HREF_URL_", click != null ? click : "");
+        htmlString = htmlString.replace("_IMAGE_URL_", ad.creative.details.image);
         return htmlString;
     }
 
@@ -99,14 +48,14 @@ public class SAProcessHTML {
      * @return      the formatted HTML string to be used by a WebView
      */
     public static String formatCreativeIntoRichMediaHTML(SAAd ad) {
-        String htmlString = richMediaHTML;
+        String htmlString = "<iframe src='_RICH_MEDIA_URL_'></iframe>";
         String richMediaURL = ad.creative.details.url +
                 "?placement=" + ad.placementId +
                 "&line_item=" + ad.lineItemId +
                 "&creative=" + ad.creative.id +
                 "&rnd=" + SAUtils.getCacheBuster();
 
-        return htmlString.replace("richMediaURL", richMediaURL);
+        return htmlString.replace("_RICH_MEDIA_URL_", richMediaURL);
     }
 
     /**
@@ -116,7 +65,7 @@ public class SAProcessHTML {
      * @return      the formatted HTML string to be used by a WebView
      */
     public static String formatCreativeIntoTagHTML(SAAd ad) {
-        String htmlString = tagHTML;
+        String htmlString = "_TAGDATA__MOAT_";
 
         String click = ad.creative.clickUrl;
 
@@ -130,16 +79,12 @@ public class SAProcessHTML {
 
         String tagString = ad.creative.details.tag;
         tagString = tagString.replace("[click]", click+ "&redir=");
-//        try {
-            tagString = tagString.replace("[click_enc]", SAUtils.encodeURL(click));
-//        } catch (/*URISyntaxException | */MalformedURLException e) {
-//            e.printStackTrace();
-//        }
+        tagString = tagString.replace("[click_enc]", SAUtils.encodeURL(click));
         tagString = tagString.replace("[keywords]", "");
         tagString = tagString.replace("[timestamp]", "");
         tagString = tagString.replace("target=\"_blank\"", "");
         tagString = tagString.replace("“", "\"");
 
-        return htmlString.replace("tagdata", tagString);
+        return htmlString.replace("_TAGDATA_", tagString);
     }
 }
