@@ -42,7 +42,7 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         Log.d("SuperAwesome", ad.creative.details.media.html);
 
         assertNotNull(ad.creative.details.media.html);
-        assertTrue(ad.creative.details.media.html.contains("<iframe src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html?placement=4091&line_item=2001&creative=2081&rnd="));
+        assertTrue(ad.creative.details.media.html.contains("<iframe style='padding:0;border:0;' width='100%' height='100%' src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html?placement=4091&line_item=2001&creative=2081&rnd="));
     }
 
     @SmallTest
