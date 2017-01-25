@@ -74,7 +74,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 9;
+                int expected_creative_events = 10;
 
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
@@ -169,7 +169,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 24;
+                int expected_creative_events = 25;
 
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
@@ -262,7 +262,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.invalid;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 9;
+                int expected_creative_events = 10;
 
                 String expected_details_image = null;
                 String expected_details_url = null;
@@ -360,9 +360,10 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
+                String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                 SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 9;
+                int expected_creative_events = 10;
 
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
@@ -405,6 +406,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
+                assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
@@ -453,9 +455,10 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = "https://superawesome.tv/v2/ad/ext_impression";
                 String expected_creative_installUrl = null;
+                String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                 SACreativeFormat expected_creative_format = SACreativeFormat.rich;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 9;
+                int expected_creative_events = 10;
 
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
@@ -498,6 +501,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
+                assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
@@ -550,7 +554,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.tag;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 9;
+                int expected_creative_events = 10;
 
                 String expected_details_image = null;
                 String expected_details_url = null;
@@ -641,9 +645,10 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
+                String expected_creative_click_counter_url = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 49;
+                int expected_creative_events = 50;
 
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
@@ -686,6 +691,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
+                assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
@@ -732,12 +738,22 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 SACampaignType[] expected_ad_campaignType = {SACampaignType.CPI, SACampaignType.CPI};
 
                 int[] expected_creative_id = {5792, 5793};
-                String[] expected_creative_click_url = {"http://superawesome.tv", "http://www.superawesome.tv/en/kws"};
+                String[] expected_creative_click_url = {
+                        "http://superawesome.tv",
+                        "http://www.superawesome.tv/en/kws"
+                };
                 String[] expected_creative_impression_url = {null, null};
-                String[] expected_creative_installUrl = {"https://ads.superawesome.tv/install_1", null};
+                String[] expected_creative_installUrl = {
+                        "https://ads.superawesome.tv/install_1",
+                        null
+                };
+                String[] expected_creative_click_counter_url = {
+                        "https://superawesome.tv/click_counter",
+                        "https://superawesome.tv/click_counter_2"
+                };
                 SACreativeFormat[] expected_creative_format = {SACreativeFormat.appwall, SACreativeFormat.appwall};
                 String[] expected_creative_bundleId = {"tv.superawesome.demoapp", "tv.superawesome.demoapp"};
-                int[] expected_creative_events = {9, 9};
+                int[] expected_creative_events = {10, 10};
 
                 String[] expected_details_image = {
                         "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/2ODwlbp3NJxnsmgROrdzXrxIUcD87h5y.png",
@@ -797,6 +813,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                     assertEquals(expected_creative_click_url[i], ad.creative.clickUrl);
                     assertEquals(expected_creative_impression_url[i], ad.creative.impressionUrl);
                     assertEquals(expected_creative_installUrl[i], ad.creative.installUrl);
+                    assertEquals(expected_creative_click_counter_url[i], ad.creative.clickCounterUrl);
                     assertEquals(expected_creative_format[i], ad.creative.format);
                     assertEquals(expected_creative_bundleId[i], ad.creative.bundleId);
                     assertEquals(expected_creative_events[i], ad.creative.events.size());
@@ -846,9 +863,10 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 String expected_creative_click_url = "https://superawesome.tv";
                 String expected_creative_impression_url = null;
                 String expected_creative_installUrl = null;
+                String expected_creative_click_counter_url = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 39;
+                int expected_creative_events = 40;
 
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
@@ -891,6 +909,7 @@ public class SAAdLoader_Async_Tests extends ApplicationTestCase<Application> {
                 assertEquals(expected_creative_click_url, ad.creative.clickUrl);
                 assertEquals(expected_creative_impression_url, ad.creative.impressionUrl);
                 assertEquals(expected_creative_installUrl, ad.creative.installUrl);
+                assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
