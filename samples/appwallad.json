@@ -14,7 +14,7 @@
             "impressionUrl": null,
             "installUrl": "https://ads.superawesome.tv/install_1",
             "clickUrl": "http://superawesome.tv",
-            "clickCounterUrl": null,
+            "clickCounterUrl": "https://superawesome.tv/click_counter",
             "details": {
                 "url": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/2ODwlbp3NJxnsmgROrdzXrxIUcD87h5y.png",
                 "image": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/2ODwlbp3NJxnsmgROrdzXrxIUcD87h5y.png",
@@ -62,7 +62,7 @@
             "impressionUrl": null,
             "installUrl": null,
             "clickUrl": "http://www.superawesome.tv/en/kws",
-            "clickCounterUrl": null,
+            "clickCounterUrl": "https://superawesome.tv/click_counter_2",
             "details": {
                 "url": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/TMRQ0iNyFEinXx2BQhkSONtEvCES7rsr.png",
                 "image": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/TMRQ0iNyFEinXx2BQhkSONtEvCES7rsr.png",

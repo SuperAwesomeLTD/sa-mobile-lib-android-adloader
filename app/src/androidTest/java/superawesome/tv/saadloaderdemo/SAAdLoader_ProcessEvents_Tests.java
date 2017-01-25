@@ -27,6 +27,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         ad.creative.id = 1092;
         ad.creative.impressionUrl = "https://superawesome.tv/impression";
         ad.creative.installUrl = "https://superawesome.tv/install";
+        ad.creative.clickCounterUrl = "https://superawesome.tv/click_counter";
 
         SASession session = new SASession(getContext());
         session.setConfigurationProduction();
@@ -34,7 +35,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
 
         SAProcessEvents.addAdEvents(ad, session);
 
-        int expected_events = 9;
+        int expected_events = 10;
 
         int expected_sa_tracking = 1;
         int expected_viewable_impr = 1;
@@ -45,6 +46,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         int expected_sa_impr = 1;
         int expected_impression = 1;
         int expected_install = 1;
+        int expected_clk_counter = 1;
 
         String expected_sa_tracking_url = "https://ads.superawesome.tv/v2/click?placement=4001&rnd=1026797&sourceBundle=superawesome.tv.saadloaderdemo&creative=1092&line_item=2731&ct=wifi&sdkVersion=0.0.0";
         String expected_viewable_impr_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22viewable_impression%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1115679&ct=wifi&sdkVersion=0.0.0";
@@ -55,6 +57,8 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         String expected_sa_impr_url = "https://ads.superawesome.tv/v2/impression?placement=4001&rnd=1095998&sourceBundle=superawesome.tv.saadloaderdemo&no_image=true&line_item=2731&creative=1092&sdkVersion=0.0.0";
         String expected_impression_url = "https://superawesome.tv/impression";
         String expected_install_url = "https://superawesome.tv/install";
+        String expected_click_counter_url = "https://superawesome.tv/click_counter";
+
 
         assertNotNull(ad.creative.events);
         assertEquals(expected_events, ad.creative.events.size());
@@ -68,6 +72,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         List<SATracking> sa_impr = new ArrayList<>();
         List<SATracking> impression = new ArrayList<>();
         List<SATracking> install = new ArrayList<>();
+        List<SATracking> clickCounter = new ArrayList<>();
 
         for (SATracking event : ad.creative.events) {
             if (event.event.equals("sa_tracking")) sa_tracking.add(event);
@@ -79,6 +84,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
             if (event.event.equals("sa_impr")) sa_impr.add(event);
             if (event.event.equals("impression")) impression.add(event);
             if (event.event.equals("install")) install.add(event);
+            if (event.event.equals("clk_counter")) clickCounter.add(event);
         }
 
         assertEquals(expected_sa_tracking, sa_tracking.size());
@@ -90,6 +96,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertEquals(expected_sa_impr, sa_impr.size());
         assertEquals(expected_impression, impression.size());
         assertEquals(expected_install, install.size());
+        assertEquals(expected_clk_counter, clickCounter.size());
 
         String sa_tracking_url = sa_tracking.get(0).URL;
         String viewable_impr_url = viewable_impr.get(0).URL;
@@ -100,6 +107,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         String sa_impr_url = sa_impr.get(0).URL;
         String impression_url = impression.get(0).URL;
         String install_url = install.get(0).URL;
+        String click_counter_url = clickCounter.get(0).URL;
 
         assertNotNull(sa_tracking_url);
         assertNotNull(viewable_impr_url);
@@ -110,6 +118,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertNotNull(sa_impr_url);
         assertNotNull(impression_url);
         assertNotNull(install_url);
+        assertNotNull(click_counter_url);
 
         boolean sa_tracking_ok = getHammingDistance(expected_sa_tracking_url, sa_tracking_url, 7);
         boolean viewable_impr_ok = getHammingDistance(expected_viewable_impr_url, viewable_impr_url, 7);
@@ -120,6 +129,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         boolean sa_impr_ok = getHammingDistance(expected_sa_impr_url, sa_impr_url, 7);
         boolean impression_ok = getHammingDistance(expected_impression_url, impression_url, 7);
         boolean install_ok = getHammingDistance(expected_install_url, install_url, 7);
+        boolean click_counter_ok = getHammingDistance(expected_click_counter_url, click_counter_url, 7);
 
         assertTrue(sa_tracking_ok);
         assertTrue(viewable_impr_ok);
@@ -130,6 +140,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertTrue(sa_impr_ok);
         assertTrue(impression_ok);
         assertTrue(install_ok);
+        assertTrue(click_counter_ok);
 
     }
 

@@ -13,7 +13,7 @@
         "impressionUrl": null,
         "installUrl": null,
         "clickUrl": "https://superawesome.tv",
-        "clickCounterUrl": null,
+        "clickCounterUrl": "https://superawesome.tv/click_counter",
         "details": {
             "url": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg",
             "image": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg",

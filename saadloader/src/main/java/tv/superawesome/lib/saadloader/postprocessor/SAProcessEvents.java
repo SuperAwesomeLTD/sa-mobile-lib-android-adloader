@@ -161,6 +161,12 @@ public class SAProcessEvents {
         externalInstall.event = "install";
         externalInstall.URL = ad.creative.installUrl;
 
+        // create an external click counter event; this needs to be triggered if the advertiser
+        // has added an extra click tracker to his  campaign
+        SATracking externalClickCounter = new SATracking();
+        externalClickCounter.event = "clk_counter";
+        externalClickCounter.URL = ad.creative.clickCounterUrl;
+
         // add events to the ads events array
         ad.creative.events.add(clickEvt);
         ad.creative.events.add(viewableImpression);
@@ -171,6 +177,7 @@ public class SAProcessEvents {
         ad.creative.events.add(saImpressionEvt);
         ad.creative.events.add(externalImpression);
         ad.creative.events.add(externalInstall);
+        ad.creative.events.add(externalClickCounter);
     }
 
 }

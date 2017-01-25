@@ -13,7 +13,7 @@
         "impressionUrl": "https://superawesome.tv/v2/ad/ext_impression",
         "installUrl": null,
         "clickUrl": "https://superawesome.tv",
-        "clickCounterUrl": null,
+        "clickCounterUrl": "https://superawesome.tv/click_counter",
         "details": {
             "url": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html",
             "image": "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html",
