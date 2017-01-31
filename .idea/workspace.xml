@@ -12,28 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c28a7d6-cd06-4c95-acec-ef294e4eb57d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/TestSuite.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/androidTest/debug/superawesome/tv/saadloaderdemo/TestSuite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/9z+jq_X5RUKeYH_vZy+Bp4fOjfc=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/9z+jq_X5RUKeYH_vZy+Bp4fOjfc=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/debug_66a3c8c96bb24f08aa0fc5a6c9dfb2fbffdeb7a4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/androidTest/debug/debug_66a3c8c96bb24f08aa0fc5a6c9dfb2fbffdeb7a4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.9.4/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/0.9.4/jars/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-androidTest.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-androidTest.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebugAndroidTest/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/circle.yml" />
     </list>
     <ignored path="sa-mobile-lib-android-adloader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -201,7 +185,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestSuite.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -243,43 +227,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SAAdLoader_Async_Tests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1219#6778#0" expanded="true" />
-                <element signature="e#6777#6778#0" expanded="true" />
-                <element signature="e#7085#12779#0" expanded="true" />
-                <element signature="e#12778#12779#0" expanded="true" />
-                <element signature="e#13085#18419#0" expanded="true" />
-                <element signature="e#18418#18419#0" expanded="true" />
-                <element signature="e#18829#24773#0" expanded="true" />
-                <element signature="e#19049#24747#0" expanded="true" />
-                <element signature="e#24746#24747#0" expanded="true" />
-                <element signature="e#24772#24773#0" expanded="true" />
-                <element signature="e#25187#31286#0" expanded="true" />
-                <element signature="e#25407#31260#0" expanded="true" />
-                <element signature="e#31259#31260#0" expanded="true" />
-                <element signature="e#31285#31286#0" expanded="true" />
-                <element signature="e#31694#37456#0" expanded="true" />
-                <element signature="e#31914#37430#0" expanded="true" />
-                <element signature="e#37429#37430#0" expanded="true" />
-                <element signature="e#37455#37456#0" expanded="true" />
-                <element signature="e#37866#43948#0" expanded="true" />
-                <element signature="e#38086#43922#0" expanded="true" />
-                <element signature="e#43921#43922#0" expanded="true" />
-                <element signature="e#43947#43948#0" expanded="true" />
-                <element signature="e#44360#52305#0" expanded="true" />
-                <element signature="e#44580#52279#0" expanded="true" />
-                <element signature="e#52278#52279#0" expanded="true" />
-                <element signature="e#52304#52305#0" expanded="true" />
-                <element signature="e#52716#58653#0" expanded="true" />
-                <element signature="e#52936#58627#0" expanded="true" />
-                <element signature="e#58626#58627#0" expanded="true" />
-                <element signature="e#58652#58653#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#16659#21757#0" expanded="true" />
+                <element signature="e#21756#21757#0" expanded="true" />
+                <element signature="e#22283#27536#0" expanded="true" />
+                <element signature="e#27535#27536#0" expanded="true" />
+                <element signature="e#28068#33000#0" expanded="true" />
+                <element signature="e#32999#33000#0" expanded="true" />
+                <element signature="e#33522#38758#0" expanded="true" />
+                <element signature="e#38757#38758#0" expanded="true" />
+                <element signature="e#39282#46173#0" expanded="true" />
+                <element signature="e#46172#46173#0" expanded="true" />
+                <element signature="e#46696#51787#0" expanded="true" />
+                <element signature="e#51786#51787#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2978,9 +2945,9 @@
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/saadloader/src/main/java/tv/superawesome/lib/saadloader/postprocessor/SAProcessEvents.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_ProcessEvents_Tests.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests2.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/TestSuite.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java" />
       </list>
     </option>
   </component>
@@ -3178,7 +3145,7 @@
       <recent name="tv.superawesome.lib.saadloader.postprocessor" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Tests.TestSuite">
+  <component name="RunManager" selected="Android Tests.testAds1()">
     <configuration default="false" name="SAAdLoader_Async_Tes..." type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -3700,11 +3667,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
-        <item index="2" class="java.lang.String" itemvalue="Android Tests.testAds3()" />
-        <item index="3" class="java.lang.String" itemvalue="Android Tests.testAds2()" />
-        <item index="4" class="java.lang.String" itemvalue="Android Tests.testAds1()" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.testAds1()" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.TestSuite" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.SAAdLoader_Async_Tes..." />
+        <item index="3" class="java.lang.String" itemvalue="Android Tests.testAds3()" />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.testAds2()" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -3820,10 +3787,10 @@
     <history-entry file="TestSuite - 2017.01.31 at 13h 22m 23s.xml">
       <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds1() - 2017.01.31 at 12h 28m 57s.xml">
-      <configuration name="testAds1()" configurationId="AndroidTestRunConfigurationType" />
+    <history-entry file="TestSuite - 2017.01.31 at 14h 14m 08s.xml">
+      <configuration name="TestSuite" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="testAds1() - 2017.01.31 at 12h 29m 14s.xml">
+    <history-entry file="testAds1() - 2017.01.31 at 14h 14m 27s.xml">
       <configuration name="testAds1()" configurationId="AndroidTestRunConfigurationType" />
     </history-entry>
     <history-entry file="testAds2() - 2017.01.31 at 12h 30m 50s.xml">
@@ -4112,77 +4079,20 @@
         <state relative-caret-position="259">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1219#6778#0" expanded="true" />
-            <element signature="e#6777#6778#0" expanded="true" />
-            <element signature="e#7085#12779#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#13085#18419#0" expanded="true" />
-            <element signature="e#18418#18419#0" expanded="true" />
-            <element signature="e#18829#24773#0" expanded="true" />
-            <element signature="e#19049#24747#0" expanded="true" />
-            <element signature="e#24746#24747#0" expanded="true" />
-            <element signature="e#24772#24773#0" expanded="true" />
-            <element signature="e#25187#31286#0" expanded="true" />
-            <element signature="e#25407#31260#0" expanded="true" />
-            <element signature="e#31259#31260#0" expanded="true" />
-            <element signature="e#31285#31286#0" expanded="true" />
-            <element signature="e#31694#37456#0" expanded="true" />
-            <element signature="e#31914#37430#0" expanded="true" />
-            <element signature="e#37429#37430#0" expanded="true" />
-            <element signature="e#37455#37456#0" expanded="true" />
-            <element signature="e#37866#43948#0" expanded="true" />
-            <element signature="e#38086#43922#0" expanded="true" />
-            <element signature="e#43921#43922#0" expanded="true" />
-            <element signature="e#43947#43948#0" expanded="true" />
-            <element signature="e#44360#52305#0" expanded="true" />
-            <element signature="e#44580#52279#0" expanded="true" />
-            <element signature="e#52278#52279#0" expanded="true" />
-            <element signature="e#52304#52305#0" expanded="true" />
-            <element signature="e#52716#58653#0" expanded="true" />
-            <element signature="e#52936#58627#0" expanded="true" />
-            <element signature="e#58626#58627#0" expanded="true" />
-            <element signature="e#58652#58653#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1219#6778#0" expanded="true" />
-            <element signature="e#6777#6778#0" expanded="true" />
-            <element signature="e#7085#12779#0" expanded="true" />
-            <element signature="e#12778#12779#0" expanded="true" />
-            <element signature="e#13085#18419#0" expanded="true" />
-            <element signature="e#18418#18419#0" expanded="true" />
-            <element signature="e#18829#24773#0" expanded="true" />
-            <element signature="e#19049#24747#0" expanded="true" />
-            <element signature="e#24746#24747#0" expanded="true" />
-            <element signature="e#24772#24773#0" expanded="true" />
-            <element signature="e#25187#31286#0" expanded="true" />
-            <element signature="e#25407#31260#0" expanded="true" />
-            <element signature="e#31259#31260#0" expanded="true" />
-            <element signature="e#31285#31286#0" expanded="true" />
-            <element signature="e#31694#37456#0" expanded="true" />
-            <element signature="e#31914#37430#0" expanded="true" />
-            <element signature="e#37429#37430#0" expanded="true" />
-            <element signature="e#37455#37456#0" expanded="true" />
-            <element signature="e#37866#43948#0" expanded="true" />
-            <element signature="e#38086#43922#0" expanded="true" />
-            <element signature="e#43921#43922#0" expanded="true" />
-            <element signature="e#43947#43948#0" expanded="true" />
-            <element signature="e#44360#52305#0" expanded="true" />
-            <element signature="e#44580#52279#0" expanded="true" />
-            <element signature="e#52278#52279#0" expanded="true" />
-            <element signature="e#52304#52305#0" expanded="true" />
-            <element signature="e#52716#58653#0" expanded="true" />
-            <element signature="e#52936#58627#0" expanded="true" />
-            <element signature="e#58626#58627#0" expanded="true" />
-            <element signature="e#58652#58653#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#16659#21757#0" expanded="true" />
+            <element signature="e#21756#21757#0" expanded="true" />
+            <element signature="e#22283#27536#0" expanded="true" />
+            <element signature="e#27535#27536#0" expanded="true" />
+            <element signature="e#28068#33000#0" expanded="true" />
+            <element signature="e#32999#33000#0" expanded="true" />
+            <element signature="e#33522#38758#0" expanded="true" />
+            <element signature="e#38757#38758#0" expanded="true" />
+            <element signature="e#39282#46173#0" expanded="true" />
+            <element signature="e#46172#46173#0" expanded="true" />
+            <element signature="e#46696#51787#0" expanded="true" />
+            <element signature="e#51786#51787#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4192,6 +4102,29 @@
         <state relative-caret-position="165">
           <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/superawesome/tv/saadloaderdemo/SAAdLoader_Async_Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#16659#21757#0" expanded="true" />
+            <element signature="e#21756#21757#0" expanded="true" />
+            <element signature="e#22283#27536#0" expanded="true" />
+            <element signature="e#27535#27536#0" expanded="true" />
+            <element signature="e#28068#33000#0" expanded="true" />
+            <element signature="e#32999#33000#0" expanded="true" />
+            <element signature="e#33522#38758#0" expanded="true" />
+            <element signature="e#38757#38758#0" expanded="true" />
+            <element signature="e#39282#46173#0" expanded="true" />
+            <element signature="e#46172#46173#0" expanded="true" />
+            <element signature="e#46696#51787#0" expanded="true" />
+            <element signature="e#51786#51787#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
