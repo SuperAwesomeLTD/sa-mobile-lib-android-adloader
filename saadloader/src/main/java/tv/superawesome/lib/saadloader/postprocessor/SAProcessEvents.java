@@ -34,12 +34,12 @@ public class SAProcessEvents {
                 (ad.creative.format == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "sdkVersion", session.getVersion(),
                         "sourceBundle", session.getPackageName(),
-                        "rnd", session.getCachebuster(),
-                        "ct", session.getConnectionType()
+                        "creative", ad.creative.id,
+                        "line_item", ad.lineItemId,
+                        "ct", session.getConnectionType(),
+                        "sdkVersion", session.getVersion(),
+                        "rnd", session.getCachebuster()
                 }));
 
         // create an impression event; this should be used by video ads (for the moment), and
@@ -54,8 +54,8 @@ public class SAProcessEvents {
                         "line_item", ad.lineItemId,
                         "sdkVersion", session.getVersion(),
                         "sourceBundle", session.getPackageName(),
-                        "rnd", session.getCachebuster(),
-                        "no_image", true
+                        "no_image", true,
+                        "rnd", session.getCachebuster()
                 }));
 
         // create a viewable impression event; this is triggered when the ad first shown on screen
@@ -65,15 +65,15 @@ public class SAProcessEvents {
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
-                        "rnd", session.getCachebuster(),
                         "ct", session.getConnectionType(),
                         "sourceBundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                        "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "type", "viewable_impression"
-                }))
+                            "placement", ad.placementId,
+                            "line_item", ad.lineItemId,
+                            "creative", ad.creative.id,
+                            "type", "viewable_impression"
+                        })),
+                        "rnd", session.getCachebuster()
                 }));
 
         // create a parental gate close event;
@@ -83,15 +83,15 @@ public class SAProcessEvents {
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
-                        "rnd", session.getCachebuster(),
                         "ct", session.getConnectionType(),
                         "sourceBundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
-                        "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "type", "parentalGateClose"
-                }))
+                            "placement", ad.placementId,
+                            "line_item", ad.lineItemId,
+                            "creative", ad.creative.id,
+                            "type", "parentalGateClose",
+                        })),
+                        "rnd", session.getCachebuster()
                 }));
 
 
@@ -102,15 +102,15 @@ public class SAProcessEvents {
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
-                        "rnd", session.getCachebuster(),
                         "ct", session.getConnectionType(),
                         "sourceBundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                        "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "type", "parentalGateOpen"
-                }))
+                            "placement", ad.placementId,
+                            "line_item", ad.lineItemId,
+                            "creative", ad.creative.id,
+                            "type", "parentalGateOpen"
+                        })),
+                        "rnd", session.getCachebuster()
                 }));
 
         // create a parental gate fail event
@@ -120,15 +120,15 @@ public class SAProcessEvents {
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
-                        "rnd", session.getCachebuster(),
                         "ct", session.getConnectionType(),
                         "sourceBundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
-                        "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "type", "parentalGateFail"
-                }))
+                            "placement", ad.placementId,
+                            "line_item", ad.lineItemId,
+                            "creative", ad.creative.id,
+                            "type", "parentalGateFail"
+                        })),
+                        "rnd", session.getCachebuster()
                 }));
 
         // create a parentla gate success event
@@ -138,15 +138,15 @@ public class SAProcessEvents {
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[] {
                         "sdkVersion", session.getVersion(),
-                        "rnd", session.getCachebuster(),
                         "ct", session.getConnectionType(),
                         "sourceBundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
-                        "placement", ad.placementId,
-                        "line_item", ad.lineItemId,
-                        "creative", ad.creative.id,
-                        "type", "parentalGateSuccess"
-                }))
+                            "placement", ad.placementId,
+                            "line_item", ad.lineItemId,
+                            "creative", ad.creative.id,
+                            "type", "parentalGateSuccess"
+                        })),
+                        "rnd", session.getCachebuster()
                 }));
 
         // create an external impression event; this needs to be triggered if the advertiser

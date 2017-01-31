@@ -3,6 +3,7 @@ package superawesome.tv.saadloaderdemo;
 import android.app.Application;
 import android.test.ApplicationTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         ad.creative.clickCounterUrl = "https://superawesome.tv/click_counter";
 
         SASession session = new SASession(getContext());
+        session.setVersion("3.2.1");
         session.setConfigurationProduction();
         session.disableTestMode();
 
@@ -47,18 +49,6 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         int expected_impression = 1;
         int expected_install = 1;
         int expected_clk_counter = 1;
-
-        String expected_sa_tracking_url = "https://ads.superawesome.tv/v2/click?placement=4001&rnd=1026797&sourceBundle=superawesome.tv.saadloaderdemo&creative=1092&line_item=2731&ct=wifi&sdkVersion=0.0.0";
-        String expected_viewable_impr_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22viewable_impression%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1115679&ct=wifi&sdkVersion=0.0.0";
-        String expected_pg_close_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22parentalGateClose%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1123630&ct=wifi&sdkVersion=0.0.0";
-        String expected_pg_fail_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22parentalGateFail%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1468009&ct=wifi&sdkVersion=0.0.0";
-        String expected_pg_open_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22parentalGateOpen%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1043005&ct=wifi&sdkVersion=0.0.0";
-        String expected_pg_success_url = "https://ads.superawesome.tv/v2/event?data=%7B%22type%22%3A%22parentalGateSuccess%22%2C%22creative%22%3A1092%2C%22line_item%22%3A2731%2C%22placement%22%3A4001%7D&sourceBundle=superawesome.tv.saadloaderdemo&rnd=1487496&ct=wifi&sdkVersion=0.0.0";
-        String expected_sa_impr_url = "https://ads.superawesome.tv/v2/impression?placement=4001&rnd=1095998&sourceBundle=superawesome.tv.saadloaderdemo&no_image=true&line_item=2731&creative=1092&sdkVersion=0.0.0";
-        String expected_impression_url = "https://superawesome.tv/impression";
-        String expected_install_url = "https://superawesome.tv/install";
-        String expected_click_counter_url = "https://superawesome.tv/click_counter";
-
 
         assertNotNull(ad.creative.events);
         assertEquals(expected_events, ad.creative.events.size());
@@ -120,28 +110,63 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertNotNull(install_url);
         assertNotNull(click_counter_url);
 
-        boolean sa_tracking_ok = getHammingDistance(expected_sa_tracking_url, sa_tracking_url, 7);
-        boolean viewable_impr_ok = getHammingDistance(expected_viewable_impr_url, viewable_impr_url, 7);
-        boolean pg_close_ok = getHammingDistance(expected_pg_close_url, pg_close_url, 7);
-        boolean pg_fail_ok = getHammingDistance(expected_pg_fail_url, pg_fail_url, 7);
-        boolean pg_open_ok = getHammingDistance(expected_pg_open_url, pg_open_url, 7);
-        boolean pg_success_ok = getHammingDistance(expected_pg_success_url, pg_success_url, 7);
-        boolean sa_impr_ok = getHammingDistance(expected_sa_impr_url, sa_impr_url, 7);
-        boolean impression_ok = getHammingDistance(expected_impression_url, impression_url, 7);
-        boolean install_ok = getHammingDistance(expected_install_url, install_url, 7);
-        boolean click_counter_ok = getHammingDistance(expected_click_counter_url, click_counter_url, 7);
+        assertTrue(sa_tracking_url.contains("https://ads.superawesome.tv/v2/click"));
+        assertTrue(sa_tracking_url.contains("placement=4001"));
+        assertTrue(sa_tracking_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(sa_tracking_url.contains("creative=1092"));
+        assertTrue(sa_tracking_url.contains("line_item=2731"));
+        assertTrue(sa_tracking_url.contains("sdkVersion=3.2.1"));
 
-        assertTrue(sa_tracking_ok);
-        assertTrue(viewable_impr_ok);
-        assertTrue(pg_close_ok);
-        assertTrue(pg_fail_ok);
-        assertTrue(pg_open_ok);
-        assertTrue(pg_success_ok);
-        assertTrue(sa_impr_ok);
-        assertTrue(impression_ok);
-        assertTrue(install_ok);
-        assertTrue(click_counter_ok);
+        assertTrue(viewable_impr_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(viewable_impr_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(viewable_impr_url.contains("sdkVersion=3.2.1"));
+        assertTrue(viewable_impr_url.contains("type%22%3A%22viewable_impression"));
+        assertTrue(viewable_impr_url.contains("creative%22%3A1092"));
+        assertTrue(viewable_impr_url.contains("line_item%22%3A2731"));
+        assertTrue(viewable_impr_url.contains("placement%22%3A4001"));
 
+        assertTrue(pg_close_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(pg_close_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_close_url.contains("sdkVersion=3.2.1"));
+        assertTrue(pg_close_url.contains("type%22%3A%22parentalGateClose"));
+        assertTrue(pg_close_url.contains("creative%22%3A1092"));
+        assertTrue(pg_close_url.contains("line_item%22%3A2731"));
+        assertTrue(pg_close_url.contains("placement%22%3A4001"));
+
+        assertTrue(pg_fail_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(pg_fail_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_fail_url.contains("sdkVersion=3.2.1"));
+        assertTrue(pg_fail_url.contains("type%22%3A%22parentalGateFail"));
+        assertTrue(pg_fail_url.contains("creative%22%3A1092"));
+        assertTrue(pg_fail_url.contains("line_item%22%3A2731"));
+        assertTrue(pg_fail_url.contains("placement%22%3A4001"));
+
+        assertTrue(pg_open_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(pg_open_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_open_url.contains("sdkVersion=3.2.1"));
+        assertTrue(pg_open_url.contains("type%22%3A%22parentalGateOpen"));
+        assertTrue(pg_open_url.contains("creative%22%3A1092"));
+        assertTrue(pg_open_url.contains("line_item%22%3A2731"));
+        assertTrue(pg_open_url.contains("placement%22%3A4001"));
+
+        assertTrue(pg_success_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(pg_success_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_success_url.contains("sdkVersion=3.2.1"));
+        assertTrue(pg_success_url.contains("type%22%3A%22parentalGateSuccess"));
+        assertTrue(pg_success_url.contains("creative%22%3A1092"));
+        assertTrue(pg_success_url.contains("line_item%22%3A2731"));
+        assertTrue(pg_success_url.contains("placement%22%3A4001"));
+
+        assertTrue(sa_impr_url.contains("https://ads.superawesome.tv/v2/impression"));
+        assertTrue(sa_impr_url.contains("placement=4001"));
+        assertTrue(sa_impr_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(sa_impr_url.contains("creative=1092"));
+        assertTrue(sa_impr_url.contains("line_item=2731"));
+        assertTrue(sa_impr_url.contains("sdkVersion=3.2.1"));
+
+        assertTrue(impression_url.equals("https://superawesome.tv/impression"));
+        assertTrue(install_url.equals("https://superawesome.tv/install"));
+        assertTrue(click_counter_url.equals("https://superawesome.tv/click_counter"));
     }
 
     private boolean getHammingDistance (String expected, String existing, int maxDelta) {
