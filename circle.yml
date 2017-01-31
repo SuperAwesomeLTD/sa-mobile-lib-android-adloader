@@ -15,4 +15,4 @@ test:
     - circle-android wait-for-boot
     # run tests against the emulator
     - ./gradlew connectedAndroidTest --stacktrace:
-        timeout: 720
+        timeout: 10000

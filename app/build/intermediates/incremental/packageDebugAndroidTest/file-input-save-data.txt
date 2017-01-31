@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 18 13:42:17 GMT 2017
+#Tue Jan 31 12:33:22 GMT 2017
 2.base=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug-androidTest.ap_
 5.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/transforms/dex/androidTest/debug/folders/1000/1f/main/classes.dex
 5.set=DEX
