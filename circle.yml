@@ -8,7 +8,7 @@ checkout:
 
 test:
   override:
-    - emulator -avd circleci-android22 -no-window:
+    - emulator -avd circleci-android24 -no-window:
 	background:true
     - circle-android wait-for-boot
     # - sleep 30
