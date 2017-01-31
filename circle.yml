@@ -9,10 +9,10 @@ checkout:
 test:
   override:
     # launch the default Android 24 emulator
-    # - emulator -avd circleci-android24 -no-window -gpu off:
+    - emulator -avd circleci-android24 -no-window -gpu off:
     #    background: true
     #    parallel: true
-    # - circle-android wait-for-boot
+    - circle-android wait-for-boot
     # run tests against the emulator
     - ./gradlew connectedAndroidTest --stacktrace:
         timeout: 10000
