@@ -1,17 +1,10 @@
-dependencies:
-  pre:
-    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.3
-
-checkout:
-  post:
-    - cp local.properties.ci local.properties
-
 test:
   override:
-    - emulator -avd circleci-android24 -no-window:
-	background:true
+    # launch the default Android 24 emulator
+    - emulator -avd circleci-android24 -no-window -gpu off:
+        background: true
+        parallel: true
     - circle-android wait-for-boot
-    # - sleep 30
-    # - ./gradlew clean
-    # - ./gradlew build
-    - ./gradlew connectedAndroidTest
+    # run tests against the emulator
+    - ./gradlew connectedAndroidTest:
+        timeout: 720
