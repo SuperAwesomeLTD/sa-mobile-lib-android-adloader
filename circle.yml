@@ -8,10 +8,10 @@ checkout:
 
 test:
   override:
-    - emulator -avd circleci-android22 -no-audio -no-window:
+    - emulator -avd circleci-android22 -no-window:
 	background:true
     - circle-android wait-for-boot
-    - sleep 30
+    # - sleep 30
     # - ./gradlew clean
     # - ./gradlew build
     - ./gradlew connectedAndroidTest
