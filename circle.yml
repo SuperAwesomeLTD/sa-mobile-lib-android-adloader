@@ -1,3 +1,11 @@
+dependencies:
+  pre:
+    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.3
+
+checkout:
+  post:
+    - cp local.properties.ci local.properties
+
 test:
   override:
     # launch the default Android 24 emulator
