@@ -12,6 +12,6 @@ test:
 	background:true
     - circle-android wait-for-boot
     - sleep 30
-    - ./gradlew clean
-    - ./gradlew build
+    # - ./gradlew clean
+    # - ./gradlew build
     - ./gradlew connectedAndroidTest
