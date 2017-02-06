@@ -25,19 +25,20 @@ public class SAProcessHTML {
      */
     public static String formatCreativeIntoImageHTML(SAAd ad) {
         String htmlString = "<a href='_HREF_URL_' target='_blank'><img src='_IMAGE_URL_'/></a>_MOAT_";
-        String click = ad.creative.clickUrl;
 
-        if (click == null) {
-            for (SATracking tracking : ad.creative.events) {
-                if (tracking.event.equals("sa_tracking")) {
-                    click = tracking.URL;
-                }
-            }
+        if (ad.creative.details.image != null) {
+            htmlString = htmlString.replace("_IMAGE_URL_", ad.creative.details.image);
         }
 
-        htmlString = htmlString.replace("_HREF_URL_", click != null ? click : "");
-        htmlString = htmlString.replace("_IMAGE_URL_", ad.creative.details.image);
-        return htmlString;
+        if (ad.creative.clickUrl != null) {
+            return htmlString
+                    .replace("_HREF_URL_", ad.creative.clickUrl);
+        }
+        else {
+            return htmlString
+                    .replace("<a href='_HREF_URL_' target='_blank'>", "")
+                    .replace("</a>", "");
+        }
     }
 
     /**
@@ -67,19 +68,16 @@ public class SAProcessHTML {
     public static String formatCreativeIntoTagHTML(SAAd ad) {
         String htmlString = "_TAGDATA__MOAT_";
 
-        String click = ad.creative.clickUrl;
-
-        if (click == null) {
-            for (SATracking tracking : ad.creative.events) {
-                if (tracking.event.equals("sa_tracking")) {
-                    click = tracking.URL;
-                }
-            }
-        }
-
         String tagString = ad.creative.details.tag;
-        tagString = tagString.replace("[click]", click+ "&redir=");
-        tagString = tagString.replace("[click_enc]", SAUtils.encodeURL(click));
+        if (ad.creative.clickUrl != null) {
+            tagString = tagString
+                    .replace("[click]", ad.creative.clickUrl + "&redir=")
+                    .replace("[click_enc]", SAUtils.encodeURL(ad.creative.clickUrl));
+        } else {
+            tagString = tagString
+                    .replace("[click]", "")
+                    .replace("[click_enc", "");
+        }
         tagString = tagString.replace("[keywords]", "");
         tagString = tagString.replace("[timestamp]", "");
         tagString = tagString.replace("target=\"_blank\"", "");

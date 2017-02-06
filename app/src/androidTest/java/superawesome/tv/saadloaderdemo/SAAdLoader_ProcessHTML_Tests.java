@@ -17,7 +17,23 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
     }
 
     @SmallTest
-    public void testProcessImage () {
+    public void testProcessImageWithClick () {
+
+        SAAd ad = new SAAd();
+        ad.creative.format = SACreativeFormat.image;
+        ad.creative.details.image = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
+        ad.creative.clickUrl = "http://hotnews.ro";
+        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
+
+        assertNotNull(ad.creative.details.media.html);
+        assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>"));
+        assertTrue(ad.creative.details.media.html.contains("<a href='http://hotnews.ro' target='_blank'>"));
+        assertTrue(ad.creative.details.media.html.contains("</a>"));
+        assertTrue(ad.creative.details.media.html.equals("<a href='http://hotnews.ro' target='_blank'><img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/></a>_MOAT_"));
+    }
+
+    @SmallTest
+    public void testProcessImageWithNoClick () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.image;
@@ -26,6 +42,10 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
 
         assertNotNull(ad.creative.details.media.html);
         assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>"));
+        assertFalse(ad.creative.details.media.html.contains("<a href='http://hotnews.ro' target='_blank'>"));
+        assertFalse(ad.creative.details.media.html.contains("</a>"));
+        assertTrue(ad.creative.details.media.html.equals("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>_MOAT_"));
+
     }
 
     @SmallTest
@@ -46,7 +66,7 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
     }
 
     @SmallTest
-    public void testProcessTag () {
+    public void testProcessTag1 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.tag;
@@ -55,5 +75,30 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
 
         assertNotNull(ad.creative.details.media.html);
         assertTrue(ad.creative.details.media.html.contains("<!-- Beginning PassBack for Ad unit FK:Site-Skyscraper-Passback ### size: [[120,600]] -->\\\\n\\\\t<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>\\\\n\\\\t\\\\tgoogletag.pubads().definePassback('1002534/FK:Site-Skyscraper-Passback', [[120,600]]).display();\\\\n\\\\t</script>\\\\n<!-- End Passback -->"));
+    }
+
+    @SmallTest
+    public void testProcessTag2 () {
+
+        SAAd ad = new SAAd();
+        ad.creative.format = SACreativeFormat.tag;
+        ad.creative.details.tag = "<A HREF=\"[click]https://ad.doubleclick.net/ddm/jump/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729?\"><IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=480 HEIGHT=320 ALT=\"Advertisement\"></A>";
+        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
+
+        assertNotNull(ad.creative.details.media.html);
+        assertTrue(ad.creative.details.media.html.contains("<A HREF=\"https://ad.doubleclick.net/ddm/jump/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729?\"><IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=480 HEIGHT=320 ALT=\"Advertisement\"></A>_MOAT_"));
+    }
+
+    @SmallTest
+    public void testProcessTag3 () {
+
+        SAAd ad = new SAAd();
+        ad.creative.format = SACreativeFormat.tag;
+        ad.creative.details.tag = "<A HREF=\"[click]https://ad.doubleclick.net/ddm/jump/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729?\"><IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=480 HEIGHT=320 ALT=\"Advertisement\"></A>";
+        ad.creative.clickUrl = "http://hotnews.ro";
+        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
+
+        assertNotNull(ad.creative.details.media.html);
+        assertTrue(ad.creative.details.media.html.contains("<A HREF=\"http://hotnews.ro&redir=https://ad.doubleclick.net/ddm/jump/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729?\"><IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=480 HEIGHT=320 ALT=\"Advertisement\"></A>_MOAT_"));
     }
 }
