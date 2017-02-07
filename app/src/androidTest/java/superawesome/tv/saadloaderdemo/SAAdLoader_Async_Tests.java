@@ -62,6 +62,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 10;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 0;
+                int expected_referral_lineItemId = -1;
+                int expected_referral_creativeId = -1;
+                int expected_referral_placementId = 30471;
+
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
                 String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
@@ -106,6 +112,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D0"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D-1"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D-1"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D30471"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -165,6 +183,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 25;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 0;
+                int expected_referral_lineItemId = -1;
+                int expected_referral_creativeId = -1;
+                int expected_referral_placementId = 30479;
+
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
@@ -209,6 +233,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D0"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D-1"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D-1"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D30479"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -269,6 +305,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 10;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 0;
+                int expected_referral_lineItemId = 0;
+                int expected_referral_creativeId = 0;
+                int expected_referral_placementId = 20;
+
                 String expected_details_image = null;
                 String expected_details_url = null;
                 String expected_details_video = null;
@@ -313,6 +355,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D0"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D0"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D0"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D20"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -374,6 +428,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 10;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 1209;
+                int expected_referral_lineItemId = 1052;
+                int expected_referral_creativeId = 5768;
+                int expected_referral_placementId = 100;
+
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
                 String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
@@ -419,6 +479,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D1209"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D1052"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D5768"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D100"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -479,6 +551,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 10;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 2921;
+                int expected_referral_lineItemId = 9021;
+                int expected_referral_creativeId = 8902;
+                int expected_referral_placementId = 100;
+
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
                 String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
@@ -524,6 +602,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D2921"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D9021"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D8902"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D100"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -583,6 +673,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 10;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 2213;
+                int expected_referral_lineItemId = 8929;
+                int expected_referral_creativeId = 21029;
+                int expected_referral_placementId = 100;
+
                 String expected_details_image = null;
                 String expected_details_url = null;
                 String expected_details_video = null;
@@ -627,6 +723,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D2213"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D8929"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D21029"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D100"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -687,6 +795,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 50;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 1209;
+                int expected_referral_lineItemId = 1054;
+                int expected_referral_creativeId = 5770;
+                int expected_referral_placementId = 100;
+
                 String expected_details_image = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
                 String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
                 String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
@@ -732,6 +846,18 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_format, ad.creative.format);
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
+
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D1209"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D1054"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D5770"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D100"));    // placement
 
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
@@ -802,6 +928,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String[] expected_creative_bundleId = {"tv.superawesome.demoapp", "tv.superawesome.demoapp"};
                 int[] expected_creative_events = {10, 10};
 
+                int[] expected_referral_configuration = {0, 0};
+                int[] expected_referral_campaignId = {1227, 1227};
+                int[] expected_referral_lineItemId = {1075, 1076};
+                int[] expected_referral_creativeId = {5792, 5793};
+                int[] expected_referral_placementId = {100, 100};
+
                 String[] expected_details_image = {
                         "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/2ODwlbp3NJxnsmgROrdzXrxIUcD87h5y.png",
                         "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/TMRQ0iNyFEinXx2BQhkSONtEvCES7rsr.png"
@@ -865,6 +997,13 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                     assertEquals(expected_creative_bundleId[i], ad.creative.bundleId);
                     assertEquals(expected_creative_events[i], ad.creative.events.size());
 
+                    assertNotNull(ad.creative.referralData);
+                    assertEquals(expected_referral_configuration[i], ad.creative.referralData.configuration);
+                    assertEquals(expected_referral_campaignId[i], ad.creative.referralData.campaignId);
+                    assertEquals(expected_referral_lineItemId[i], ad.creative.referralData.lineItemId);
+                    assertEquals(expected_referral_creativeId[i], ad.creative.referralData.creativeId);
+                    assertEquals(expected_referral_placementId[i], ad.creative.referralData.placementId);
+
                     assertEquals(expected_details_image[i], ad.creative.details.image);
                     assertEquals(expected_details_url[i], ad.creative.details.url);
                     assertEquals(expected_details_video[i], ad.creative.details.video);
@@ -925,6 +1064,12 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_bundleId = null;
                 int expected_creative_events = 40;
 
+                int expected_referral_configuration = 0;
+                int expected_referral_campaignId = 1420;
+                int expected_referral_lineItemId = 1110;
+                int expected_referral_creativeId = 3330;
+                int expected_referral_placementId = 100;
+
                 String expected_details_image = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                 String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
@@ -971,13 +1116,24 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 assertEquals(expected_creative_bundleId, ad.creative.bundleId);
                 assertEquals(expected_creative_events, ad.creative.events.size());
 
+                assertNotNull(ad.creative.referralData);
+                assertEquals(expected_referral_configuration, ad.creative.referralData.configuration);
+                assertEquals(expected_referral_campaignId, ad.creative.referralData.campaignId);
+                assertEquals(expected_referral_lineItemId, ad.creative.referralData.lineItemId);
+                assertEquals(expected_referral_creativeId, ad.creative.referralData.creativeId);
+                assertEquals(expected_referral_placementId, ad.creative.referralData.placementId);
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_source%3D0"));    // configuration
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_campaign%3D1420"));  // campaign
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_term%3D1110"));      // line item
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_content%3D3330"));   // creative
+                assertTrue(ad.creative.referralData.writeToReferralQuery().contains("utm_medium%3D100"));    // placement
+
                 assertEquals(expected_details_image, ad.creative.details.image);
                 assertEquals(expected_details_url, ad.creative.details.url);
                 assertEquals(expected_details_video, ad.creative.details.video);
                 assertEquals(expected_details_cdnUrl, ad.creative.details.cdnUrl);
                 assertEquals(expected_details_tag, ad.creative.details.tag);
                 assertEquals(expected_details_vast, ad.creative.details.vast);
-
 
                 assertNull(ad.creative.details.media.html);
                 assertEquals(expected_media_playableMediaUrl, ad.creative.details.media.playableMediaUrl);

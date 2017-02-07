@@ -202,6 +202,7 @@ public class SALoader {
                         ad.placementId = placementId;
                         // add events
                         SAProcessEvents.addAdEvents(ad, session);
+                        SAProcessEvents.addReferralSendData(ad, session);
 
                         // update type in response as well
                         response.format = ad.creative.format;
@@ -272,6 +273,7 @@ public class SALoader {
                                 SAAd ad = new SAAd(jsonArray.getJSONObject(i));
                                 ad.placementId = placementId;
                                 SAProcessEvents.addAdEvents(ad, session);
+                                SAProcessEvents.addReferralSendData(ad, session);
 
                                 // only add image type ads - no rich media or videos in the
                                 // GameWall for now

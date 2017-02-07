@@ -7,6 +7,7 @@ package tv.superawesome.lib.saadloader.postprocessor;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.SAAd;
 import tv.superawesome.lib.samodelspace.SACreativeFormat;
+import tv.superawesome.lib.samodelspace.SAReferralData;
 import tv.superawesome.lib.samodelspace.SATracking;
 import tv.superawesome.lib.sasession.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
@@ -180,4 +181,19 @@ public class SAProcessEvents {
         ad.creative.events.add(externalClickCounter);
     }
 
+    /**
+     * Method that ads new referral data
+     *
+     * @param ad        the current ad
+     * @param session   the current session
+     */
+    public static void addReferralSendData (SAAd ad, SASession session) {
+        ad.creative.referralData = new SAReferralData(
+                session.getConfiguration().ordinal(),
+                ad.campaignId,
+                ad.lineItemId,
+                ad.creative.id,
+                ad.placementId
+        );
+    }
 }
