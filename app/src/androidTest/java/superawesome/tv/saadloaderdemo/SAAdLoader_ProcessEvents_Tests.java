@@ -3,7 +3,6 @@ package superawesome.tv.saadloaderdemo;
 import android.app.Application;
 import android.test.ApplicationTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
