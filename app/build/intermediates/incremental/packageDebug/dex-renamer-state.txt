@@ -1,4 +1,4 @@
-#Wed Feb 08 16:48:47 GMT 2017
+#Fri Feb 10 12:33:25 GMT 2017
 base.0=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

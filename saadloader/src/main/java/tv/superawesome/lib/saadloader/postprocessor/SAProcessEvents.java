@@ -35,7 +35,7 @@ public class SAProcessEvents {
                 (ad.creative.format == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "placement", ad.placementId,
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "creative", ad.creative.id,
                         "line_item", ad.lineItemId,
                         "ct", session.getConnectionType(),
@@ -54,7 +54,7 @@ public class SAProcessEvents {
                         "creative", ad.creative.id,
                         "line_item", ad.lineItemId,
                         "sdkVersion", session.getVersion(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "no_image", true,
                         "rnd", session.getCachebuster()
                 }));
@@ -67,7 +67,7 @@ public class SAProcessEvents {
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
                         "ct", session.getConnectionType(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
                             "placement", ad.placementId,
                             "line_item", ad.lineItemId,
@@ -85,7 +85,7 @@ public class SAProcessEvents {
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
                         "ct", session.getConnectionType(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
                             "placement", ad.placementId,
                             "line_item", ad.lineItemId,
@@ -104,7 +104,7 @@ public class SAProcessEvents {
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
                         "ct", session.getConnectionType(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
                             "placement", ad.placementId,
                             "line_item", ad.lineItemId,
@@ -122,7 +122,7 @@ public class SAProcessEvents {
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
                         "sdkVersion", session.getVersion(),
                         "ct", session.getConnectionType(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[]{
                             "placement", ad.placementId,
                             "line_item", ad.lineItemId,
@@ -140,7 +140,7 @@ public class SAProcessEvents {
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[] {
                         "sdkVersion", session.getVersion(),
                         "ct", session.getConnectionType(),
-                        "sourceBundle", session.getPackageName(),
+                        "bundle", session.getPackageName(),
                         "data", SAUtils.encodeDictAsJsonDict(SAJsonParser.newObject(new Object[] {
                             "placement", ad.placementId,
                             "line_item", ad.lineItemId,

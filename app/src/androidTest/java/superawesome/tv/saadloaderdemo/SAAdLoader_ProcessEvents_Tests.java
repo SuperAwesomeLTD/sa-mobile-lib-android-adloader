@@ -111,13 +111,13 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
 
         assertTrue(sa_tracking_url.contains("https://ads.superawesome.tv/v2/click"));
         assertTrue(sa_tracking_url.contains("placement=4001"));
-        assertTrue(sa_tracking_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(sa_tracking_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(sa_tracking_url.contains("creative=1092"));
         assertTrue(sa_tracking_url.contains("line_item=2731"));
         assertTrue(sa_tracking_url.contains("sdkVersion=3.2.1"));
 
         assertTrue(viewable_impr_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(viewable_impr_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(viewable_impr_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(viewable_impr_url.contains("sdkVersion=3.2.1"));
         assertTrue(viewable_impr_url.contains("type%22%3A%22viewable_impression"));
         assertTrue(viewable_impr_url.contains("creative%22%3A1092"));
@@ -125,7 +125,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertTrue(viewable_impr_url.contains("placement%22%3A4001"));
 
         assertTrue(pg_close_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_close_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_close_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(pg_close_url.contains("sdkVersion=3.2.1"));
         assertTrue(pg_close_url.contains("type%22%3A%22parentalGateClose"));
         assertTrue(pg_close_url.contains("creative%22%3A1092"));
@@ -133,7 +133,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertTrue(pg_close_url.contains("placement%22%3A4001"));
 
         assertTrue(pg_fail_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_fail_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_fail_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(pg_fail_url.contains("sdkVersion=3.2.1"));
         assertTrue(pg_fail_url.contains("type%22%3A%22parentalGateFail"));
         assertTrue(pg_fail_url.contains("creative%22%3A1092"));
@@ -141,7 +141,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertTrue(pg_fail_url.contains("placement%22%3A4001"));
 
         assertTrue(pg_open_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_open_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_open_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(pg_open_url.contains("sdkVersion=3.2.1"));
         assertTrue(pg_open_url.contains("type%22%3A%22parentalGateOpen"));
         assertTrue(pg_open_url.contains("creative%22%3A1092"));
@@ -149,7 +149,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
         assertTrue(pg_open_url.contains("placement%22%3A4001"));
 
         assertTrue(pg_success_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_success_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(pg_success_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(pg_success_url.contains("sdkVersion=3.2.1"));
         assertTrue(pg_success_url.contains("type%22%3A%22parentalGateSuccess"));
         assertTrue(pg_success_url.contains("creative%22%3A1092"));
@@ -158,7 +158,7 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
 
         assertTrue(sa_impr_url.contains("https://ads.superawesome.tv/v2/impression"));
         assertTrue(sa_impr_url.contains("placement=4001"));
-        assertTrue(sa_impr_url.contains("sourceBundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(sa_impr_url.contains("bundle=superawesome.tv.saadloaderdemo"));
         assertTrue(sa_impr_url.contains("creative=1092"));
         assertTrue(sa_impr_url.contains("line_item=2731"));
         assertTrue(sa_impr_url.contains("sdkVersion=3.2.1"));
