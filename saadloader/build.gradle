@@ -86,5 +86,5 @@ dependencies {
     compile 'tv.superawesome.lib.sautils:sautils:0.3.4'
     compile 'tv.superawesome.lib.samodelspace:samodelspace:0.5.9'
     compile 'tv.superawesome.lib.sasession:sasession:0.3.0'
-    compile 'tv.superawesome.lib.savastparser:savastparser:0.5.6'
+    compile 'tv.superawesome.lib.savastparser:savastparser:0.5.7'
 }

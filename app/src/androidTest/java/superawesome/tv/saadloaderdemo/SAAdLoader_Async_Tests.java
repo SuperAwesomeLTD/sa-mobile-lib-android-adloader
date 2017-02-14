@@ -60,7 +60,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 10;
+                int expected_creative_events = 7;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 0;
@@ -181,7 +181,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 25;
+                int expected_creative_events = 22;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 0;
@@ -303,7 +303,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.invalid;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 10;
+                int expected_creative_events = 7;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 0;
@@ -426,7 +426,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                 SACreativeFormat expected_creative_format = SACreativeFormat.image;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 10;
+                int expected_creative_events = 7;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 1209;
@@ -549,7 +549,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                 SACreativeFormat expected_creative_format = SACreativeFormat.rich;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 10;
+                int expected_creative_events = 7;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 2921;
@@ -671,7 +671,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_installUrl = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.tag;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 10;
+                int expected_creative_events = 7;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 2213;
@@ -793,7 +793,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_click_counter_url = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 50;
+                int expected_creative_events = 47;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 1209;
@@ -926,7 +926,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 };
                 SACreativeFormat[] expected_creative_format = {SACreativeFormat.appwall, SACreativeFormat.appwall};
                 String[] expected_creative_bundleId = {"tv.superawesome.demoapp", "tv.superawesome.demoapp"};
-                int[] expected_creative_events = {10, 10};
+                int[] expected_creative_events = {7, 7};
 
                 int[] expected_referral_configuration = {0, 0};
                 int[] expected_referral_campaignId = {1227, 1227};
@@ -1062,7 +1062,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                 String expected_creative_click_counter_url = null;
                 SACreativeFormat expected_creative_format = SACreativeFormat.video;
                 String expected_creative_bundleId = null;
-                int expected_creative_events = 40;
+                int expected_creative_events = 37;
 
                 int expected_referral_configuration = 0;
                 int expected_referral_campaignId = 1420;

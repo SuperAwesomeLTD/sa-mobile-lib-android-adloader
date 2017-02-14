@@ -36,148 +36,113 @@ public class SAAdLoader_ProcessEvents_Tests extends ApplicationTestCase<Applicat
 
         SAProcessEvents.addAdEvents(ad, session);
 
-        int expected_events = 10;
+        int expected_events = 7;
 
-        int expected_sa_tracking = 1;
-        int expected_viewable_impr = 1;
-        int expected_pg_close = 1;
-        int expected_pg_fail = 1;
-        int expected_pg_open = 1;
-        int expected_pg_success = 1;
-        int expected_sa_impr = 1;
-        int expected_impression = 1;
-        int expected_install = 1;
-        int expected_clk_counter = 1;
+        int expected_superawesome_click = 1;
+        int expected_superawesome_impression = 1;
+        int expected_superawesome_viewable_impression = 1;
+        int expected_superawesome_pg_close = 1;
+        int expected_superawesome_pg_fail = 1;
+        int expected_superawesome_pg_open = 1;
+        int expected_superawesome_pg_success = 1;
 
         assertNotNull(ad.creative.events);
         assertEquals(expected_events, ad.creative.events.size());
 
-        List<SATracking> sa_tracking = new ArrayList<>();
-        List<SATracking> viewable_impr = new ArrayList<>();
-        List<SATracking> pg_close = new ArrayList<>();
-        List<SATracking> pg_fail = new ArrayList<>();
-        List<SATracking> pg_open = new ArrayList<>();
-        List<SATracking> pg_success = new ArrayList<>();
-        List<SATracking> sa_impr = new ArrayList<>();
-        List<SATracking> impression = new ArrayList<>();
-        List<SATracking> install = new ArrayList<>();
-        List<SATracking> clickCounter = new ArrayList<>();
+        List<SATracking> superawesome_click = new ArrayList<>();
+        List<SATracking> superawesome_impression = new ArrayList<>();
+        List<SATracking> superawesome_viewable_impression = new ArrayList<>();
+        List<SATracking> superawesome_pg_close = new ArrayList<>();
+        List<SATracking> superawesome_pg_fail = new ArrayList<>();
+        List<SATracking> superawesome_pg_open = new ArrayList<>();
+        List<SATracking> superawesome_pg_success = new ArrayList<>();
 
         for (SATracking event : ad.creative.events) {
-            if (event.event.equals("sa_tracking")) sa_tracking.add(event);
-            if (event.event.equals("viewable_impr")) viewable_impr.add(event);
-            if (event.event.equals("pg_close")) pg_close.add(event);
-            if (event.event.equals("pg_fail")) pg_fail.add(event);
-            if (event.event.equals("pg_open")) pg_open.add(event);
-            if (event.event.equals("pg_success")) pg_success.add(event);
-            if (event.event.equals("sa_impr")) sa_impr.add(event);
-            if (event.event.equals("impression")) impression.add(event);
-            if (event.event.equals("install")) install.add(event);
-            if (event.event.equals("clk_counter")) clickCounter.add(event);
+            if (event.event.equals("superawesome_click")) superawesome_click.add(event);
+            if (event.event.equals("superawesome_impression")) superawesome_impression.add(event);
+            if (event.event.equals("superawesome_viewable_impression")) superawesome_viewable_impression.add(event);
+            if (event.event.equals("superawesome_pg_close")) superawesome_pg_close.add(event);
+            if (event.event.equals("superawesome_pg_fail")) superawesome_pg_fail.add(event);
+            if (event.event.equals("superawesome_pg_open")) superawesome_pg_open.add(event);
+            if (event.event.equals("superawesome_pg_success")) superawesome_pg_success.add(event);
         }
 
-        assertEquals(expected_sa_tracking, sa_tracking.size());
-        assertEquals(expected_viewable_impr, viewable_impr.size());
-        assertEquals(expected_pg_close, pg_close.size());
-        assertEquals(expected_pg_fail, pg_fail.size());
-        assertEquals(expected_pg_open, pg_open.size());
-        assertEquals(expected_pg_success, pg_success.size());
-        assertEquals(expected_sa_impr, sa_impr.size());
-        assertEquals(expected_impression, impression.size());
-        assertEquals(expected_install, install.size());
-        assertEquals(expected_clk_counter, clickCounter.size());
+        assertEquals(expected_superawesome_click, superawesome_click.size());
+        assertEquals(expected_superawesome_impression, superawesome_impression.size());
+        assertEquals(expected_superawesome_viewable_impression, superawesome_viewable_impression.size());
+        assertEquals(expected_superawesome_pg_close, superawesome_pg_close.size());
+        assertEquals(expected_superawesome_pg_fail, superawesome_pg_fail.size());
+        assertEquals(expected_superawesome_pg_open, superawesome_pg_open.size());
+        assertEquals(expected_superawesome_pg_success, superawesome_pg_success.size());
 
-        String sa_tracking_url = sa_tracking.get(0).URL;
-        String viewable_impr_url = viewable_impr.get(0).URL;
-        String pg_close_url = pg_close.get(0).URL;
-        String pg_fail_url = pg_fail.get(0).URL;
-        String pg_open_url = pg_open.get(0).URL;
-        String pg_success_url = pg_success.get(0).URL;
-        String sa_impr_url = sa_impr.get(0).URL;
-        String impression_url = impression.get(0).URL;
-        String install_url = install.get(0).URL;
-        String click_counter_url = clickCounter.get(0).URL;
+        String superawesome_click_url = superawesome_click.get(0).URL;
+        String superawesome_impression_url = superawesome_impression.get(0).URL;
+        String superawesome_viewable_impression_url = superawesome_viewable_impression.get(0).URL;
+        String superawesome_pg_close_url = superawesome_pg_close.get(0).URL;
+        String superawesome_pg_fail_url = superawesome_pg_fail.get(0).URL;
+        String superawesome_pg_open_url = superawesome_pg_open.get(0).URL;
+        String superawesome_pg_success_url = superawesome_pg_success.get(0).URL;
 
-        assertNotNull(sa_tracking_url);
-        assertNotNull(viewable_impr_url);
-        assertNotNull(pg_close_url);
-        assertNotNull(pg_fail_url);
-        assertNotNull(pg_open_url);
-        assertNotNull(pg_success_url);
-        assertNotNull(sa_impr_url);
-        assertNotNull(impression_url);
-        assertNotNull(install_url);
-        assertNotNull(click_counter_url);
+        assertNotNull(superawesome_click_url);
+        assertNotNull(superawesome_impression_url);
+        assertNotNull(superawesome_viewable_impression_url);
+        assertNotNull(superawesome_pg_close_url);
+        assertNotNull(superawesome_pg_fail_url);
+        assertNotNull(superawesome_pg_open_url);
+        assertNotNull(superawesome_pg_success_url);
 
-        assertTrue(sa_tracking_url.contains("https://ads.superawesome.tv/v2/click"));
-        assertTrue(sa_tracking_url.contains("placement=4001"));
-        assertTrue(sa_tracking_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(sa_tracking_url.contains("creative=1092"));
-        assertTrue(sa_tracking_url.contains("line_item=2731"));
-        assertTrue(sa_tracking_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_click_url.contains("https://ads.superawesome.tv/v2/click"));
+        assertTrue(superawesome_click_url.contains("placement=4001"));
+        assertTrue(superawesome_click_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_click_url.contains("creative=1092"));
+        assertTrue(superawesome_click_url.contains("line_item=2731"));
+        assertTrue(superawesome_click_url.contains("sdkVersion=3.2.1"));
 
-        assertTrue(viewable_impr_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(viewable_impr_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(viewable_impr_url.contains("sdkVersion=3.2.1"));
-        assertTrue(viewable_impr_url.contains("type%22%3A%22viewable_impression"));
-        assertTrue(viewable_impr_url.contains("creative%22%3A1092"));
-        assertTrue(viewable_impr_url.contains("line_item%22%3A2731"));
-        assertTrue(viewable_impr_url.contains("placement%22%3A4001"));
+        assertTrue(superawesome_impression_url.contains("https://ads.superawesome.tv/v2/impression"));
+        assertTrue(superawesome_impression_url.contains("placement=4001"));
+        assertTrue(superawesome_impression_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_impression_url.contains("creative=1092"));
+        assertTrue(superawesome_impression_url.contains("line_item=2731"));
+        assertTrue(superawesome_impression_url.contains("sdkVersion=3.2.1"));
 
-        assertTrue(pg_close_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_close_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(pg_close_url.contains("sdkVersion=3.2.1"));
-        assertTrue(pg_close_url.contains("type%22%3A%22parentalGateClose"));
-        assertTrue(pg_close_url.contains("creative%22%3A1092"));
-        assertTrue(pg_close_url.contains("line_item%22%3A2731"));
-        assertTrue(pg_close_url.contains("placement%22%3A4001"));
+        assertTrue(superawesome_viewable_impression_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(superawesome_viewable_impression_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_viewable_impression_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_viewable_impression_url.contains("type%22%3A%22viewable_impression"));
+        assertTrue(superawesome_viewable_impression_url.contains("creative%22%3A1092"));
+        assertTrue(superawesome_viewable_impression_url.contains("line_item%22%3A2731"));
+        assertTrue(superawesome_viewable_impression_url.contains("placement%22%3A4001"));
 
-        assertTrue(pg_fail_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_fail_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(pg_fail_url.contains("sdkVersion=3.2.1"));
-        assertTrue(pg_fail_url.contains("type%22%3A%22parentalGateFail"));
-        assertTrue(pg_fail_url.contains("creative%22%3A1092"));
-        assertTrue(pg_fail_url.contains("line_item%22%3A2731"));
-        assertTrue(pg_fail_url.contains("placement%22%3A4001"));
+        assertTrue(superawesome_pg_close_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(superawesome_pg_close_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_pg_close_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_pg_close_url.contains("type%22%3A%22parentalGateClose"));
+        assertTrue(superawesome_pg_close_url.contains("creative%22%3A1092"));
+        assertTrue(superawesome_pg_close_url.contains("line_item%22%3A2731"));
+        assertTrue(superawesome_pg_close_url.contains("placement%22%3A4001"));
 
-        assertTrue(pg_open_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_open_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(pg_open_url.contains("sdkVersion=3.2.1"));
-        assertTrue(pg_open_url.contains("type%22%3A%22parentalGateOpen"));
-        assertTrue(pg_open_url.contains("creative%22%3A1092"));
-        assertTrue(pg_open_url.contains("line_item%22%3A2731"));
-        assertTrue(pg_open_url.contains("placement%22%3A4001"));
+        assertTrue(superawesome_pg_fail_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(superawesome_pg_fail_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_pg_fail_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_pg_fail_url.contains("type%22%3A%22parentalGateFail"));
+        assertTrue(superawesome_pg_fail_url.contains("creative%22%3A1092"));
+        assertTrue(superawesome_pg_fail_url.contains("line_item%22%3A2731"));
+        assertTrue(superawesome_pg_fail_url.contains("placement%22%3A4001"));
 
-        assertTrue(pg_success_url.contains("https://ads.superawesome.tv/v2/event"));
-        assertTrue(pg_success_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(pg_success_url.contains("sdkVersion=3.2.1"));
-        assertTrue(pg_success_url.contains("type%22%3A%22parentalGateSuccess"));
-        assertTrue(pg_success_url.contains("creative%22%3A1092"));
-        assertTrue(pg_success_url.contains("line_item%22%3A2731"));
-        assertTrue(pg_success_url.contains("placement%22%3A4001"));
+        assertTrue(superawesome_pg_open_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(superawesome_pg_open_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_pg_open_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_pg_open_url.contains("type%22%3A%22parentalGateOpen"));
+        assertTrue(superawesome_pg_open_url.contains("creative%22%3A1092"));
+        assertTrue(superawesome_pg_open_url.contains("line_item%22%3A2731"));
+        assertTrue(superawesome_pg_open_url.contains("placement%22%3A4001"));
 
-        assertTrue(sa_impr_url.contains("https://ads.superawesome.tv/v2/impression"));
-        assertTrue(sa_impr_url.contains("placement=4001"));
-        assertTrue(sa_impr_url.contains("bundle=superawesome.tv.saadloaderdemo"));
-        assertTrue(sa_impr_url.contains("creative=1092"));
-        assertTrue(sa_impr_url.contains("line_item=2731"));
-        assertTrue(sa_impr_url.contains("sdkVersion=3.2.1"));
-
-        assertTrue(impression_url.equals("https://superawesome.tv/impression"));
-        assertTrue(install_url.equals("https://superawesome.tv/install"));
-        assertTrue(click_counter_url.equals("https://superawesome.tv/click_counter"));
-    }
-
-    private boolean getHammingDistance (String expected, String existing, int maxDelta) {
-        int cDelta = 0;
-        if (existing.length() != expected.length()) return false;
-
-        for (int i = 0; i < expected.length(); i++) {
-            char expC = expected.charAt(i);
-            char exiC = existing.charAt(i);
-            if (expC != exiC) cDelta++;
-        }
-
-        return cDelta <= maxDelta;
+        assertTrue(superawesome_pg_success_url.contains("https://ads.superawesome.tv/v2/event"));
+        assertTrue(superawesome_pg_success_url.contains("bundle=superawesome.tv.saadloaderdemo"));
+        assertTrue(superawesome_pg_success_url.contains("sdkVersion=3.2.1"));
+        assertTrue(superawesome_pg_success_url.contains("type%22%3A%22parentalGateSuccess"));
+        assertTrue(superawesome_pg_success_url.contains("creative%22%3A1092"));
+        assertTrue(superawesome_pg_success_url.contains("line_item%22%3A2731"));
+        assertTrue(superawesome_pg_success_url.contains("placement%22%3A4001"));
     }
 }

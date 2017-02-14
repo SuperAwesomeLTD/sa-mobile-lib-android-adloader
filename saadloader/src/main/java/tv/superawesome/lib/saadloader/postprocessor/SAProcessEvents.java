@@ -30,7 +30,7 @@ public class SAProcessEvents {
         // create a new tracking event (click event), to be used if the ad's click will not
         // contain a SuperAwesome url at all
         SATracking clickEvt = new SATracking();
-        clickEvt.event = "sa_tracking";
+        clickEvt.event = "superawesome_click";
         clickEvt.URL = session.getBaseUrl() +
                 (ad.creative.format == SACreativeFormat.video ? "/video/click/?" : "/click?") +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
@@ -46,7 +46,7 @@ public class SAProcessEvents {
         // create an impression event; this should be used by video ads (for the moment), and
         // sometime in the future by display ads
         SATracking saImpressionEvt = new SATracking();
-        saImpressionEvt.event = "sa_impr";
+        saImpressionEvt.event = "superawesome_impression";
         saImpressionEvt.URL = session.getBaseUrl() +
                 "/impression?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[] {
@@ -55,13 +55,14 @@ public class SAProcessEvents {
                         "line_item", ad.lineItemId,
                         "sdkVersion", session.getVersion(),
                         "bundle", session.getPackageName(),
+                        "ct", session.getConnectionType(),
                         "no_image", true,
                         "rnd", session.getCachebuster()
                 }));
 
         // create a viewable impression event; this is triggered when the ad first shown on screen
         SATracking viewableImpression = new SATracking();
-        viewableImpression.event = "viewable_impr";
+        viewableImpression.event = "superawesome_viewable_impression";
         viewableImpression.URL = session.getBaseUrl() +
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
@@ -79,7 +80,7 @@ public class SAProcessEvents {
 
         // create a parental gate close event;
         SATracking parentalGateClose = new SATracking();
-        parentalGateClose.event = "pg_close";
+        parentalGateClose.event = "superawesome_pg_close";
         parentalGateClose.URL = session.getBaseUrl() +
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
@@ -98,7 +99,7 @@ public class SAProcessEvents {
 
         // create a parental gate open event
         SATracking parentalGateOpen = new SATracking();
-        parentalGateOpen.event = "pg_open";
+        parentalGateOpen.event = "superawesome_pg_open";
         parentalGateOpen.URL = session.getBaseUrl() +
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
@@ -116,7 +117,7 @@ public class SAProcessEvents {
 
         // create a parental gate fail event
         SATracking parentalGateFail = new SATracking();
-        parentalGateFail.event = "pg_fail";
+        parentalGateFail.event = "superawesome_pg_fail";
         parentalGateFail.URL = session.getBaseUrl() +
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[]{
@@ -134,7 +135,7 @@ public class SAProcessEvents {
 
         // create a parentla gate success event
         SATracking parentalGateSuccess = new SATracking();
-        parentalGateSuccess.event = "pg_success";
+        parentalGateSuccess.event = "superawesome_pg_success";
         parentalGateSuccess.URL = session.getBaseUrl() +
                 "/event?" +
                 SAUtils.formGetQueryFromDict(SAJsonParser.newObject(new Object[] {
@@ -150,24 +151,6 @@ public class SAProcessEvents {
                         "rnd", session.getCachebuster()
                 }));
 
-        // create an external impression event; this needs to be triggered if the advertiser
-        // has added an extra impression tracker to his campaign
-        SATracking externalImpression = new SATracking();
-        externalImpression.event = "impression";
-        externalImpression.URL = ad.creative.impressionUrl;
-
-        // create an external install event; this needs to be triggered if the advertiser has
-        // added an extra install event tracker to his campaign
-        SATracking externalInstall = new SATracking();
-        externalInstall.event = "install";
-        externalInstall.URL = ad.creative.installUrl;
-
-        // create an external click counter event; this needs to be triggered if the advertiser
-        // has added an extra click tracker to his  campaign
-        SATracking externalClickCounter = new SATracking();
-        externalClickCounter.event = "clk_counter";
-        externalClickCounter.URL = ad.creative.clickCounterUrl;
-
         // add events to the ads events array
         ad.creative.events.add(clickEvt);
         ad.creative.events.add(viewableImpression);
@@ -176,9 +159,6 @@ public class SAProcessEvents {
         ad.creative.events.add(parentalGateOpen);
         ad.creative.events.add(parentalGateSuccess);
         ad.creative.events.add(saImpressionEvt);
-        ad.creative.events.add(externalImpression);
-        ad.creative.events.add(externalInstall);
-        ad.creative.events.add(externalClickCounter);
     }
 
     /**
