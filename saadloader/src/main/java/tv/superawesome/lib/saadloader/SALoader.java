@@ -237,16 +237,16 @@ public class SALoader {
                                     public void saDidParseVAST(SAVASTAd savastAd) {
 
                                         // copy the vast media
-                                        ad.creative.details.media.playableMediaUrl = savastAd.mediaUrl;
+                                        ad.creative.details.media.url = savastAd.url;
                                         // copy the vast events
-                                        ad.creative.events.addAll(savastAd.vastEvents);
+                                        ad.creative.events.addAll(savastAd.events);
                                         // download file
-                                        SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.playableMediaUrl, new SAFileDownloaderInterface() {
+                                        SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                             @Override
                                             public void saDidDownloadFile(boolean success, String playableDiskUrl) {
 
-                                                ad.creative.details.media.playableDiskUrl = playableDiskUrl;
-                                                ad.creative.details.media.isOnDisk = playableDiskUrl != null;
+                                                ad.creative.details.media.path = playableDiskUrl;
+                                                ad.creative.details.media.isDownloaded = playableDiskUrl != null;
 
                                                 // finally respond with a response
                                                 localListener.saDidLoadAd(response);
@@ -303,9 +303,9 @@ public class SALoader {
                                     try {
                                         String diskUrl = list.get(i);
                                         SAAd ad = response.ads.get(i);
-                                        ad.creative.details.media.playableMediaUrl = ad.creative.details.image;
-                                        ad.creative.details.media.isOnDisk = diskUrl != null;
-                                        ad.creative.details.media.playableDiskUrl = diskUrl;
+                                        ad.creative.details.media.url = ad.creative.details.image;
+                                        ad.creative.details.media.isDownloaded = diskUrl != null;
+                                        ad.creative.details.media.path = diskUrl;
                                     } catch (Exception e) {
                                         // do nothing
                                     }
