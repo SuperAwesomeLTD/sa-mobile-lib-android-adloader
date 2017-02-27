@@ -8,7 +8,6 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         SAAdLoader_Async_Tests.class,
         SAAdLoader_Endpoint_Tests.class,
-        SAAdLoader_ProcessEvents_Tests.class,
         SAAdLoader_ProcessHTML_Tests.class
 })
 public class TestSuite {

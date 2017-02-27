@@ -4,7 +4,7 @@
  */
 package tv.superawesome.lib.saadloader;
 
-import tv.superawesome.lib.samodelspace.SAResponse;
+import tv.superawesome.lib.samodelspace.saad.SAResponse;
 
 /**
  * Interface used by the SALoader class to send events back to the library users when an ad

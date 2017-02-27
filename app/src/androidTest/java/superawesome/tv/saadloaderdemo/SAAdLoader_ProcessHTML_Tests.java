@@ -7,8 +7,8 @@ import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
 
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
-import tv.superawesome.lib.samodelspace.SAAd;
-import tv.superawesome.lib.samodelspace.SACreativeFormat;
+import tv.superawesome.lib.samodelspace.saad.SAAd;
+import tv.superawesome.lib.samodelspace.saad.SACreativeFormat;
 
 public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Application> {
 

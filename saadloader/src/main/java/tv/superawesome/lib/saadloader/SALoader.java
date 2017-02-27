@@ -13,13 +13,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import tv.superawesome.lib.saadloader.postprocessor.SAProcessEvents;
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
-import tv.superawesome.lib.samodelspace.SAAd;
-import tv.superawesome.lib.samodelspace.SACreativeFormat;
-import tv.superawesome.lib.samodelspace.SAResponse;
-import tv.superawesome.lib.samodelspace.SAVASTAd;
+import tv.superawesome.lib.samodelspace.saad.SAAd;
+import tv.superawesome.lib.samodelspace.saad.SACreativeFormat;
+import tv.superawesome.lib.samodelspace.saad.SAResponse;
+import tv.superawesome.lib.samodelspace.vastad.SAVASTAd;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloader;
@@ -198,11 +197,7 @@ public class SALoader {
                     if (jsonObject != null) {
 
                         // parse the final ad
-                        final SAAd ad = new SAAd(jsonObject);
-                        ad.placementId = placementId;
-                        // add events
-                        SAProcessEvents.addAdEvents(ad, session);
-                        SAProcessEvents.addReferralSendData(ad, session);
+                        final SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonObject);
 
                         // update type in response as well
                         response.format = ad.creative.format;
@@ -236,10 +231,10 @@ public class SALoader {
                                     @Override
                                     public void saDidParseVAST(SAVASTAd savastAd) {
 
-                                        // copy the vast media
+                                        // copy the vast data
+                                        ad.creative.details.media.vastAd = savastAd;
+                                        // and the exact url to download
                                         ad.creative.details.media.url = savastAd.url;
-                                        // copy the vast events
-                                        ad.creative.events.addAll(savastAd.events);
                                         // download file
                                         SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                             @Override
@@ -270,10 +265,7 @@ public class SALoader {
 
                             try {
                                 // parse ad
-                                SAAd ad = new SAAd(jsonArray.getJSONObject(i));
-                                ad.placementId = placementId;
-                                SAProcessEvents.addAdEvents(ad, session);
-                                SAProcessEvents.addReferralSendData(ad, session);
+                                SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonArray.getJSONObject(i));
 
                                 // only add image type ads - no rich media or videos in the
                                 // GameWall for now
