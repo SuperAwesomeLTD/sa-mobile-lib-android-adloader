@@ -65,9 +65,9 @@ public class SALoader {
      * @return              an url of the form https://ads.superawesome.tv/v2/ad/7212
      */
     public String getAwesomeAdsEndpoint (SASession session, int placementId) {
-        if (session != null) {
+        try {
             return session.getBaseUrl() + "/ad/" + placementId;
-        } else {
+        } catch (Exception e) {
             return null;
         }
     }
@@ -88,18 +88,22 @@ public class SALoader {
      *                  - type of device as string, "phone" or "tablet"
      */
     public JSONObject getAwesomeAdsQuery (SASession session) {
-        return SAJsonParser.newObject(new Object[]{
-                "test", session != null && session.getTestMode(),
-                "sdkVersion", session != null ? session.getVersion() : "0.0.0",
-                "rnd", session != null ? session.getCachebuster() : SAUtils.randomNumberBetween(1000000, 1500000),
-                "bundle", session != null ? session.getPackageName() : "unknown",
-                "name", session != null ? session.getAppName() : "unknown",
-                "dauid", session != null ? session.getDauId() : 0,
-                "ct", session != null ? session.getConnectionType().ordinal() : SAUtils.SAConnectionType.unknown.ordinal(),
-                "lang", session != null ? session.getLang() : "unknown",
-                "device", session != null ? session.getDevice() : "phone"
-                // "preload", true
-        });
+        try {
+            return SAJsonParser.newObject(new Object[]{
+                    "test", session.getTestMode(),
+                    "sdkVersion", session.getVersion(),
+                    "rnd", session.getCachebuster(),
+                    "bundle", session.getPackageName(),
+                    "name", session.getAppName(),
+                    "dauid", session.getDauId(),
+                    "ct", session.getConnectionType().ordinal(),
+                    "lang", session.getLang(),
+                    "device", session.getDevice()
+                    // "preload", true
+            });
+        } catch (Exception e) {
+            return new JSONObject();
+        }
     }
 
     /**
@@ -109,10 +113,14 @@ public class SALoader {
      * @return          a JSONObject with header parameters
      */
     public JSONObject getAwesomeAdsHeader (SASession session) {
-        return SAJsonParser.newObject(new Object[]{
-                "Content-Type", "application/json",
-                "User-Agent", session != null ? session.getUserAgent() : ""
-        });
+        try {
+            return SAJsonParser.newObject(new Object[]{
+                    "Content-Type", "application/json",
+                    "User-Agent", session.getUserAgent()
+            });
+        } catch (Exception e) {
+            return new JSONObject();
+        }
     }
 
     /**
@@ -149,7 +157,6 @@ public class SALoader {
 
         // create a local listener to avoid null pointer exceptions
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
-
 
         SANetwork network = new SANetwork();
         network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
@@ -254,7 +261,7 @@ public class SALoader {
                             }
                         }
                     }
-                    // ÅppWall case
+                    // AppWall case
                     else if (jsonArray != null) {
 
                         // assign correct format
