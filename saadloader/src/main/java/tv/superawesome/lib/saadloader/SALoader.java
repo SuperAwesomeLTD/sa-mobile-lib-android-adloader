@@ -5,6 +5,7 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
+import android.location.GpsStatus;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -153,7 +154,7 @@ public class SALoader {
      * @param listener      listener copy so that the loader can return the response to the
      *                      library user
      */
-    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SASession session, SALoaderInterface listener) {
+    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SASession session, final SALoaderInterface listener) {
 
         // create a local listener to avoid null pointer exceptions
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
@@ -169,159 +170,167 @@ public class SALoader {
              */
             @Override
             public void saDidGetResponse(int status, String data, boolean success) {
+                processAd(placementId, data, status, session, listener);
+            }
+        });
 
-                // create a new object of type SAResponse
-                final SAResponse response = new SAResponse();
-                response.status = status;
-                response.placementId = placementId;
+    }
 
-                // error case, just bail out with a non-null invalid response
-                if (!success || data == null) {
-                    localListener.saDidLoadAd(response);
-                }
-                // good case, continue trying to figure out what kind of ad this is
-                else {
+    public void processAd (int placementId, String data, int status, SASession session, SALoaderInterface listener) {
 
-                    // declare the two possible json outcomes
-                    JSONObject jsonObject = null;
-                    JSONArray jsonArray = null;
+        // create a local listener to avoid null pointer exceptions
+        final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
 
-                    // try to get json Object
-                    try {
-                        jsonObject = new JSONObject(data);
-                    } catch (JSONException e) {
-                        // do nothing
+        // create a new object of type SAResponse
+        final SAResponse response = new SAResponse();
+        response.status = status;
+        response.placementId = placementId;
+
+        // error case, just bail out with a non-null invalid response
+        if (data == null) {
+            localListener.saDidLoadAd(response);
+        }
+        // good case, continue trying to figure out what kind of ad this is
+        else {
+
+            // declare the two possible json outcomes
+            JSONObject jsonObject = null;
+            JSONArray jsonArray = null;
+
+            // try to get json Object
+            try {
+                jsonObject = new JSONObject(data);
+            } catch (JSONException e) {
+                // do nothing
+            }
+
+            // try to get json Array
+            try {
+                jsonArray = new JSONArray(data);
+            } catch (JSONException e) {
+                // do nothing
+            }
+
+            // Normal Ad case
+            if (jsonObject != null) {
+
+                // parse the final ad
+                final SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonObject);
+
+                // update type in response as well
+                response.format = ad.creative.format;
+                response.ads.add(ad);
+
+                switch (ad.creative.format) {
+                    // in this case return whatever we have at this moment
+                    case invalid:
+                        localListener.saDidLoadAd(response);
+                        break;
+                    // in this case process the HTML and return the response
+                    case image:
+                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
+                        localListener.saDidLoadAd(response);
+                        break;
+                    // in this case process the HTML and return the response
+                    case rich:
+                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
+                        localListener.saDidLoadAd(response);
+                        break;
+                    // in this case process the HTML and return the response
+                    case tag: {
+                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
+                        localListener.saDidLoadAd(response);
+                        break;
                     }
+                    // in this case process the VAST response, download the files and return
+                    case video: {
+                        SAVASTParser parser = new SAVASTParser(context);
+                        parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
+                            @Override
+                            public void saDidParseVAST(SAVASTAd savastAd) {
 
-                    // try to get json Array
-                    try {
-                        jsonArray = new JSONArray(data);
-                    } catch (JSONException e) {
-                        // do nothing
-                    }
-
-                    // Normal Ad case
-                    if (jsonObject != null) {
-
-                        // parse the final ad
-                        final SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonObject);
-
-                        // update type in response as well
-                        response.format = ad.creative.format;
-                        response.ads.add(ad);
-
-                        switch (ad.creative.format) {
-                            // in this case return whatever we have at this moment
-                            case invalid:
-                                localListener.saDidLoadAd(response);
-                                break;
-                            // in this case process the HTML and return the response
-                            case image:
-                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
-                                localListener.saDidLoadAd(response);
-                                break;
-                            // in this case process the HTML and return the response
-                            case rich:
-                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
-                                localListener.saDidLoadAd(response);
-                                break;
-                            // in this case process the HTML and return the response
-                            case tag: {
-                                ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
-                                localListener.saDidLoadAd(response);
-                                break;
-                            }
-                            // in this case process the VAST response, download the files and return
-                            case video: {
-                                SAVASTParser parser = new SAVASTParser(context);
-                                parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
+                                // copy the vast data
+                                ad.creative.details.media.vastAd = savastAd;
+                                // and the exact url to download
+                                ad.creative.details.media.url = savastAd.url;
+                                // download file
+                                SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                     @Override
-                                    public void saDidParseVAST(SAVASTAd savastAd) {
+                                    public void saDidDownloadFile(boolean success, String playableDiskUrl) {
 
-                                        // copy the vast data
-                                        ad.creative.details.media.vastAd = savastAd;
-                                        // and the exact url to download
-                                        ad.creative.details.media.url = savastAd.url;
-                                        // download file
-                                        SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
-                                            @Override
-                                            public void saDidDownloadFile(boolean success, String playableDiskUrl) {
+                                        ad.creative.details.media.path = playableDiskUrl;
+                                        ad.creative.details.media.isDownloaded = playableDiskUrl != null;
 
-                                                ad.creative.details.media.path = playableDiskUrl;
-                                                ad.creative.details.media.isDownloaded = playableDiskUrl != null;
+                                        // finally respond with a response
+                                        localListener.saDidLoadAd(response);
 
-                                                // finally respond with a response
-                                                localListener.saDidLoadAd(response);
-
-                                            }
-                                        });
                                     }
                                 });
-                                break;
                             }
-                        }
+                        });
+                        break;
                     }
-                    // AppWall case
-                    else if (jsonArray != null) {
+                }
+            }
+            // AppWall case
+            else if (jsonArray != null) {
 
-                        // assign correct format
-                        response.format = SACreativeFormat.appwall;
+                // assign correct format
+                response.format = SACreativeFormat.appwall;
 
-                        // add ads to it
-                        for (int i = 0; i < jsonArray.length(); i++) {
+                // add ads to it
+                for (int i = 0; i < jsonArray.length(); i++) {
 
+                    try {
+                        // parse ad
+                        SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonArray.getJSONObject(i));
+
+                        // only add image type ads - no rich media or videos in the
+                        // GameWall for now
+                        if (ad.creative.format == SACreativeFormat.image) {
+                            response.ads.add(ad);
+                            ad.creative.format = SACreativeFormat.appwall;
+                        }
+                    } catch (JSONException e) {
+                        // do nothing
+                    }
+                }
+
+                // add all the images that'll need to be downloaded
+                List<String> filesToDownload = new ArrayList<>();
+                for (SAAd ad : response.ads) {
+                    filesToDownload.add(ad.creative.details.image);
+                }
+
+                // use the file list downloader to download them in the same
+                // correct order
+                SAFileListDownloader fileListDownloader = new SAFileListDownloader(context);
+                fileListDownloader.downloadListOfFiles(filesToDownload, new SAFileListDownloaderInterface() {
+                    @Override
+                    public void saDidDownloadFilesInList(List<String> list) {
+
+                        for (int i = 0; i < list.size(); i++) {
                             try {
-                                // parse ad
-                                SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonArray.getJSONObject(i));
-
-                                // only add image type ads - no rich media or videos in the
-                                // GameWall for now
-                                if (ad.creative.format == SACreativeFormat.image) {
-                                    response.ads.add(ad);
-                                    ad.creative.format = SACreativeFormat.appwall;
-                                }
-                            } catch (JSONException e) {
+                                String diskUrl = list.get(i);
+                                SAAd ad = response.ads.get(i);
+                                ad.creative.details.media.url = ad.creative.details.image;
+                                ad.creative.details.media.isDownloaded = diskUrl != null;
+                                ad.creative.details.media.path = diskUrl;
+                            } catch (Exception e) {
                                 // do nothing
                             }
                         }
 
-                        // add all the images that'll need to be downloaded
-                        List<String> filesToDownload = new ArrayList<>();
-                        for (SAAd ad : response.ads) {
-                            filesToDownload.add(ad.creative.details.image);
-                        }
-
-                        // use the file list downloader to download them in the same
-                        // correct order
-                        SAFileListDownloader fileListDownloader = new SAFileListDownloader(context);
-                        fileListDownloader.downloadListOfFiles(filesToDownload, new SAFileListDownloaderInterface() {
-                            @Override
-                            public void saDidDownloadFilesInList(List<String> list) {
-
-                                for (int i = 0; i < list.size(); i++) {
-                                    try {
-                                        String diskUrl = list.get(i);
-                                        SAAd ad = response.ads.get(i);
-                                        ad.creative.details.media.url = ad.creative.details.image;
-                                        ad.creative.details.media.isDownloaded = diskUrl != null;
-                                        ad.creative.details.media.path = diskUrl;
-                                    } catch (Exception e) {
-                                        // do nothing
-                                    }
-                                }
-
-                                // and finally send a response
-                                localListener.saDidLoadAd(response);
-                            }
-                        });
-                    }
-                    // it's not a normal ad or an app wall, then return
-                    else {
+                        // and finally send a response
                         localListener.saDidLoadAd(response);
                     }
-                }
+                });
             }
-        });
+            // it's not a normal ad or an app wall, then return
+            else {
+                localListener.saDidLoadAd(response);
+            }
+        }
 
     }
 }

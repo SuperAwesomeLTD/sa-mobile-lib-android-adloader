@@ -242,7 +242,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         media.height = 480;
                         media.type = "video/mp4";
                         expected_vastad_media.add(media);
-                        List<SAVASTEvent> expected_vastad_events = new ArrayList<>();
+                        int expected_vastad_events_size = 15;
 
                         assertNotNull(response);
                         assertTrue(response.isValid());
@@ -308,7 +308,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertNotNull(ad.creative.details.media.vastAd.media);
                         assertNotNull(ad.creative.details.media.vastAd.events);
                         assertEquals(ad.creative.details.media.vastAd.media.size(), expected_vastad_media.size());
-                        assertEquals(ad.creative.details.media.vastAd.events.size(), 15);
+                        assertEquals(ad.creative.details.media.vastAd.events.size(), expected_vastad_events_size);
 
                         signal.countDown();
 
@@ -964,8 +964,8 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_vastad_redirect = null;
                         String expected_vastad_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         SAVASTAdType expected_vastad_type = SAVASTAdType.InLine;
-                        List<SAVASTMedia> expected_vastad_media = new ArrayList<>();
-                        List<SAVASTEvent> expected_vastad_events = new ArrayList<>();
+                        int expected_vastad_media_size = 3;
+                        int expected_vastad_events_size = 40;
 
                         assertNotNull(response);
                         assertTrue(response.isValid());
@@ -1032,8 +1032,8 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(ad.creative.details.media.vastAd.type, expected_vastad_type);
                         assertNotNull(ad.creative.details.media.vastAd.media);
                         assertNotNull(ad.creative.details.media.vastAd.events);
-                        assertEquals(ad.creative.details.media.vastAd.media.size(), 3);
-                        assertEquals(ad.creative.details.media.vastAd.events.size(), 40);
+                        assertEquals(ad.creative.details.media.vastAd.media.size(), expected_vastad_media_size);
+                        assertEquals(ad.creative.details.media.vastAd.events.size(), expected_vastad_events_size);
 
                         signal.countDown();
                     }
@@ -1274,8 +1274,8 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_vastad_redirect = null;
                         String expected_vastad_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         SAVASTAdType expected_vastad_type = SAVASTAdType.InLine;
-                        List<SAVASTMedia> expected_vastad_media = new ArrayList<>();
-                        List<SAVASTEvent> expected_vastad_events = new ArrayList<>();
+                        int expected_vastad_media_size = 3;
+                        int expected_vastad_events_size = 30;
 
                         assertNotNull(response);
                         assertTrue(response.isValid());
@@ -1341,8 +1341,8 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(ad.creative.details.media.vastAd.type, expected_vastad_type);
                         assertNotNull(ad.creative.details.media.vastAd.media);
                         assertNotNull(ad.creative.details.media.vastAd.events);
-                        assertEquals(ad.creative.details.media.vastAd.media.size(), 3);
-                        assertEquals(ad.creative.details.media.vastAd.events.size(), 30);
+                        assertEquals(ad.creative.details.media.vastAd.media.size(), expected_vastad_media_size);
+                        assertEquals(ad.creative.details.media.vastAd.events.size(), expected_vastad_events_size);
 
                         signal.countDown();
                     }
