@@ -80,6 +80,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
                         String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/320x50.jpg";
                         String expected_details_cdn = "https://ads.superawesome.tv/v2/demo_images/";
+                        String expected_details_base = "https://ads.superawesome.tv";
                         String expected_details_tag = null;
                         String expected_details_vast = null;
 
@@ -142,6 +143,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -224,6 +226,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         String expected_details_cdn = "https://ads.superawesome.tv/v2/demo_images/";
+                        String expected_details_base = "https://ads.superawesome.tv";
                         String expected_details_tag = null;
                         String expected_details_vast = "https://ads.superawesome.tv/v2/video/vast/30479/-1/-1/?sdkVersion=0.0.0&rnd=";
 
@@ -293,6 +296,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertTrue(ad.creative.details.vast.contains(expected_details_vast));
 
@@ -376,6 +380,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = null;
                         String expected_details_video = null;
                         String expected_details_cdn = null;
+                        String expected_details_base = null;
                         String expected_details_tag = null;
                         String expected_details_vast = null;
 
@@ -438,6 +443,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -521,6 +527,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
                         String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/9Q4SVblKKIWDBJm537HFrqI6rBxjCdb9.jpg";
                         String expected_details_cdn = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/";
+                        String expected_details_base = "https://s3-eu-west-1.amazonaws.com";
                         String expected_details_tag = null;
                         String expected_details_vast = null;
 
@@ -584,6 +591,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -666,6 +674,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
                         String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
                         String expected_details_cdn = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/";
+                        String expected_details_base = "https://s3-eu-west-1.amazonaws.com";
                         String expected_details_tag = null;
                         String expected_details_vast = null;
 
@@ -729,6 +738,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -810,6 +820,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = null;
                         String expected_details_video = null;
                         String expected_details_cdn = null;
+                        String expected_details_base = "https://ads.superawesome.tv";
                         // String expected_details_tag = "<!-- Beginning PassBack for Ad unit FK:Site-Skyscraper-Passback ### size: [[120,600]] -->\\\\n\\\\t<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>\\\\n\\\\t\\\\tgoogletag.pubads().definePassback('1002534/FK:Site-Skyscraper-Passback', [[120,600]]).display();\\\\n\\\\t</script>\\\\n<!-- End Passback -->";
                         String expected_details_vast = null;
 
@@ -872,6 +883,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertNotNull(ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -954,6 +966,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
                         String expected_details_video = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/yqbZXLY8b7p8dyIekHAnzySMwqOwA0HE.mp4";
                         String expected_details_cdn = "https://s3-eu-west-1.amazonaws.com/sb-ads-video-transcoded/";
+                        String expected_details_base = "https://s3-eu-west-1.amazonaws.com";
                         String expected_details_tag = null;
                         String expected_details_vast = "https://raw.githubusercontent.com/SuperAwesomeLTD/sa-mobile-lib-android-vastparser/master/samples/VAST2.0.xml";
 
@@ -1017,6 +1030,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
@@ -1121,6 +1135,10 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                                 "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/",
                                 "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/"
                         };
+                        String[] expected_details_base = {
+                                "https://s3-eu-west-1.amazonaws.com",
+                                "https://s3-eu-west-1.amazonaws.com"
+                        };
                         String[] expected_details_tag = {null, null};
                         String[] expected_details_vast = {null, null};
 
@@ -1182,6 +1200,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                             assertEquals(expected_details_url[i], ad.creative.details.url);
                             assertEquals(expected_details_video[i], ad.creative.details.video);
                             assertEquals(expected_details_cdn[i], ad.creative.details.cdn);
+                            assertEquals(expected_details_base[i], ad.creative.details.base);
                             assertEquals(expected_details_tag[i], ad.creative.details.tag);
                             assertEquals(expected_details_vast[i], ad.creative.details.vast);
 
@@ -1264,6 +1283,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         String expected_details_video = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
                         String expected_details_cdn = "https://ads.superawesome.tv/v2/demo_images/";
+                        String expected_details_base = "https://ads.superawesome.tv";
                         String expected_details_tag = null;
                         String expected_details_vast = "https://raw.githubusercontent.com/SuperAwesomeLTD/sa-mobile-lib-android-vastparser/master/samples/VAST5.0.xml";
 
@@ -1327,6 +1347,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_details_url, ad.creative.details.url);
                         assertEquals(expected_details_video, ad.creative.details.video);
                         assertEquals(expected_details_cdn, ad.creative.details.cdn);
+                        assertEquals(expected_details_base, ad.creative.details.base);
                         assertEquals(expected_details_tag, ad.creative.details.tag);
                         assertEquals(expected_details_vast, ad.creative.details.vast);
 
