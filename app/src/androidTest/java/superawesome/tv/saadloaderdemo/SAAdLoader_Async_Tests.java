@@ -6,6 +6,8 @@ import android.test.suitebuilder.annotation.LargeTest;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -69,6 +71,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_installUrl = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.image;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 0;
@@ -126,6 +129,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -215,6 +219,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_installUrl = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.video;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 0;
@@ -279,6 +284,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -369,6 +375,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_installUrl = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.invalid;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 0;
@@ -426,6 +433,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -516,6 +524,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                         SACreativeFormat expected_creative_format = SACreativeFormat.image;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 1209;
@@ -574,6 +583,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -663,6 +673,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_click_counter_url = "https://superawesome.tv/click_counter";
                         SACreativeFormat expected_creative_format = SACreativeFormat.rich;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 2921;
@@ -721,6 +732,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -809,6 +821,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_installUrl = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.tag;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 2213;
@@ -866,6 +879,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_installUrl, ad.creative.installUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -955,6 +969,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_click_counter_url = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.video;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 1209;
@@ -1013,6 +1028,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);
@@ -1112,6 +1128,9 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         };
                         SACreativeFormat[] expected_creative_format = {SACreativeFormat.appwall, SACreativeFormat.appwall};
                         String[] expected_creative_bundle = {"tv.superawesome.demoapp", "tv.superawesome.demoapp"};
+                        List[] expected_creative_osTarget = {
+                                Collections.singletonList("Android"), Collections.singletonList("Android")
+                        };
 
                         int[] expected_referral_configuration = {0, 0};
                         int[] expected_referral_campaignId = {1227, 1227};
@@ -1188,6 +1207,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                             assertEquals(expected_creative_click_counter_url[i], ad.creative.clickCounterUrl);
                             assertEquals(expected_creative_format[i], ad.creative.format);
                             assertEquals(expected_creative_bundle[i], ad.creative.bundle);
+                            assertEquals(expected_creative_osTarget[i], ad.creative.osTarget);
 
                             assertNotNull(ad.creative.referral);
                             assertEquals(expected_referral_configuration[i], ad.creative.referral.configuration);
@@ -1272,6 +1292,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_creative_click_counter_url = null;
                         SACreativeFormat expected_creative_format = SACreativeFormat.video;
                         String expected_creative_bundle = null;
+                        List<String> expected_creative_osTarget = new ArrayList<>();
 
                         int expected_referral_configuration = 0;
                         int expected_referral_campaignId = 1420;
@@ -1330,6 +1351,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         assertEquals(expected_creative_click_counter_url, ad.creative.clickCounterUrl);
                         assertEquals(expected_creative_format, ad.creative.format);
                         assertEquals(expected_creative_bundle, ad.creative.bundle);
+                        assertEquals(expected_creative_osTarget, ad.creative.osTarget);
 
                         assertNotNull(ad.creative.referral);
                         assertEquals(expected_referral_configuration, ad.creative.referral.configuration);

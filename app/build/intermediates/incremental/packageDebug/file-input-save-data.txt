@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 24 12:47:09 GMT 2017
+#Tue Apr 18 14:28:49 BST 2017
 175.set=ANDROID_RESOURCE
 122.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-xhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png
 60.set=ANDROID_RESOURCE
@@ -47,7 +47,7 @@
 43.set=ANDROID_RESOURCE
 105.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/color/abc_primary_text_disable_only_material_dark.xml
 35.set=ANDROID_RESOURCE
-152.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
+152.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
 27.set=ANDROID_RESOURCE
 159.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_list_menu_item_layout.xml
 68.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_switch_thumb_material.xml
@@ -538,7 +538,7 @@ count=190
 53.set=ANDROID_RESOURCE
 106.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/layout/abc_list_menu_item_radio.xml
 45.set=ANDROID_RESOURCE
-153.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+153.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
 30.base=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_
 62.file=/Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_edit_text_material.xml
 37.set=ANDROID_RESOURCE
