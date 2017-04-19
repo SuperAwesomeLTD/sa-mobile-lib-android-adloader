@@ -90,7 +90,7 @@ public class SALoader {
      */
     public JSONObject getAwesomeAdsQuery (SASession session) {
         try {
-            return SAJsonParser.newObject(new Object[]{
+            return SAJsonParser.newObject(
                     "test", session.getTestMode(),
                     "sdkVersion", session.getVersion(),
                     "rnd", session.getCachebuster(),
@@ -101,7 +101,7 @@ public class SALoader {
                     "lang", session.getLang(),
                     "device", session.getDevice()
                     // "preload", true
-            });
+            );
         } catch (Exception e) {
             return new JSONObject();
         }
@@ -115,10 +115,9 @@ public class SALoader {
      */
     public JSONObject getAwesomeAdsHeader (SASession session) {
         try {
-            return SAJsonParser.newObject(new Object[]{
+            return SAJsonParser.newObject(
                     "Content-Type", "application/json",
-                    "User-Agent", session.getUserAgent()
-            });
+                    "User-Agent", session.getUserAgent());
         } catch (Exception e) {
             return new JSONObject();
         }
