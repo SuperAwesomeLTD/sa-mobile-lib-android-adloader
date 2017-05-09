@@ -6,6 +6,7 @@ package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
 import android.location.GpsStatus;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -137,6 +138,8 @@ public class SALoader {
         String endpoint = getAwesomeAdsEndpoint(session, placementId);
         JSONObject query = getAwesomeAdsQuery(session);
         JSONObject header = getAwesomeAdsHeader(session);
+
+        Log.d("SuperAwesome", "Header is " + header.toString());
 
         // call to the load ad method
         loadAd(endpoint, query, header, placementId, session, listener);
