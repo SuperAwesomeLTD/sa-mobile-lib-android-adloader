@@ -233,7 +233,7 @@ public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
                         String expected_details_cdn = "https://ads.superawesome.tv/v2/demo_images/";
                         String expected_details_base = "https://ads.superawesome.tv";
                         String expected_details_tag = null;
-                        String expected_details_vast = "https://ads.superawesome.tv/v2/video/vast/30479/-1/-1/?sdkVersion=0.0.0&rnd=";
+                        String expected_details_vast = "https://eu-west-1-ads.superawesome.tv/v2/video/vast/30479/-1/-1/?sdkVersion=0.0.0&rnd=";
 
                         String expected_media_path = "samov_";
                         String expected_media_url = "https://ads.superawesome.tv/v2/demo_images/video.mp4";
