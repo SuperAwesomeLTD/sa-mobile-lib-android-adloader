@@ -172,7 +172,7 @@ public class SALoader {
              */
             @Override
             public void saDidGetResponse(int status, String data, boolean success) {
-                processAd(placementId, data, status, session, listener);
+                processAd(placementId, data, status, session, localListener);
             }
         });
 
