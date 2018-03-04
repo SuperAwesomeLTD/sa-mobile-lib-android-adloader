@@ -23,7 +23,7 @@ public class SAProcessHTML {
      * @return      the formatted HTML string to be used by a WebView
      */
     public static String formatCreativeIntoImageHTML(SAAd ad) {
-        String htmlString = "<a href='_HREF_URL_' target='_blank'><img src='_IMAGE_URL_'/></a>_MOAT_";
+        String htmlString = "<a href='_HREF_URL_' target='_blank'><img src='_IMAGE_URL_' width='100%' height='100%'/></a>_MOAT_";
 
         if (ad.creative.details.image != null) {
             htmlString = htmlString.replace("_IMAGE_URL_", ad.creative.details.image);

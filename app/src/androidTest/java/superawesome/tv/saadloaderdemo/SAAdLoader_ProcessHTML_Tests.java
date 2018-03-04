@@ -26,10 +26,10 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
 
         assertNotNull(ad.creative.details.media.html);
-        assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>"));
+        assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg' width='100%' height='100%'/>"));
         assertTrue(ad.creative.details.media.html.contains("<a href='http://hotnews.ro' target='_blank'>"));
         assertTrue(ad.creative.details.media.html.contains("</a>"));
-        assertTrue(ad.creative.details.media.html.equals("<a href='http://hotnews.ro' target='_blank'><img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/></a>_MOAT_"));
+        assertTrue(ad.creative.details.media.html.equals("<a href='http://hotnews.ro' target='_blank'><img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg' width='100%' height='100%'/></a>_MOAT_"));
     }
 
     @SmallTest
@@ -41,10 +41,10 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
 
         assertNotNull(ad.creative.details.media.html);
-        assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>"));
+        assertTrue(ad.creative.details.media.html.contains("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg' width='100%' height='100%'/>"));
         assertFalse(ad.creative.details.media.html.contains("<a href='http://hotnews.ro' target='_blank'>"));
         assertFalse(ad.creative.details.media.html.contains("</a>"));
-        assertTrue(ad.creative.details.media.html.equals("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg'/>_MOAT_"));
+        assertTrue(ad.creative.details.media.html.equals("<img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg' width='100%' height='100%'/>_MOAT_"));
 
     }
 
