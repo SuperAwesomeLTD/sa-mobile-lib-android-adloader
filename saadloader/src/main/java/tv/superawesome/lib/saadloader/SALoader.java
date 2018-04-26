@@ -48,10 +48,13 @@ public class SALoader {
     // private context
     private Context context = null;
 
-    private int pos = 1;            // 1 - above the fold for banners, 7 - fullscreen, for banners & interstitials
-    private int skip = 0;           // skip = 0 - no, 1 - yes
-    private int playbackmethod = 5; // playbackmethod - 5
-    private int startdelay = 0;     // startdelay = -2 - post-roll. -1 - mid-roll. 0 - preroll. > 0 - mid-roll
+    private int pos = 1;            // 1 = above the fold for banners | 7 = fullscreen, for videos
+    private int skip = 0;           // 0 = no | 1 = yes
+    private int playbackmethod = 5; // 5 = with sound on screen enter
+    private int startdelay = 0;     // -2 = post-roll | -1 = mid-roll | 0 = preroll | > 0 = mid-roll
+    private int instl = 0;          // 1 = fullscreen | 0 = not fullscreen
+    private int w = 0;              // width, in pixels
+    private int h = 0;              // height, in pixels
 
     /**
      * Standard constructor with a context
@@ -108,7 +111,10 @@ public class SALoader {
                     "pos", pos,
                     "skip", skip,
                     "playbackmethod", playbackmethod,
-                    "startdelay", startdelay
+                    "startdelay", startdelay,
+                    "instl", instl,
+                    "w", w,
+                    "h", h
                     // "preload", true
             );
         } catch (Exception e) {
@@ -357,5 +363,17 @@ public class SALoader {
 
     public void setPlaybackmethod(int playbackmethod) {
         this.playbackmethod = playbackmethod;
+    }
+
+    public void setInstl (int instl) {
+        this.instl = instl;
+    }
+
+    public void setWidth (int width) {
+        this.w = width;
+    }
+
+    public void setHeight (int height) {
+        this.h = height;
     }
 }
