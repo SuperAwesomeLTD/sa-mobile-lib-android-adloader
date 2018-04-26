@@ -5,7 +5,6 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
-import android.location.GpsStatus;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -14,6 +13,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Future;
 
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
@@ -28,7 +28,6 @@ import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
@@ -48,6 +47,11 @@ public class SALoader {
 
     // private context
     private Context context = null;
+
+    private int pos = 1;            // 1 - above the fold for banners, 7 - fullscreen, for banners & interstitials
+    private int skip = 0;           // skip = 0 - no, 1 - yes
+    private int playbackmethod = 5; // playbackmethod - 5
+    private int startdelay = 0;     // startdelay = -2 - post-roll. -1 - mid-roll. 0 - preroll. > 0 - mid-roll
 
     /**
      * Standard constructor with a context
@@ -100,7 +104,11 @@ public class SALoader {
                     "dauid", session.getDauId(),
                     "ct", session.getConnectionType().ordinal(),
                     "lang", session.getLang(),
-                    "device", session.getDevice()
+                    "device", session.getDevice(),
+                    "pos", pos,
+                    "skip", skip,
+                    "playbackmethod", playbackmethod,
+                    "startdelay", startdelay
                     // "preload", true
             );
         } catch (Exception e) {
@@ -333,6 +341,21 @@ public class SALoader {
                 localListener.saDidLoadAd(response);
             }
         }
+    }
 
+    public void setPos(int pos) {
+        this.pos = pos;
+    }
+
+    public void setSkip(int skip) {
+        this.skip = skip;
+    }
+
+    public void setStartdelay(int startdelay) {
+        this.startdelay = startdelay;
+    }
+
+    public void setPlaybackmethod(int playbackmethod) {
+        this.playbackmethod = playbackmethod;
     }
 }
