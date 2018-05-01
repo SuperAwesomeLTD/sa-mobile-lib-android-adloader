@@ -5,7 +5,7 @@ local.properties
 saadloader/java_pid*
 java_pid*
 app/java_pid*
-
+app/build/intermediates/*
 # Built application files
 *.apk
 *.ap_
