@@ -263,7 +263,7 @@ public class SALoader {
                                 // and the exact url to download
                                 ad.creative.details.media.url = savastAd.url;
                                 // download file
-                                SAFileDownloader.getInstance().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
+                                new SAFileDownloader().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                     @Override
                                     public void saDidDownloadFile(boolean success, String playableDiskUrl) {
 
