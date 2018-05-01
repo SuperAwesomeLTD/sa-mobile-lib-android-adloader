@@ -24,7 +24,7 @@ public class SAAdLoader_Query_Tests extends ApplicationTestCase<Application> {
         SASession session = new SASession(getContext());
         session.enableTestMode();
 
-        int expected_keys = 9;
+        int expected_keys = 16;
         boolean expected_test = true;
         String expected_sdkVersion = "0.0.0";
         String expected_bundle = "superawesome.tv.saadloaderdemo";
@@ -67,7 +67,7 @@ public class SAAdLoader_Query_Tests extends ApplicationTestCase<Application> {
         SASession session = new SASession(getContext());
         session.disableTestMode();
 
-        int expected_keys = 9;
+        int expected_keys = 16;
         boolean expected_test = false;
         String expected_sdkVersion = "0.0.0";
         String expected_bundle = "superawesome.tv.saadloaderdemo";
@@ -109,7 +109,7 @@ public class SAAdLoader_Query_Tests extends ApplicationTestCase<Application> {
         SALoader loader = new SALoader(null);
         SASession session = new SASession(null);
 
-        int expected_keys = 9;
+        int expected_keys = 16;
         boolean expected_test = false;
         String expected_sdkVersion = "0.0.0";
         String expected_bundle = "unknown";

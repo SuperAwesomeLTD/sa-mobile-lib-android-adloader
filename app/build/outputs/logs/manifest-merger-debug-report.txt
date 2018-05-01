@@ -1,40 +1,96 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:17:1-31:12
+MERGED from [:saadloader] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/saadloader/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:17:1-28:12
+MERGED from [tv.superawesome.lib.sasession:sasession:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sasession-1.0.0.aar/c4f5c419d76c5afbfd510c2a91888d53/AndroidManifest.xml:2:1-17:12
+MERGED from [tv.superawesome.lib.savastparser:savastparser:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/savastparser-1.0.0.aar/163b44847410525933d4cf986b41e4b1/AndroidManifest.xml:2:1-17:12
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:2:1-19:12
+MERGED from [tv.superawesome.lib.samodelspace:samodelspace:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/samodelspace-1.0.0.aar/730c6fdccb76b30336909174594270ac/AndroidManifest.xml:2:1-17:12
+MERGED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:2:1-19:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:17:1-31:12
+MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sajsonparser-1.0.1.aar/da82e1af7ab1918a2717ec466e357d82/AndroidManifest.xml:2:1-17:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:1-23:12
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:2:11-69
-	android:versionCode
-		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:5:5-21:19
-MERGED from [com.android.support:design:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [tv.superawesome.lib.saadloader:saadloader:1.1.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/1.1.6/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sasession:sasession:0.3.3] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.3.3/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.savastparser:savastparser:0.7.1] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.7.1/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:13:5-21:19
-MERGED from [tv.superawesome.lib.samodelspace:samodelspace:0.7.2] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.7.2/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:0.2.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.7/AndroidManifest.xml:11:5-15:19
-MERGED from [tv.superawesome.lib.sautils:sautils:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.6/AndroidManifest.xml:13:5-17:19
-	android:label
-		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:8:9-41
+MERGED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:25:5-29:19
+MERGED from [:saadloader] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/saadloader/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:saadloader] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/saadloader/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:22:5-26:19
+MERGED from [tv.superawesome.lib.sasession:sasession:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sasession-1.0.0.aar/c4f5c419d76c5afbfd510c2a91888d53/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sasession:sasession:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sasession-1.0.0.aar/c4f5c419d76c5afbfd510c2a91888d53/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.savastparser:savastparser:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/savastparser-1.0.0.aar/163b44847410525933d4cf986b41e4b1/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.savastparser:savastparser:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/savastparser-1.0.0.aar/163b44847410525933d4cf986b41e4b1/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:13:5-17:19
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:13:5-17:19
+MERGED from [tv.superawesome.lib.samodelspace:samodelspace:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/samodelspace-1.0.0.aar/730c6fdccb76b30336909174594270ac/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.samodelspace:samodelspace:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/samodelspace-1.0.0.aar/730c6fdccb76b30336909174594270ac/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:13:5-17:19
+MERGED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:13:5-17:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:25:5-29:19
+MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sajsonparser-1.0.1.aar/da82e1af7ab1918a2717ec466e357d82/AndroidManifest.xml:11:5-15:19
+MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sajsonparser-1.0.1.aar/da82e1af7ab1918a2717ec466e357d82/AndroidManifest.xml:11:5-15:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:9:9-35
-	android:allowBackup
-		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:6:9-35
+	android:label
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:8:9-41
 	android:icon
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:10:9-40
 activity#superawesome.tv.saadloaderdemo.MainActivity
@@ -57,40 +113,99 @@ ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src
 		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml:18:27-74
 uses-sdk
 INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [tv.superawesome.lib.saadloader:saadloader:1.1.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.saadloader/saadloader/1.1.6/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sasession:sasession:0.3.3] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sasession/sasession/0.3.3/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.savastparser:savastparser:0.7.1] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.savastparser/savastparser/0.7.1/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.samodelspace:samodelspace:0.7.2] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.samodelspace/samodelspace/0.7.2/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:0.2.7] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sajsonparser/sajsonparser/0.2.7/AndroidManifest.xml:7:5-9:41
-MERGED from [tv.superawesome.lib.sautils:sautils:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.6/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:21:5-23:62
+MERGED from [:saadloader] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/saadloader/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:saadloader] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/saadloader/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:20:5-44
+MERGED from [tv.superawesome.lib.sasession:sasession:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sasession-1.0.0.aar/c4f5c419d76c5afbfd510c2a91888d53/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sasession:sasession:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sasession-1.0.0.aar/c4f5c419d76c5afbfd510c2a91888d53/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.savastparser:savastparser:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/savastparser-1.0.0.aar/163b44847410525933d4cf986b41e4b1/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.savastparser:savastparser:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/savastparser-1.0.0.aar/163b44847410525933d4cf986b41e4b1/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.samodelspace:samodelspace:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/samodelspace-1.0.0.aar/730c6fdccb76b30336909174594270ac/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.samodelspace:samodelspace:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/samodelspace-1.0.0.aar/730c6fdccb76b30336909174594270ac/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:21:5-23:58
+MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sajsonparser-1.0.1.aar/da82e1af7ab1918a2717ec466e357d82/AndroidManifest.xml:7:5-9:41
+MERGED from [tv.superawesome.lib.sajsonparser:sajsonparser:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sajsonparser-1.0.1.aar/da82e1af7ab1918a2717ec466e357d82/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9738c3eb4f23018a47732af0798d3d52/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/cee4a7f5e7d54ecbf751a26725dfb1b1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c1ab99641df79ddafdd7a5ba2f347d57/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/8b91e8fd1410832ffdc08c123315f0ab/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f675c7c64d6b0a4f2104482a71ba6145/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c8d762b8c663615d593433d7c51e370a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/78e759abeeaa3de2734496c6169aaff1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/5de95dc01fda2c82d5c5eebd8bad0121/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/9b4e209ecd2ae718e0e621e1035dae84/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/f85eb72045e9447f410765dd8137d579/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/77edbed8396bba6713953067594d3cd4/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/6cc70fb7e5b22c03fcde8fd4a81434c8/AndroidManifest.xml:27:13-51
 uses-permission#android.permission.INTERNET
-ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:11:5-67
+ADDED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:11:22-64
-service#tv.superawesome.lib.sanetwork.asynctask.SAAsyncTask$SAAsync
-ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:17:9-20:72
-	android:exported
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:19:13-37
-	android:permission
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:20:13-69
-	android:name
-		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:0.3.8] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sanetwork/sanetwork/0.3.8/AndroidManifest.xml:18:13-87
+		ADDED from [tv.superawesome.lib.sanetwork:sanetwork:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sanetwork-1.0.1.aar/f6b83ef209829b26002502ea857c8f0e/AndroidManifest.xml:11:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [tv.superawesome.lib.sautils:sautils:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.6/AndroidManifest.xml:11:5-79
+ADDED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [tv.superawesome.lib.sautils:sautils:0.3.6] /Users/gabriel.coman/Workspace/sa-mobile-lib-android-adloader/app/build/intermediates/exploded-aar/tv.superawesome.lib.sautils/sautils/0.3.6/AndroidManifest.xml:11:22-76
+		ADDED from [tv.superawesome.lib.sautils:sautils:1.0.1] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/sautils-1.0.1.aar/07a6a1d76bb42915110cc148f200c3ef/AndroidManifest.xml:11:22-76
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/gabriel.coman/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/f1f0bba817224c86428df0a276d77400/AndroidManifest.xml:26:13-58

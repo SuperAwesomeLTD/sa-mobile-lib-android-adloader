@@ -11,20 +11,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Future;
-
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.saad.SAAd;
-import tv.superawesome.lib.samodelspace.saad.SACreativeFormat;
 import tv.superawesome.lib.samodelspace.saad.SAResponse;
 import tv.superawesome.lib.samodelspace.vastad.SAVASTAd;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
-import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloader;
-import tv.superawesome.lib.sanetwork.listdownload.SAFileListDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.SASession;
@@ -176,7 +169,7 @@ public class SALoader {
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
 
         SANetwork network = new SANetwork();
-        network.sendGET(context, endpoint, query, header, new SANetworkInterface() {
+        network.sendGET(endpoint, query, header, new SANetworkInterface() {
             /**
              * Overridden method of the SANetworkInterface in which I process the ad response
              *
@@ -287,60 +280,6 @@ public class SALoader {
                         break;
                     }
                 }
-            }
-            // AppWall case
-            else if (jsonArray != null) {
-
-                // assign correct format
-                response.format = SACreativeFormat.appwall;
-
-                // add ads to it
-                for (int i = 0; i < jsonArray.length(); i++) {
-
-                    try {
-                        // parse ad
-                        SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonArray.getJSONObject(i));
-
-                        // only add image type ads - no rich media or videos in the
-                        // GameWall for now
-                        if (ad.creative.format == SACreativeFormat.image) {
-                            response.ads.add(ad);
-                            ad.creative.format = SACreativeFormat.appwall;
-                        }
-                    } catch (JSONException e) {
-                        // do nothing
-                    }
-                }
-
-                // add all the images that'll need to be downloaded
-                List<String> filesToDownload = new ArrayList<>();
-                for (SAAd ad : response.ads) {
-                    filesToDownload.add(ad.creative.details.image);
-                }
-
-                // use the file list downloader to download them in the same
-                // correct order
-                SAFileListDownloader fileListDownloader = new SAFileListDownloader(context);
-                fileListDownloader.downloadListOfFiles(filesToDownload, new SAFileListDownloaderInterface() {
-                    @Override
-                    public void saDidDownloadFilesInList(List<String> list) {
-
-                        for (int i = 0; i < list.size(); i++) {
-                            try {
-                                String diskUrl = list.get(i);
-                                SAAd ad = response.ads.get(i);
-                                ad.creative.details.media.url = ad.creative.details.image;
-                                ad.creative.details.media.isDownloaded = diskUrl != null;
-                                ad.creative.details.media.path = diskUrl;
-                            } catch (Exception e) {
-                                // do nothing
-                            }
-                        }
-
-                        // and finally send a response
-                        localListener.saDidLoadAd(response);
-                    }
-                });
             }
             // it's not a normal ad or an app wall, then return
             else {
