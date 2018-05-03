@@ -8,8 +8,7 @@ import android.util.Log;
 import org.json.JSONObject;
 
 import tv.superawesome.lib.saadloader.SALoader;
-import tv.superawesome.lib.sasession.SASession;
-import tv.superawesome.lib.sautils.SAUtils;
+import tv.superawesome.lib.sasession.session.SASession;
 
 public class SAAdLoader_Endpoint_Tests extends ApplicationTestCase<Application> {
 

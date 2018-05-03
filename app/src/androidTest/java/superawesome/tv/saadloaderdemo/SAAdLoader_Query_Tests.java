@@ -7,7 +7,7 @@ import android.test.suitebuilder.annotation.SmallTest;
 import org.json.JSONObject;
 
 import tv.superawesome.lib.saadloader.SALoader;
-import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sasession.session.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
 
 public class SAAdLoader_Query_Tests extends ApplicationTestCase<Application> {

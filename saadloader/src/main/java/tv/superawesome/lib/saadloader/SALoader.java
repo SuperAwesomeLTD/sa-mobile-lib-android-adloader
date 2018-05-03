@@ -20,7 +20,7 @@ import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
-import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sasession.session.SASession;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
@@ -40,14 +40,6 @@ public class SALoader {
 
     // private context
     private Context context = null;
-
-    private int pos = 1;            // 1 = above the fold for banners | 7 = fullscreen, for videos
-    private int skip = 0;           // 0 = no | 1 = yes
-    private int playbackmethod = 5; // 5 = with sound on screen enter
-    private int startdelay = 0;     // -2 = post-roll | -1 = mid-roll | 0 = preroll | > 0 = mid-roll
-    private int instl = 0;          // 1 = fullscreen | 0 = not fullscreen
-    private int w = 0;              // width, in pixels
-    private int h = 0;              // height, in pixels
 
     /**
      * Standard constructor with a context
@@ -101,13 +93,13 @@ public class SALoader {
                     "ct", session.getConnectionType().ordinal(),
                     "lang", session.getLang(),
                     "device", session.getDevice(),
-                    "pos", pos,
-                    "skip", skip,
-                    "playbackmethod", playbackmethod,
-                    "startdelay", startdelay,
-                    "instl", instl,
-                    "w", w,
-                    "h", h
+                    "pos", session.getPos().getValue(),
+                    "skip", session.getSkip().getValue(),
+                    "playbackmethod", session.getPlaybackMethod().getValue(),
+                    "startdelay", session.getStartDelay().getValue(),
+                    "instl", session.getInstl().getValue(),
+                    "w", session.getWidth(),
+                    "h", session.getHeight()
                     // "preload", true
             );
         } catch (Exception e) {
@@ -263,9 +255,9 @@ public class SALoader {
                                 // and the exact url to download
                                 ad.creative.details.media.url = savastAd.url;
                                 // download file
-                                new SAFileDownloader().downloadFileFrom(context, ad.creative.details.media.url, new SAFileDownloaderInterface() {
+                                new SAFileDownloader(context).downloadFileFrom(ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                     @Override
-                                    public void saDidDownloadFile(boolean success, String playableDiskUrl) {
+                                    public void saDidDownloadFile(boolean success, String key, String playableDiskUrl) {
 
                                         ad.creative.details.media.path = playableDiskUrl;
                                         ad.creative.details.media.isDownloaded = playableDiskUrl != null;
@@ -286,33 +278,5 @@ public class SALoader {
                 localListener.saDidLoadAd(response);
             }
         }
-    }
-
-    public void setPos(int pos) {
-        this.pos = pos;
-    }
-
-    public void setSkip(int skip) {
-        this.skip = skip;
-    }
-
-    public void setStartdelay(int startdelay) {
-        this.startdelay = startdelay;
-    }
-
-    public void setPlaybackmethod(int playbackmethod) {
-        this.playbackmethod = playbackmethod;
-    }
-
-    public void setInstl (int instl) {
-        this.instl = instl;
-    }
-
-    public void setWidth (int width) {
-        this.w = width;
-    }
-
-    public void setHeight (int height) {
-        this.h = height;
     }
 }

@@ -20,7 +20,7 @@ import tv.superawesome.lib.samodelspace.saad.SAResponse;
 import tv.superawesome.lib.samodelspace.vastad.SAVASTAdType;
 import tv.superawesome.lib.samodelspace.vastad.SAVASTEvent;
 import tv.superawesome.lib.samodelspace.vastad.SAVASTMedia;
-import tv.superawesome.lib.sasession.SASession;
+import tv.superawesome.lib.sasession.session.SASession;
 
 public class SAAdLoader_Async_Tests extends ActivityInstrumentationTestCase2 {
 
