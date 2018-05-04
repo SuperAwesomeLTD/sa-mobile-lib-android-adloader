@@ -13,7 +13,7 @@ import static junit.framework.Assert.assertTrue;
 public class TestSAProcessHTML {
 
     @Test
-    public void test_SAProcessHTML_FormatCreativeIntoImageHTML1 () {
+    public void test_SAProcessHTML_FormatCreativeIntoImageHTML_WithClick () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.image;
@@ -29,7 +29,7 @@ public class TestSAProcessHTML {
     }
 
     @Test
-    public void test_SAProcessHTML_FormatCreativeIntoImageHTML2 () {
+    public void test_SAProcessHTML_FormatCreativeIntoImageHTML_WithoutClick () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.image;
