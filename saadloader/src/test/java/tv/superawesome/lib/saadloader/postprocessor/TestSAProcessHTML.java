@@ -1,23 +1,19 @@
-package superawesome.tv.saadloaderdemo;
+package tv.superawesome.lib.saadloader.postprocessor;
 
 
-import android.app.Application;
-import android.test.ApplicationTestCase;
-import android.test.suitebuilder.annotation.SmallTest;
-import android.util.Log;
+import org.junit.Test;
 
-import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.samodelspace.saad.SAAd;
 import tv.superawesome.lib.samodelspace.saad.SACreativeFormat;
 
-public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Application> {
+import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertTrue;
 
-    public SAAdLoader_ProcessHTML_Tests() {
-        super(Application.class);
-    }
+public class TestSAProcessHTML {
 
-    @SmallTest
-    public void testProcessImageWithClick () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoImageHTML1 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.image;
@@ -32,8 +28,8 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         assertTrue(ad.creative.details.media.html.equals("<a href='http://hotnews.ro' target='_blank'><img src='https://ads.superawesome.tv/v2/demo_images/320x50.jpg' width='100%' height='100%'/></a>_MOAT_"));
     }
 
-    @SmallTest
-    public void testProcessImageWithNoClick () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoImageHTML2 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.image;
@@ -48,8 +44,8 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
 
     }
 
-    @SmallTest
-    public void testProcessRichMedia () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoRichMediaHTML () {
 
         SAAd ad = new SAAd();
         ad.placementId = 4091;
@@ -59,14 +55,12 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         ad.creative.details.url = "https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html";
         ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
 
-        Log.d("SuperAwesome", ad.creative.details.media.html);
-
         assertNotNull(ad.creative.details.media.html);
         assertTrue(ad.creative.details.media.html.contains("<iframe style='padding:0;border:0;' width='100%' height='100%' src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/rich-media/tNmFLJ7kGQWBbyORkIqTJ4oqykaGPU9w/rich-media/index.html?placement=4091&line_item=2001&creative=2081&rnd="));
     }
 
-    @SmallTest
-    public void testProcessTag1 () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoTagHTML1 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.tag;
@@ -77,8 +71,8 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         assertTrue(ad.creative.details.media.html.contains("<!-- Beginning PassBack for Ad unit FK:Site-Skyscraper-Passback ### size: [[120,600]] -->\\\\n\\\\t<script type='text/javascript' src='http://www.googletagservices.com/tag/js/gpt.js'>\\\\n\\\\t\\\\tgoogletag.pubads().definePassback('1002534/FK:Site-Skyscraper-Passback', [[120,600]]).display();\\\\n\\\\t</script>\\\\n<!-- End Passback -->"));
     }
 
-    @SmallTest
-    public void testProcessTag2 () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoTagHTML2 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.tag;
@@ -89,8 +83,8 @@ public class SAAdLoader_ProcessHTML_Tests extends ApplicationTestCase<Applicatio
         assertTrue(ad.creative.details.media.html.contains("<A HREF=\"https://ad.doubleclick.net/ddm/jump/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729?\"><IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N304202.1915243SUPERAWESOME.TV/B10773905.144955457;sz=480x320;ord=1486394166729;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=480 HEIGHT=320 ALT=\"Advertisement\"></A>_MOAT_"));
     }
 
-    @SmallTest
-    public void testProcessTag3 () {
+    @Test
+    public void test_SAProcessHTML_FormatCreativeIntoTagHTML3 () {
 
         SAAd ad = new SAAd();
         ad.creative.format = SACreativeFormat.tag;

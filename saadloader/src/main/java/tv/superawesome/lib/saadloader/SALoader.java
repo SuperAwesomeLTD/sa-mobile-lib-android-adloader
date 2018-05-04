@@ -11,6 +11,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.concurrent.Executor;
+
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
 import tv.superawesome.lib.samodelspace.saad.SAAd;
@@ -20,6 +22,7 @@ import tv.superawesome.lib.sanetwork.file.SAFileDownloader;
 import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
+import tv.superawesome.lib.sasession.defines.SAConfiguration;
 import tv.superawesome.lib.sasession.session.SASession;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
@@ -39,48 +42,37 @@ import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 public class SALoader {
 
     // private context
+    private Executor executor = null;
+    private int timeout = 15000;
     private Context context = null;
+    private boolean isDebug = false;
 
-    /**
-     * Standard constructor with a context
-     *
-     * @param context copy a reference to the context
-     */
     public SALoader (Context context) {
         this.context = context;
     }
 
-    /**
-     * Method that creates the standard AwesomeAds base url starting from a session (to know
-     * if it's in STAGING or PRODUCTION mode), and a placement Id
-     *
-     * @param session       current session
-     * @param placementId   current placement Id
-     * @return              an url of the form https://ads.superawesome.tv/v2/ad/7212
-     */
+    public SALoader (Context context, Executor executor, boolean isDebug, int timeout) {
+        this.context = context;
+        this.executor = executor;
+        this.timeout = timeout;
+        this.isDebug = isDebug;
+    }
+
     public String getAwesomeAdsEndpoint (SASession session, int placementId) {
         try {
-            return session.getBaseUrl() + "/ad/" + placementId;
+            String base = session.getBaseUrl();
+            try {
+                char last = base.charAt(base.length() - 1);
+                String separator = last == '/' ? "" : "/";
+                return base + separator + "ad/" + placementId;
+            } catch (Exception e) {
+                return base + "/ad/" + placementId;
+            }
         } catch (Exception e) {
             return null;
         }
     }
 
-    /**
-     * Method that creates the additional query parameters that will need to be appended to the
-     * AwesomeAds endpoint
-     *
-     * @param session   current session
-     * @return          a JSONObject containing the necessary query params, such as:
-     *                  - test mode
-     *                  - sdk version
-     *                  - cache buster
-     *                  - bundle & app name
-     *                  - DAU Id for frequency capping
-     *                  - connection type as an integer
-     *                  - current language as "en_US"
-     *                  - type of device as string, "phone" or "tablet"
-     */
     public JSONObject getAwesomeAdsQuery (SASession session) {
         try {
             return SAJsonParser.newObject(
@@ -107,12 +99,6 @@ public class SALoader {
         }
     }
 
-    /**
-     * Method that creates the Awesome Ads specific header needed for network requests
-     *
-     * @param session   current session
-     * @return          a JSONObject with header parameters
-     */
     public JSONObject getAwesomeAdsHeader (SASession session) {
         try {
             return SAJsonParser.newObject(
@@ -138,10 +124,8 @@ public class SALoader {
         JSONObject query = getAwesomeAdsQuery(session);
         JSONObject header = getAwesomeAdsHeader(session);
 
-        Log.d("SuperAwesome", "Header is " + header.toString());
-
         // call to the load ad method
-        loadAd(endpoint, query, header, placementId, session, listener);
+        loadAd(endpoint, query, header, placementId, session.getConfiguration(), listener);
     }
 
     /**
@@ -151,33 +135,24 @@ public class SALoader {
      * @param query         additional query parameters
      * @param header        request header
      * @param placementId   placement Id (bc it's not returned by the request)
-     * @param session       current session
      * @param listener      listener copy so that the loader can return the response to the
      *                      library user
      */
-    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SASession session, final SALoaderInterface listener) {
+    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SAConfiguration configuration, final SALoaderInterface listener) {
 
         // create a local listener to avoid null pointer exceptions
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
 
-        SANetwork network = new SANetwork();
+        SANetwork network = new SANetwork(executor, timeout);
         network.sendGET(endpoint, query, header, new SANetworkInterface() {
-            /**
-             * Overridden method of the SANetworkInterface in which I process the ad response
-             *
-             * @param status    status of the SuperAwesome ad request
-             * @param data      payload returned by the ad server
-             * @param success   success status
-             */
             @Override
             public void saDidGetResponse(int status, String data, boolean success) {
-                processAd(placementId, data, status, session, localListener);
+                processAd(placementId, data, status, configuration, localListener);
             }
         });
-
     }
 
-    public void processAd (int placementId, String data, int status, SASession session, SALoaderInterface listener) {
+    public void processAd (int placementId, String data, int status, SAConfiguration configuration, SALoaderInterface listener) {
 
         // create a local listener to avoid null pointer exceptions
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
@@ -196,7 +171,6 @@ public class SALoader {
 
             // declare the two possible json outcomes
             JSONObject jsonObject = null;
-            JSONArray jsonArray = null;
 
             // try to get json Object
             try {
@@ -205,18 +179,11 @@ public class SALoader {
                 // do nothing
             }
 
-            // try to get json Array
-            try {
-                jsonArray = new JSONArray(data);
-            } catch (JSONException e) {
-                // do nothing
-            }
-
             // Normal Ad case
             if (jsonObject != null) {
 
                 // parse the final ad
-                final SAAd ad = new SAAd(placementId, session.getConfiguration().ordinal(), jsonObject);
+                final SAAd ad = new SAAd(placementId, configuration.ordinal(), jsonObject);
 
                 // update type in response as well
                 response.format = ad.creative.format;
@@ -245,7 +212,8 @@ public class SALoader {
                     }
                     // in this case process the VAST response, download the files and return
                     case video: {
-                        SAVASTParser parser = new SAVASTParser(context);
+                        Context con = isDebug ? null : context;
+                        SAVASTParser parser = new SAVASTParser(con, executor, timeout);
                         parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
                             @Override
                             public void saDidParseVAST(SAVASTAd savastAd) {
@@ -255,7 +223,8 @@ public class SALoader {
                                 // and the exact url to download
                                 ad.creative.details.media.url = savastAd.url;
                                 // download file
-                                new SAFileDownloader(context).downloadFileFrom(ad.creative.details.media.url, new SAFileDownloaderInterface() {
+                                SAFileDownloader downloader = new SAFileDownloader(context, executor, isDebug, timeout);
+                                downloader.downloadFileFrom(ad.creative.details.media.url, new SAFileDownloaderInterface() {
                                     @Override
                                     public void saDidDownloadFile(boolean success, String key, String playableDiskUrl) {
 
