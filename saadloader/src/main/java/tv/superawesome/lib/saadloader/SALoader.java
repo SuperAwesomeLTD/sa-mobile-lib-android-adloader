@@ -170,81 +170,75 @@ public class SALoader {
         else {
 
             // declare the two possible json outcomes
-            JSONObject jsonObject = null;
+            JSONObject jsonObject;
 
             // try to get json Object
             try {
                 jsonObject = new JSONObject(data);
             } catch (JSONException e) {
-                // do nothing
+                jsonObject = new JSONObject();
             }
 
             // Normal Ad case
-            if (jsonObject != null) {
 
-                // parse the final ad
-                final SAAd ad = new SAAd(placementId, configuration.ordinal(), jsonObject);
+            // parse the final ad
+            final SAAd ad = new SAAd(placementId, configuration.ordinal(), jsonObject);
 
-                // update type in response as well
-                response.format = ad.creative.format;
-                response.ads.add(ad);
+            // update type in response as well
+            response.format = ad.creative.format;
+            response.ads.add(ad);
 
-                switch (ad.creative.format) {
-                    // in this case return whatever we have at this moment
-                    case invalid:
-                        localListener.saDidLoadAd(response);
-                        break;
-                    // in this case process the HTML and return the response
-                    case image:
-                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
-                        localListener.saDidLoadAd(response);
-                        break;
-                    // in this case process the HTML and return the response
-                    case rich:
-                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
-                        localListener.saDidLoadAd(response);
-                        break;
-                    // in this case process the HTML and return the response
-                    case tag: {
-                        ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
-                        localListener.saDidLoadAd(response);
-                        break;
-                    }
-                    // in this case process the VAST response, download the files and return
-                    case video: {
-                        Context con = isDebug ? null : context;
-                        SAVASTParser parser = new SAVASTParser(con, executor, timeout);
-                        parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
-                            @Override
-                            public void saDidParseVAST(SAVASTAd savastAd) {
-
-                                // copy the vast data
-                                ad.creative.details.media.vastAd = savastAd;
-                                // and the exact url to download
-                                ad.creative.details.media.url = savastAd.url;
-                                // download file
-                                SAFileDownloader downloader = new SAFileDownloader(context, executor, isDebug, timeout);
-                                downloader.downloadFileFrom(ad.creative.details.media.url, new SAFileDownloaderInterface() {
-                                    @Override
-                                    public void saDidDownloadFile(boolean success, String key, String playableDiskUrl) {
-
-                                        ad.creative.details.media.path = playableDiskUrl;
-                                        ad.creative.details.media.isDownloaded = playableDiskUrl != null;
-
-                                        // finally respond with a response
-                                        localListener.saDidLoadAd(response);
-
-                                    }
-                                });
-                            }
-                        });
-                        break;
-                    }
+            switch (ad.creative.format) {
+                // in this case return whatever we have at this moment
+                case invalid:
+                    localListener.saDidLoadAd(response);
+                    break;
+                // in this case process the HTML and return the response
+                case image:
+                    ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoImageHTML(ad);
+                    localListener.saDidLoadAd(response);
+                    break;
+                // in this case process the HTML and return the response
+                case rich:
+                    ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
+                    localListener.saDidLoadAd(response);
+                    break;
+                // in this case process the HTML and return the response
+                case tag: {
+                    ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoTagHTML(ad);
+                    localListener.saDidLoadAd(response);
+                    break;
                 }
-            }
-            // it's not a normal ad or an app wall, then return
-            else {
-                localListener.saDidLoadAd(response);
+                // in this case process the VAST response, download the files and return
+                case video: {
+                    Context con = isDebug ? null : context;
+                    SAVASTParser parser = new SAVASTParser(con, executor, timeout);
+                    parser.parseVAST(ad.creative.details.vast, new SAVASTParserInterface() {
+                        @Override
+                        public void saDidParseVAST(SAVASTAd savastAd) {
+
+                            // copy the vast data
+                            ad.creative.details.media.vastAd = savastAd;
+                            // and the exact url to download
+                            ad.creative.details.media.url = savastAd.url;
+                            // download file
+                            SAFileDownloader downloader = new SAFileDownloader(context, executor, isDebug, timeout);
+                            downloader.downloadFileFrom(ad.creative.details.media.url, new SAFileDownloaderInterface() {
+                                @Override
+                                public void saDidDownloadFile(boolean success, String key, String playableDiskUrl) {
+
+                                    ad.creative.details.media.path = playableDiskUrl;
+                                    ad.creative.details.media.isDownloaded = playableDiskUrl != null;
+
+                                    // finally respond with a response
+                                    localListener.saDidLoadAd(response);
+
+                                }
+                            });
+                        }
+                    });
+                    break;
+                }
             }
         }
     }

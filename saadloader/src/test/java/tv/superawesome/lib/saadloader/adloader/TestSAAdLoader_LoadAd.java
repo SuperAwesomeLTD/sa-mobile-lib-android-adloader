@@ -44,7 +44,7 @@ import static org.mockito.Mockito.when;
  * Created by gabriel.coman on 03/05/2018.
  */
 
-public class TestSAAdLoader {
+public class TestSAAdLoader_LoadAd {
 
     private Executor executor = null;
     private SASession session = null;
@@ -290,76 +290,6 @@ public class TestSAAdLoader {
     }
 
     @Test
-    public void test_SAAdLoader_LoadAd_WithEmptyAd () {
-        // given
-        Context context = mock(Context.class);
-
-        // when
-        SALoader loader = new SALoader(context, executor, true, 1000);
-
-        // then
-        loader.loadAd(1003, session, new SALoaderInterface() {
-            @Override
-            public void saDidLoadAd(SAResponse response) {
-
-                assertNotNull(response);
-                assertNotNull(response.ads);
-                assertEquals(1, response.ads.size());
-
-                SAAd ad = response.ads.get(0);
-
-                assertNotNull(ad);
-                assertFalse(ad.isValid());
-            }
-        });
-    }
-
-    @Test
-    public void test_SAAdLoader_LoadAd_WithMalformedResponse () {
-        // given
-        Context context = mock(Context.class);
-
-        // when
-        SALoader loader = new SALoader(context, executor, true, 1000);
-
-        // then
-        loader.loadAd(1004, session, new SALoaderInterface() {
-            @Override
-            public void saDidLoadAd(SAResponse response) {
-
-                assertNotNull(response);
-                assertNotNull(response.ads);
-                assertEquals(1, response.ads.size());
-
-                SAAd ad = response.ads.get(0);
-
-                assertNotNull(ad);
-                assertFalse(ad.isValid());
-            }
-        });
-    }
-
-    @Test
-    public void test_SAAdLoader_LoadAd_WithTimeoutResponse () {
-        // given
-        Context context = mock(Context.class);
-
-        // when
-        SALoader loader = new SALoader(context, executor, true, 1000);
-
-        // then
-        loader.loadAd(50000, session, new SALoaderInterface() {
-            @Override
-            public void saDidLoadAd(SAResponse response) {
-
-                assertNotNull(response);
-                assertNotNull(response.ads);
-                assertEquals(0, response.ads.size());
-            }
-        });
-    }
-
-    @Test
     public void test_SAAdLoader_LoadAd_WithVideoAdResponseButNoVASTTagResponse () {
         // given
         Context context = mock(Context.class);
@@ -380,6 +310,11 @@ public class TestSAAdLoader {
 
                 assertNotNull(ad);
                 assertFalse(ad.isValid());
+
+                SACreative creative = ad.creative;
+
+                assertNotNull(creative);
+                assertEquals(SACreativeFormat.video, creative.format);
             }
         });
     }
@@ -405,6 +340,91 @@ public class TestSAAdLoader {
 
                 assertNotNull(ad);
                 assertFalse(ad.isValid());
+
+                SACreative creative = ad.creative;
+
+                assertNotNull(creative);
+                assertEquals(SACreativeFormat.video, creative.format);
+            }
+        });
+    }
+
+    @Test
+    public void test_SAAdLoader_LoadAd_WithEmptyAd () {
+        // given
+        Context context = mock(Context.class);
+
+        // when
+        SALoader loader = new SALoader(context, executor, true, 1000);
+
+        // then
+        loader.loadAd(1003, session, new SALoaderInterface() {
+            @Override
+            public void saDidLoadAd(SAResponse response) {
+
+                assertNotNull(response);
+                assertNotNull(response.ads);
+                assertEquals(1, response.ads.size());
+
+                SAAd ad = response.ads.get(0);
+
+                assertNotNull(ad);
+                assertFalse(ad.isValid());
+
+                SACreative creative = ad.creative;
+
+                assertNotNull(creative);
+                assertEquals(SACreativeFormat.invalid, creative.format);
+            }
+        });
+    }
+
+    @Test
+    public void test_SAAdLoader_LoadAd_WithMalformedResponse () {
+        // given
+        Context context = mock(Context.class);
+
+        // when
+        SALoader loader = new SALoader(context, executor, true, 1000);
+
+        // then
+        loader.loadAd(1004, session, new SALoaderInterface() {
+            @Override
+            public void saDidLoadAd(SAResponse response) {
+
+                assertNotNull(response);
+                assertNotNull(response.ads);
+                assertEquals(1, response.ads.size());
+
+                SAAd ad = response.ads.get(0);
+
+                assertNotNull(ad);
+                assertFalse(ad.isValid());
+
+                SACreative creative = ad.creative;
+
+                assertNotNull(creative);
+                assertEquals(SACreativeFormat.invalid, creative.format);
+            }
+        });
+    }
+
+    @Test
+    public void test_SAAdLoader_LoadAd_WithTimeoutResponse () {
+        // given
+        Context context = mock(Context.class);
+
+        // when
+        SALoader loader = new SALoader(context, executor, true, 1000);
+
+        // then
+        loader.loadAd(50000, session, new SALoaderInterface() {
+            @Override
+            public void saDidLoadAd(SAResponse response) {
+
+                assertNotNull(response);
+                assertNotNull(response.ads);
+                assertEquals(0, response.ads.size());
             }
         });
     }

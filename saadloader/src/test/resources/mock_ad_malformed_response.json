@@ -1,8 +1,8 @@
 {
-  "creative": {
-    "id": 230904,
+  "cråeative": {
+   \'' "id": 230904,
     "format": "video",
-      "duration": 21,
+      "dur'"""ation": 21,
       "vast": "http://localhost:64000/vast/vast.xml"
     },
     "click_url": "http://superawesome.tv"
@@ -11,7 +11,7 @@
   "pu/sa//sa/assad": 44855,
   "moat": 0.2,
   "test": true,
-  "campaign_id": 32862,
+  "ca'''saa///mpaign_id": 32862,
   "app": 31570,
   "device": "phone"
 }
