@@ -14,6 +14,7 @@ import tv.superawesome.lib.saadloader.SALoader;
 import tv.superawesome.lib.saadloader.SALoaderInterface;
 import tv.superawesome.lib.saadloader.mocks.executors.MockExecutor;
 import tv.superawesome.lib.saadloader.mocks.servers.ads.MockAdsServer;
+import tv.superawesome.lib.saadloader.mocks.session.MockSession;
 import tv.superawesome.lib.samodelspace.saad.SAAd;
 import tv.superawesome.lib.samodelspace.saad.SACampaignType;
 import tv.superawesome.lib.samodelspace.saad.SACreative;
@@ -27,6 +28,7 @@ import tv.superawesome.lib.sasession.defines.SARTBPlaybackMethod;
 import tv.superawesome.lib.sasession.defines.SARTBPosition;
 import tv.superawesome.lib.sasession.defines.SARTBSkip;
 import tv.superawesome.lib.sasession.defines.SARTBStartDelay;
+import tv.superawesome.lib.sasession.session.ISASession;
 import tv.superawesome.lib.sasession.session.SASession;
 import tv.superawesome.lib.sautils.SAUtils;
 
@@ -47,7 +49,7 @@ import static org.mockito.Mockito.when;
 public class TestSAAdLoader_LoadAd {
 
     private Executor executor = null;
-    private SASession session = null;
+    private ISASession session = null;
     private MockAdsServer server = null;
 
     @Before
@@ -57,26 +59,7 @@ public class TestSAAdLoader_LoadAd {
         server = new MockAdsServer();
         server.start();
 
-        session = mock(SASession.class);
-
-        when(session.getBaseUrl()).thenReturn(server.url());
-        when(session.getTestMode()).thenReturn(true);
-        when(session.getConfiguration()).thenReturn(SAConfiguration.PRODUCTION);
-        when(session.getVersion()).thenReturn("1.0.0");
-        when(session.getCachebuster()).thenReturn(123456);
-        when(session.getPackageName()).thenReturn("superawesome.tv.saadloaderdemo");
-        when(session.getAppName()).thenReturn("SAAdLoaderDemo");
-        when(session.getDauId()).thenReturn(654321);
-        when(session.getConnectionType()).thenReturn(SAUtils.SAConnectionType.wifi);
-        when(session.getLang()).thenReturn("en_GB");
-        when(session.getDevice()).thenReturn("phone");
-        when(session.getPos()).thenReturn(SARTBPosition.FULLSCREEN);
-        when(session.getSkip()).thenReturn(SARTBSkip.NO_SKIP);
-        when(session.getPlaybackMethod()).thenReturn(SARTBPlaybackMethod.WITH_SOUND_ON_SCREEN);
-        when(session.getStartDelay()).thenReturn(SARTBStartDelay.PRE_ROLL);
-        when(session.getInstl()).thenReturn(SARTBInstl.FULLSCREEN);
-        when(session.getWidth()).thenReturn(320);
-        when(session.getHeight()).thenReturn(240);
+        session = new MockSession(server.url());
     }
 
     @After

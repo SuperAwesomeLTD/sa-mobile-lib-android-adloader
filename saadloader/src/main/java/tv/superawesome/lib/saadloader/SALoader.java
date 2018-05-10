@@ -5,13 +5,12 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
-import android.util.Log;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import tv.superawesome.lib.saadloader.postprocessor.SAProcessHTML;
 import tv.superawesome.lib.sajsonparser.SAJsonParser;
@@ -23,7 +22,7 @@ import tv.superawesome.lib.sanetwork.file.SAFileDownloaderInterface;
 import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.defines.SAConfiguration;
-import tv.superawesome.lib.sasession.session.SASession;
+import tv.superawesome.lib.sasession.session.ISASession;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
@@ -48,7 +47,7 @@ public class SALoader {
     private boolean isDebug = false;
 
     public SALoader (Context context) {
-        this.context = context;
+        this(context, Executors.newSingleThreadExecutor(), false, 15000);
     }
 
     public SALoader (Context context, Executor executor, boolean isDebug, int timeout) {
@@ -58,7 +57,7 @@ public class SALoader {
         this.isDebug = isDebug;
     }
 
-    public String getAwesomeAdsEndpoint (SASession session, int placementId) {
+    public String getAwesomeAdsEndpoint (ISASession session, int placementId) {
         try {
             String base = session.getBaseUrl();
             try {
@@ -73,7 +72,7 @@ public class SALoader {
         }
     }
 
-    public JSONObject getAwesomeAdsQuery (SASession session) {
+    public JSONObject getAwesomeAdsQuery (ISASession session) {
         try {
             return SAJsonParser.newObject(
                     "test", session.getTestMode(),
@@ -99,7 +98,7 @@ public class SALoader {
         }
     }
 
-    public JSONObject getAwesomeAdsHeader (SASession session) {
+    public JSONObject getAwesomeAdsHeader (ISASession session) {
         try {
             return SAJsonParser.newObject(
                     "Content-Type", "application/json",
@@ -117,7 +116,7 @@ public class SALoader {
      * @param listener      listener copy so that the loader can return the response to the
      *                      library user
      */
-    public void loadAd(final int placementId, final SASession session, final SALoaderInterface listener){
+    public void loadAd(final int placementId, final ISASession session, final SALoaderInterface listener){
 
         // get connection things to AwesomeAds
         String endpoint = getAwesomeAdsEndpoint(session, placementId);
