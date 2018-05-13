@@ -5,6 +5,7 @@
 package tv.superawesome.lib.saadloader;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,6 +24,7 @@ import tv.superawesome.lib.sanetwork.request.SANetwork;
 import tv.superawesome.lib.sanetwork.request.SANetworkInterface;
 import tv.superawesome.lib.sasession.defines.SAConfiguration;
 import tv.superawesome.lib.sasession.session.ISASession;
+import tv.superawesome.lib.sautils.SAUtils;
 import tv.superawesome.lib.savastparser.SAVASTParser;
 import tv.superawesome.lib.savastparser.SAVASTParserInterface;
 
@@ -137,7 +139,7 @@ public class SALoader {
      * @param listener      listener copy so that the loader can return the response to the
      *                      library user
      */
-    public void loadAd (String endpoint, JSONObject query, JSONObject header, final int placementId, final SAConfiguration configuration, final SALoaderInterface listener) {
+    public void loadAd (final String endpoint, final JSONObject query, JSONObject header, final int placementId, final SAConfiguration configuration, final SALoaderInterface listener) {
 
         // create a local listener to avoid null pointer exceptions
         final SALoaderInterface localListener = listener != null ? listener : new SALoaderInterface() { @Override public void saDidLoadAd(SAResponse response) {} };
@@ -146,6 +148,11 @@ public class SALoader {
         network.sendGET(endpoint, query, header, new SANetworkInterface() {
             @Override
             public void saDidGetResponse(int status, String data, boolean success) {
+
+                if (!isDebug) {
+                    Log.d("SuperAwesome", success + " | " + status + " | " + endpoint + "?" + SAUtils.formGetQueryFromDict(query));
+                }
+
                 processAd(placementId, data, status, configuration, localListener);
             }
         });
