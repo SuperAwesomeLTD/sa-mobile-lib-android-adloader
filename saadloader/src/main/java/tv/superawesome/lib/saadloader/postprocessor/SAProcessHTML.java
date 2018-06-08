@@ -47,13 +47,13 @@ public class SAProcessHTML {
      * @param ad    ad data (as an SAAd object)
      * @return      the formatted HTML string to be used by a WebView
      */
-    public static String formatCreativeIntoRichMediaHTML(SAAd ad) {
+    public static String formatCreativeIntoRichMediaHTML(SAAd ad, int random) {
         String htmlString = "<iframe style='padding:0;border:0;' width='100%' height='100%' src='_RICH_MEDIA_URL_'></iframe>_MOAT_";
         String richMediaURL = ad.creative.details.url +
                 "?placement=" + ad.placementId +
                 "&line_item=" + ad.lineItemId +
                 "&creative=" + ad.creative.id +
-                "&rnd=" + SAUtils.getCacheBuster();
+                "&rnd=" + random;
 
         return htmlString.replace("_RICH_MEDIA_URL_", richMediaURL);
     }

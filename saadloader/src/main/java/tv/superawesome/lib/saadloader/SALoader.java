@@ -206,7 +206,7 @@ public class SALoader {
                     break;
                 // in this case process the HTML and return the response
                 case rich:
-                    ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad);
+                    ad.creative.details.media.html = SAProcessHTML.formatCreativeIntoRichMediaHTML(ad, SAUtils.getCacheBuster());
                     localListener.saDidLoadAd(response);
                     break;
                 // in this case process the HTML and return the response
